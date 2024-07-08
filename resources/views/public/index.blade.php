@@ -185,7 +185,7 @@
 
 
 
-        <section class="pt-[5%] py-12 lg:py-20 bg-auto object-top" style="background-image: url('{{ asset('images/svg/textura2.svg') }}');">
+        <section class="pt-[5%] py-12 lg:py-20 bg-cover object-top" style="background-image: url('{{ asset('images/svg/textura2.svg') }}');">
             <div class="grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto gap-5">
                 <div class="flex flex-col gap-10 max-w-[665px]">
                     <h2 class="text-terciario text-4xl lg:text-secondary font-outfitSemiBold leading-tight">
@@ -493,7 +493,7 @@
         </section>
 
 
-        <section class="pt-16 pb-16 md:pb-0  lg:pt-20 bg-[#110101]">
+        <section class="pt-16 pb-16 md:pb-0  lg:pt-20 bg-[#110101] bg-top object-right-top bg-cover bg-no-repeat" style="background-image: url('{{ asset('images/img/textura3.webp') }}');" >
             <div class="grid grid-cols-1 lg:grid-cols-2 w-11/12 mx-auto gap-5 lg:gap-24">
                 <div class="flex flex-col gap-6 md:gap-12 max-w-[665px] justify-center items-start">
 
@@ -724,7 +724,7 @@
         </section>
 
 
-        <section class="flex flex-col justify-center items-center w-11/12 mx-auto rounded-[35px] py-20 bg-[#110101] gap-6 mb-16 lg:mb-24 px-5">
+        <section class="flex flex-col justify-center items-center w-11/12 mx-auto rounded-[35px] py-20 bg-[#110101] gap-6 mb-16 lg:mb-24 px-5 bg-center object-left-top bg-cover bg-no-repeat" style="background-image: url('{{ asset('images/img/textura4.webp') }}');">
             
             <h2 class="font-outfitSemiBold  text-4xl leading-none md:text-5xl  text-white max-w-3xl  text-center">
                 ¿Listo para convertirte en un líder de la <span class="text-primario font-jakartaExtraBoldItalic">Industria</span>
