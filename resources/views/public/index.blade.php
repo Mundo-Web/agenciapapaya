@@ -3,36 +3,117 @@
 @section('css_improtados')
     <style>
         @font-face {
-            font-family: "helveticaBold";
-            src: url("./fonts/helveticaneueltprobd-webfont.woff") format("woff");
+            font-family: "jakartaExtraBold";
+            src: url("./fonts/jakarta/PlusJakartaSans-ExtraBold.woff") format("woff");
         }
 
         @font-face {
-            font-family: "helveticaLight";
-            src: url("./fonts/helveticaneueltprolt-webfont.woff") format("woff");
+            font-family: "jakartaBold";
+            src: url("./fonts/jakarta/PlusJakartaSans-Bold.woff") format("woff");
         }
 
         @font-face {
-            font-family: "helveticaMedium";
-            src: url("./fonts/helveticaneueltpromd-webfont.woff") format("woff");
+            font-family: "jakartaSemiBold";
+            src: url("./fonts/jakarta/PlusJakartaSans-SemiBold.woff") format("woff");
+        }
+
+        @font-face {
+            font-family: "jakartaMedium";
+            src: url("./fonts/jakarta/PlusJakartaSans-Medium.woff") format("woff");
+        }
+
+        @font-face {
+            font-family: "jakartaRegular";
+            src: url("./fonts/jakarta/PlusJakartaSans-Regular.woff") format("woff");
+        }
+
+        @font-face {
+            font-family: "jakartaExtraBoldItalic";
+            src: url("./fonts/jakarta/PlusJakartaSans-ExtraBoldItalic.woff") format("woff");
+        }
+
+        @font-face {
+            font-family: "outfitExtraBold";
+            src: url("./fonts/outfit/Outfit-ExtraBold.woff") format("woff");
+        }
+
+        @font-face {
+            font-family: "outfitBold";
+            src: url("./fonts/outfit/Outfit-Bold.woff") format("woff");
+        }
+
+        @font-face {
+            font-family: "outfitSemiBold";
+            src: url("./fonts/outfit/Outfit-SemiBold.woff") format("woff");
+        }
+
+        @font-face {
+            font-family: "outfitMedium";
+            src: url("./fonts/outfit/Outfit-Medium.woff") format("woff");
+        }
+
+        @font-face {
+            font-family: "outfitRegular";
+            src: url("./fonts/outfit/Outfit-Regular.woff") format("woff");
+        }
+
+        @font-face {
+            font-family: "outfitLight";
+            src: url("./fonts/outfit/Outfit-Light.woff") format("woff");
+        }
+
+        @font-face {
+            font-family: "outfitExtraLight";
+            src: url("./fonts/outfit/Outfit-ExtraLight.woff") format("woff");
+        }
+
+        .flip-card-inner {
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
         }
 
         .custom-swiper-buttons .swiper-button-prev:after {
-            background-image: url("./images/svg/image_35.svg");
+            background-image: url("./images/svg/arrow_left.svg");
             transition: background-image 0.2s ease-in-out;
+            object-fit: contain;
+            background-repeat: no-repeat;
+            width: 50px;
         }
 
         .custom-swiper-buttons .swiper-button-prev:hover:after {
-            background-image: url("./images/svg/image_37.svg");
+            background-image: url("./images/svg/arrow_left.svg");
         }
 
         .custom-swiper-buttons .swiper-button-next:after {
-            background-image: url("./images/svg/image_36.svg");
+            background-image: url("./images/svg/arrow_right.svg");
             transition: background-image 0.2s ease-in-out;
+            object-fit: contain;
+            background-repeat: no-repeat;
+            width: 50px;
         }
 
         .custom-swiper-buttons .swiper-button-next:hover:after {
-            background-image: url("./images/svg/image_39.svg");
+            background-image: url("./images/svg/arrow_right.svg");
         }
 
         .fondobombas {
@@ -55,497 +136,608 @@
 
 @section('content')
 
-    <main class="bg-[#F9FAFB]">
-        <section class="relative">
-            <img src="{{ asset('images/img/image_16.png') }}" alt="hidromec piscinas"
-                class="w-full h-[800px] object-cover hidden md:block" />
-
-            <img src="{{ asset('images/img/image_16.png') }}" alt="hidromec piscinas"
-                class="w-full h-[1000px] object-cover block md:hidden" />
-
-            <div
-                class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 w-11/12 mx-auto pt-[350px] sm:pt-[250px] md:pt-[500px] lg:pt-0">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24">
-                    <div class="flex flex-col justify-center items-start gap-2 w-full lg:max-w-[700px]">
-                        <div class="flex justify-start items-center gap-2 bg-[#232b52] rounded-full py-2 px-3">
-                            <img src="{{ asset('images/svg/image_9.svg') }}" alt="experiencia" />
-                            <p class="text-white font-helveticaMedium text-text12 md:text-text16">
-                                Más de 17 años en el mercado nos respaldan
-                            </p>
-                        </div>
-
-                        <div class="flex flex-col gap-5 items-start">
-                            <h1 class="font-helveticaBold text-text46 md:text-text64 leading-none text-white">
-                                La gama más completa de bombas para el Sector Agrícola
-                            </h1>
-                            <p class="text-white font-helveticaLight text-text20">
-                                Electrobombas, Calefacción, Iluminación, Filtros, Temperado, limpieza y mantenimiento
-
-                            </p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex justify-center items-center">
-                            <div class="bg-[#222A51] bg-opacity-80 rounded-xl p-10 backdrop-blur-sm">
-                                <div class="w-full md:max-w-[600px] lg:max-w-[442px] mx-auto flex flex-col gap-5">
-                                    <h2 class="text-white font-helveticaBold text-text32 leading-tight">
-                                        Solicita nuestro servicio llenando este formulario
-                                    </h2>
-
-                                    <form action="" id="formContactos">
-                                        @csrf
-                                        <div class="flex flex-col gap-5">
-                                            <div class="relative w-full">
-                                                <input id="" name="name" placeholder="Nombre de contacto"
-                                                    type="text"
-                                                    class="w-full py-3 px-4 focus:outline-none font-helveticaLight text-text16 text-[#FFFFFF] focus:ring-0 placeholder:text-[#FFFFFF] placeholder:text-opacity-55 border-white border-b transition-all focus:outline-0 border-t-0 border-l-0 border-r-0 focus:font-helveticaMedium bg-transparent" />
-                                                <p
-                                                    class="absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer font-helveticaMedium text-white text-text10">
-                                                    Obligatorio
-                                                </p>
-                                            </div>
-
-                                            <div class="relative w-full">
-                                                <input id="" name="document" placeholder="RUC | DNI" type="text"
-                                                    class="w-full py-3 px-4 focus:outline-none font-helveticaLight text-text16 text-[#FFFFFF] focus:ring-0 placeholder:text-[#FFFFFF] placeholder:text-opacity-55 border-white border-b transition-all focus:outline-0 border-t-0 border-l-0 border-r-0 focus:font-helveticaMedium bg-transparent" />
-                                                <p
-                                                    class="absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer font-helveticaMedium text-white text-text10">
-                                                    Obligatorio
-                                                </p>
-                                            </div>
-
-                                            <div class="relative w-full">
-                                                <input id="telefono" name="cellphone" placeholder="Teléfono" type="tel"
-                                                    class="w-full py-3 px-4 focus:outline-none font-helveticaLight text-text16 text-[#FFFFFF] focus:ring-0 placeholder:text-[#FFFFFF] placeholder:text-opacity-55 border-white border-b transition-all focus:outline-0 border-t-0 border-l-0 border-r-0 focus:font-helveticaMedium bg-transparent" />
-                                                <p
-                                                    class="absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer font-helveticaMedium text-white text-text10">
-                                                    Obligatorio
-                                                </p>
-                                            </div>
-
-                                            <div class="relative w-full">
-                                                <input id="email" name="email" placeholder="E-mail" type="tel"
-                                                    class="w-full py-3 px-4 focus:outline-none font-helveticaLight text-text16 text-[#FFFFFF] focus:ring-0 placeholder:text-[#FFFFFF] placeholder:text-opacity-55 border-white border-b transition-all focus:outline-0 border-t-0 border-l-0 border-r-0 focus:font-helveticaMedium bg-transparent" />
-                                            </div>
-
-                                            <div>
-                                                <textarea name="address" id="mensaje" rows="2" cols="30"
-                                                    class="w-full py-3 px-4 focus:outline-none font-helveticaLight text-text16 placeholder:text-white text-white focus:ring-0 placeholder:text-opacity-55 border-white border-b transition-all focus:outline-0 border-t-0 border-l-0 border-r-0 focus:font-helveticaMedium bg-transparent"
-                                                    placeholder="Mensaje"></textarea>
-
-                                            </div>
-
-                                            <div class="flex justify-center items-center py-5">
-                                                <button type="submit"
-                                                    class="text-text18 font-helveticaBold text-white bg-[#007FC8] py-4 px-6 w-full text-center rounded-lg">Quiero
-                                                    una cotización</button>
-                                            </div>
-                                            <div class="flex flex-col gap-1">
-                                                <div class="flex justify-start items-center gap-2">
-                                                    <input required id="aceptar" type="checkbox"
-                                                        class="w-4 h-4 cursor-pointer" />
-                                                    <label for="aceptar"
-                                                        class="font-helveticaLight text-text16 text-white cursor-pointer">Acepto
-                                                        recibir comunicaciones</label>
-                                                </div>
-                                                <div class="flex justify-start items-center gap-1">
-                                                    <p class="font-helveticaLight text-text16 text-white">
-                                                        Al facilitar mis datos acepto la
-                                                        <a target="_blank" id="open-modal" 
-                                                            class="font-helveticaLight text-text16 text-white underline cursor-pointer">Política
-                                                            de Privacidad</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- --- -->
+    <main>
+        <div style="background-image: url('{{ asset('images/svg/textura1.svg') }}');" class="bg-top object-right-top bg-cover lg:bg-contain bg-no-repeat"> 
+            <section class="relative bg-primario h-500  lg:h-700 gap-20 bg-no-repeat object-top bg-cover " style="background-image: url('{{ asset('images/img/textura_roja.webp') }}');">
+                <div class="flex flex-col justify-center items-center gap-2 w-full ">
+                    <div class="flex flex-col gap-10 items-center py-10 px-[2%]">
+                        <h2
+                            class="font-outfitSemiBold  text-4xl leading-none lg:text-primary  text-white max-w-4xl  text-center">
+                            Vive la experiencia Papaya Marketing <span
+                                class="text-terciario font-jakartaExtraBoldItalic">Digital</span>
+                        </h2>
+                        <p class="text-white text-lg tracking-wider text-center font-outfitLight">
+                            Vestibulum dignissim vestibulum tellus non semper. Cras dignissim lacus id pellentesque blandit.
+                        </p>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section class="bg-[#F8F8F8] pt-[310px] md:pt-[450px] py-12 lg:py-20">
+                <div class="flex flex-col justify-center items-center gap-2 w-full px-[2%] py-[5%]">
+                    <div class="w-full  max-w-5xl bg-black h-96 lg:h-600 rounded-3xl overflow-hidden">
+                        <video class="w-full h-full " controls>
+                            <source src="/docs/videos/flowbite.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="pt-56 xs:pt-40 md lg:pt-[20%] pb-20 px-[2%]">
+
+                <div class="flex flex-col justify-center items-center gap-2 w-full ">
+                    <div class="flex flex-col gap-10 items-center py-10">
+                        <h2
+                            class=" font-outfitSemiBold text-4xl lg:text-5xl leading-none  text-terciario max-w-4xl  text-center">
+                            ¿Estás listo para convertirte en el líder de la <span
+                                class="text-primario font-jakartaExtraBoldItalic">industria?</span>
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-center items-center w-60 mx-auto">
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=51123456789&text=hola" rel="noopener"
+                        class="btn-primary">Solicitar Presupuesto</a>
+                </div>
+            </section>
+        </div>    
+
+
+
+
+        <section class="pt-[5%] py-12 lg:py-20 bg-auto object-top" style="background-image: url('{{ asset('images/svg/textura2.svg') }}');">
             <div class="grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto gap-5">
                 <div class="flex flex-col gap-10 max-w-[665px]">
-                    <h2 class="text-[#007FC8] font-helveticaBold text-text44 md:text-text48 leading-tight">
-                        Donde hay agua, hay
-                        <span class="text-[#161A32]">PENTAX</span>
+                    <h2 class="text-terciario text-4xl lg:text-secondary font-outfitSemiBold leading-tight">
+                        ¿Cómo lo hacemos?
                     </h2>
-
-                    <div class="flex justify-start items-center w-full md:w-auto">
-                        <a href="#"
-                            class="text-white bg-[#007FC8] py-4 px-6 font-helveticaBold text-text18 rounded-xl w-full md:w-auto text-center">
-                            Quiero una cotización
-                        </a>
-                    </div>
                 </div>
 
-                <div class="flex flex-col gap-4 group bg-white p-6 rounded-xl hover:shadow-lg md:duration-300">
-                    <div class="flex flex-col gap-4">
-                        <p class="text-[#007FC8] font-helveticaBold text-text40 leading-none">
-                            Bombas Centrífugas
-                        </p>
-                        <div class="flex flex-col gap-2">
-
-                            <p class="text-[#808080] font-helveticaLight text-text16 md:text-text18">
-                                Ideal para equipos de presurización, sistemas de presión constante y de riego tecnificado
-                                que requieran caudales consistentes con presiones medias o altas. Fabricadas según l norma
-                                EN 733.
-                                Uso en aplicaciones agrícolas e industriales.
-                            </p>
-                        </div>
+                <div class="flex flex-col gap-7 lg:gap-10 group rounded-xl">
+                    <p class="text-xl font-outfitLight">Etiam lacinia tortor sed nisi imperdiet, eu rhoncus felis semper.
+                        Fusce venenatis magna vel fermentum feugiat. Integer ullamcorper mauris sit amet.</p>
+                    <div class="flex flex-col justify-start items-center w-60 ">
+                        <a target="_blank" href="https://api.whatsapp.com/send?phone=51123456789&text=hola" rel="noopener"
+                            class="btn-secondary">Solicitar Presupuesto</a>
                     </div>
-                    <div>
-                        <a href="#"
-                            class="font-helveticaMedium text-text16 text-[#007FC8] flex justify-start items-center gap-2">
-                            <span>Más Información</span>
-                            <div>
-                                <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M7.88628 1.33334L12.3307 6.00001M12.3307 6.00001L7.88628 10.6667M12.3307 6.00001L1.66406 6.00001"
-                                        stroke="#007FC8" stroke-width="1.6" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="flex flex-col gap-4 group bg-white p-6 rounded-xl hover:shadow-lg md:duration-300">
-                    <div class="flex flex-col gap-4">
-                        <p class="text-[#007FC8] font-helveticaBold text-text40 leading-none">
-                            Bombas de Caudal
-                        </p>
-                        <div class="flex flex-col gap-2">
-                            <p class="text-[#808080] font-helveticaLight text-text16 md:text-text18">
-                                Idelaes para traspasar o reciclar agua limpia en sistemas agrículas donde se requieren altos
-                                caudales con presiones relativamente bajas
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <a href="#"
-                            class="font-helveticaMedium text-text16 text-[#007FC8] flex justify-start items-center gap-2">
-                            <span>Más Información</span>
-                            <div>
-                                <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M7.88628 1.33334L12.3307 6.00001M12.3307 6.00001L7.88628 10.6667M12.3307 6.00001L1.66406 6.00001"
-                                        stroke="#007FC8" stroke-width="1.6" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="flex flex-col gap-4 group bg-white p-6 rounded-xl hover:shadow-lg md:duration-300">
-                    <div class="flex flex-col gap-4">
-                        <p class="text-[#007FC8] font-helveticaBold text-text40 leading-none">
-                            Bombas Multietáticas
-                        </p>
-                        <div class="flex flex-col gap-2">
-                            <p class="text-[#808080] font-helveticaLight text-text16 md:text-text18">
-                                Ideal para el bombeo líquido químicamente y mecánicamente no agresivos. Amplio uso en
-                                equipos de presión constante,
-                                sistemas de riego tecnificado y aplicaciones industriales. Extremadamente silenciosas.
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <a href="#"
-                            class="font-helveticaMedium text-text16 text-[#007FC8] flex justify-start items-center gap-2">
-                            <span>Más Información</span>
-                            <div>
-                                <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M7.88628 1.33334L12.3307 6.00001M12.3307 6.00001L7.88628 10.6667M12.3307 6.00001L1.66406 6.00001"
-                                        stroke="#007FC8" stroke-width="1.6" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-white fondologos  bg-right bg-cover">
-            <div class="flex flex-col md:flex-row w-11/12 mx-auto gap-10 justify-between py-10 lg:py-20">
-                <div class="flex flex-col gap-3 w-full md:max-w-[450px] justify-center items-start">
-                    <h3 class="text-white font-helveticaBold text-text44 md:text-text72 leading-none">
-                        Representación
-                        <span>Exclusiva</span>
-                    </h3>
-
-                    <div class="flex justify-start items-center py-5">
-                        <a href="#"
-                            class="text-text18 font-helveticaBold text-white bg-[#222A51] py-4 px-6 text-center rounded-lg">Quiero
-                            una cotización</a>
-                    </div>
-                </div>
-
-                <div
-                    class="grid grid-cols-1 gap-10  md:flex md:flex-col md:flex-wrap md:gap-2 justify-center xl:justify-between w-full md:max-w-[768px]">
-
-
-
-                    <div class="flex flex-row gap-2 lg:gap-2 justify-center lg:justify-end items-start">
-                        <div class="flex justify-center items-center">
-                            <img src="{{ asset('images/img/image_20.png') }}" alt="ISO" class="w-24" />
-                        </div>
-                        <div class="flex justify-center items-center">
-                            <img src="{{ asset('images/img/image_21.png') }}" alt="ISO" class="w-24" />
-                        </div>
-                    </div>
-
-                    <div class="flex flex-row justify-center lg:justify-end items-center">
-                        <div class="flex justify-center items-center">
-                            <img src="{{ asset('images/img/pentaxlargeblack.png') }}" alt="pentax" class="w-[600px]" />
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </section>
-
-        <section class="w-11/12 mx-auto py-20 ">
-            <div class="grid grid-cols-1  w-full md:max-w-[1300px] mx-auto gap-10 ">
-                <div
-                    class="flex flex-col gap-4 group bg-white p-6 rounded-xl hover:shadow-lg md:duration-300 fondobombas bg-cover object-cover">
-                    <div class="flex flex-col gap-5 h-[300px] justify-center pl-[5%]">
-                        <p class="text-white font-helveticaBold text-text40 leading-none">
-                            Bombas de <br>uso agrícola
-                        </p>
-
-                        <div class="flex justify-start items-center py-5">
-                            <a href="#"
-                                class="text-text18 font-helveticaBold text-white bg-[#007fc8] py-4 px-6 text-center rounded-lg">Quiero
-                                una cotización</a>
-                        </div>
-
-                    </div>
-
                 </div>
 
             </div>
         </section>
 
-        <section class="bg-[#007FC8]">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-11/12 mx-auto gap-10 py-20">
-                <div class="flex flex-col gap-3 items-center">
-                    <div class="flex flex-col gap-2 items-center">
-                        <div class="flex justify-center items-center">
-                            <img src="{{ asset('images/svg/image_31.svg') }}" alt="Calidad" />
-                        </div>
-                        <h2 class="font-helveticaBold text-text32 text-white text-center">
-                            Calidad
-                        </h2>
-                    </div>
-                    <p class="text-white font-helveticaLight text-text16 text-center">
-                        Somos representantes y distribuidores de marcas reconocidas y
-                        certificadas.
-                    </p>
-                </div>
-
-                <div class="flex flex-col gap-3 items-center">
-                    <div class="flex flex-col gap-2 items-center">
-                        <div class="flex justify-center items-center">
-                            <img src="{{ asset('images/svg/image_32.svg') }}" alt="Calidad" />
-                        </div>
-                        <h2 class="font-helveticaBold text-text32 text-white text-center">
-                            Experiencia
-                        </h2>
-                    </div>
-                    <p class="text-white font-helveticaLight text-text16 text-center">
-                        Contamos con más de 17 años de experiencia trabajando con
-                        ingeniería acuática.
-                    </p>
-                </div>
-
-                <div class="flex flex-col gap-3 items-center">
-                    <div class="flex flex-col gap-2 items-center">
-                        <div class="flex justify-center items-center">
-                            <img src="{{ asset('images/svg/image_33.svg') }}" alt="Calidad" />
-                        </div>
-                        <h2 class="font-helveticaBold text-text32 text-white text-center">
-                            Profesionalismo
-                        </h2>
-                    </div>
-                    <p class="text-white font-helveticaLight text-text16 text-center">
-                        Nuestro equipo de especialistas es constantemente capacitado para
-                        estar siempre a la vanguardia.
-                    </p>
-                </div>
-
-                <div class="flex flex-col gap-3 items-center">
-                    <div class="flex flex-col gap-2 items-center">
-                        <div class="flex justify-center items-center">
-                            <img src="{{ asset('images/svg/image_34.svg') }}" alt="Calidad" />
-                        </div>
-                        <h2 class="font-helveticaBold text-text32 text-white text-center">
-                            Compromiso
-                        </h2>
-                    </div>
-                    <p class="text-white font-helveticaLight text-text16 text-center">
-                        Contamos con 6 locales en todo el Perú y más de 200 distribuidores
-                        oficiales.
-                    </p>
-                </div>
-            </div>
-        </section>
 
         <section class="bg-white">
-            <div class="flex flex-col gap-10 py-20 w-11/12 mx-auto">
-                <div class="flex flex-col items-center gap-2">
-                    <h3 class="text-[#161A32] text-text48 font-helveticaBold leading-tight text-center">
-                        Distribuidores <span class="text-[#007FC8]">Autorizados</span>
-                    </h3>
-                    <p class="text-[#808080] font-helveticaLight text-text18 text-center">
-                        De las siguientes marcas
-                    </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 w-11/12 mx-auto gap-10 py-8 lg:py-20">
+                <div class="flex flex-col gap-3 items-center">
+                    <div
+                        class="flip-card hover:-translate-y-5 lg:hover:-translate-y-10 duration-1000 w-72 h-72 bg-transparent">
+                        <div class="flip-card-inner w-full h-full relative text-center">
+                            <div
+                                class="flip-card-front bg-cardflip rounded-3xl flex flex-col justify-center items-center gap-3 p-6">
+                                <img src="{{ asset('images/svg/icono_rojo.svg') }}" />
+                                <h3 class="font-outfitSemiBold text-2xl">Auditoria <br> Digital</h3>
+                            </div>
+                            <div
+                                class="flip-card-back bg-primario rounded-3xl flex flex-col justify-center items-center gap-3 p-6">
+                                <img src="{{ asset('images/svg/icono_blanco.svg') }}" />
+                                <h3 class="font-outfitSemiBold text-2xl text-white">Auditoria <br> Digital</h3>
+                                <p class="text-lg font-outfitExtraLight text-white leading-tight">Vestibulum non metus ut
+                                    dolor iaculis tincidunt id vitae libero, tortor consectetur.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-10">
+                <div class="flex flex-col gap-3 items-center">
+                    <div
+                        class="flip-card hover:-translate-y-5 lg:hover:-translate-y-10 duration-1000 w-72 h-72 bg-transparent">
+                        <div class="flip-card-inner w-full h-full relative text-center">
+                            <div
+                                class="flip-card-front bg-cardflip rounded-3xl flex flex-col justify-center items-center gap-3 p-6">
+                                <img src="{{ asset('images/svg/icono_rojo.svg') }}" />
+                                <h3 class="font-outfitSemiBold text-2xl">Estrategia Paid <br>Media</h3>
+                            </div>
+                            <div
+                                class="flip-card-back bg-primario rounded-3xl flex flex-col justify-center items-center gap-3 p-6">
+                                <img src="{{ asset('images/svg/icono_blanco.svg') }}" />
+                                <h3 class="font-outfitSemiBold text-2xl text-white">Estrategia Paid <br>Media</h3>
+                                <p class="text-lg font-outfitExtraLight text-white leading-tight">Vestibulum non metus ut
+                                    dolor iaculis tincidunt id vitae libero, tortor consectetur.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                    <div class="flex justify-center items-center">
-                        <img src="{{ asset('images/img/image_27.png') }}" alt="pentair" />
+                <div class="flex flex-col gap-3 items-center">
+                    <div
+                        class="flip-card hover:-translate-y-5 lg:hover:-translate-y-10 duration-1000 w-72 h-72 bg-transparent">
+                        <div class="flip-card-inner w-full h-full relative text-center">
+                            <div
+                                class="flip-card-front bg-cardflip rounded-3xl flex flex-col justify-center items-center gap-3 p-6">
+                                <img src="{{ asset('images/svg/icono_rojo.svg') }}" />
+                                <h3 class="font-outfitSemiBold text-2xl">Contenido <br> Persuasivo</h3>
+                            </div>
+                            <div
+                                class="flip-card-back bg-primario rounded-3xl flex flex-col justify-center items-center gap-3 p-6">
+                                <img src="{{ asset('images/svg/icono_blanco.svg') }}" />
+                                <h3 class="font-outfitSemiBold text-2xl text-white">Contenido <br> Persuasivo</h3>
+                                <p class="text-lg font-outfitExtraLight text-white leading-tight">Vestibulum non metus ut
+                                    dolor iaculis tincidunt id vitae libero, tortor consectetur.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex justify-center items-center">
-                        <img src="{{ asset('images/img/image_30.png') }}" alt="pentair" />
-                    </div>
-                    <div class="flex justify-center items-center">
-                        <img src="{{ asset('images/img/image_31.png') }}" alt="pentair" />
-                    </div>
-                    <div class="flex justify-center items-center">
-                        <img src="{{ asset('images/img/pentax.png') }}" alt="pentair" />
+                </div>
+
+                <div class="flex flex-col gap-3 items-center">
+                    <div
+                        class="flip-card hover:-translate-y-5 lg:hover:-translate-y-10 duration-1000 w-72 h-72 bg-transparent">
+                        <div class="flip-card-inner w-full h-full relative text-center">
+                            <div
+                                class="flip-card-front bg-cardflip rounded-3xl flex flex-col justify-center items-center gap-3 p-6">
+                                <img src="{{ asset('images/svg/icono_rojo.svg') }}" />
+                                <h3 class="font-outfitSemiBold text-2xl">Metodología <br>Performance 360°</h3>
+                            </div>
+                            <div
+                                class="flip-card-back bg-primario rounded-3xl flex flex-col justify-center items-center gap-3 p-6">
+                                <img src="{{ asset('images/svg/icono_blanco.svg') }}" />
+                                <h3 class="font-outfitSemiBold text-2xl text-white">Metodología <br>Performance 360°</h3>
+                                <p class="text-lg font-outfitExtraLight text-white leading-tight">Vestibulum non metus ut
+                                    dolor iaculis tincidunt id vitae libero, tortor consectetur.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="pb-20 pt-10 md:pt-20">
-            <h3
-                class="text-[#161A32] font-helveticaBold text-text32 md:text-text48 text-center w-[300px] md:w-[500px] mx-auto leading-tight pb-10">
-                Reconocimiento de
-                <span class="text-[#007FC8]">nuestros clientes</span>
-            </h3>
 
-            <div class="w-11/12 md:w-9/12 mx-auto relative">
-                <div class="swiper testimonios rounded-2xl">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="flex flex-col gap-8 bg-white rounded-lg p-6 md:p-8 items-center">
-                                <p class="text-[#808080] font-helveticaLight text-text18 text-center max-w-[600px]">
-                                    La eficiencia y confiabilidad de estas bombas son incomparables, y el equipo de servicio
-                                    al cliente fue excepcional
-                                    en ayudarnos a encontrar la solución perfecta para nuestras necesidades específicas.
-                                </p>
 
-                                <div class="flex flex-col gap-3 max-w-[600px]">
-                                    <p class="font-helveticaBold text-text20 text-[#161A32]">
-                                        Carmén Arámbulo
-                                    </p>
-                                    <div class="flex justify-center items-center gap-2">
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+        <section class="pt-[5%] py-12 lg:py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto gap-5">
+                <div class="flex flex-col gap-10 max-w-[665px]">
+                    <img src="{{ asset('images/svg/orbita.svg') }}" />
+                </div>
+
+                <div class="flex flex-col gap-10 justify-center items-center">
+                    <img class="w-72" src="{{ asset('images/img/movil.png') }}" />
+                    <h2 class=" font-outfitSemiBold text-4xl leading-none text-terciario max-w-4xl  text-center">
+                        Crear campañas <span class="text-primario font-jakartaExtraBoldItalic"> efectivas</span> con
+                        <span class="text-primario font-jakartaExtraBoldItalic">anuncios</span> persuasivos
+                    </h2>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <section class="py-12 lg:py-20 bg-primario">
+            <div class="grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto gap-5">
+                <div class="flex flex-col gap-6 md:gap-12 max-w-[665px] justify-center items-start">
+                    <h3 class="text-xl font-outfitSemiBold text-white">Conoce los perfiles</h3>
+                    <h2 class="font-outfitSemiBold  text-5xl leading-none md:text-6xl  text-white max-w-4xl  text-left">
+                        El Dream Team de marketing digital si existe!!! Y será designado <span
+                            class="text-terciario font-jakartaExtraBoldItalic">para ti!.</span>
+                    </h2>
+                    <div class="flex flex-col justify-start items-center w-60 ">
+                        <a target="_blank" href="https://api.whatsapp.com/send?phone=51123456789&text=hola" rel="noopener"
+                            class="btn-primary">Solicitar Presupuesto</a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-10 justify-center items-center pt-7 md:pt-0">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div><img src="{{ asset('images/img/person_1.png') }}" /></div>
+                        <div><img src="{{ asset('images/img/person_2.png') }}" /></div>
+                        <div><img src="{{ asset('images/img/person_3.png') }}" /></div>
+                        <div><img src="{{ asset('images/img/person_4.png') }}" /></div>
+                        <div><img src="{{ asset('images/img/person_5.png') }}" /></div>
+                        <div><img src="{{ asset('images/img/person_6.png') }}" /></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="py-12 lg:py-20 flex flex-col w-full gap-12 relative">
+            <div class="w-11/12 mx-auto">
+                <h2 class=" font-outfitSemiBold text-4xl lg:text-5xl leading-none  text-terciario">
+                    Lo que piensan de <span class="text-primario font-jakartaExtraBoldItalic">PMD</span>
+                </h2>
+            </div>
+
+            <div class="swiper testimonios flex flex-row w-full !px-[5%] !lg:pl-[5%]">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+                            <div class="flex flex-col justify-center items-center  px-[5%]">
+
+                                <video class="w-full h-[700px] border border-gray-200 rounded-3xl" controls>
+                                    <source src="/docs/videos/flowbite.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+
+                            </div>
+
+                            <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
+
+                                <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
+                                    Donec molestie, urna scelerisque auctor bibendum, libero libero sollicitudin diam,
+                                    et eleifend massa nisi vitae ipsum. In massa mauris, porttitor id eros et, ornare
+                                    laoreet magna. Y sera designado<span class="text-primario font-jakartaExtraBoldItalic"> para
+                                        ti!.</span>
+                                </h2>
+                                <div class="flex flex-col justify-start items-center">
+                                    <div class="flex flex-row items-center gap-3">
+                                        <img class="rounded-full w-20 h-20 object-cover"
+                                            src="{{ asset('images/img/person_3.png') }}" />
+                                        <div>
+                                            <h3 class="text-lg font-outfitSemiBold">Carlos Sile</h3>
+                                            <p class="text-base font-outfitLight">Representante Exclusivo Doulton Perú</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+                            <div class="flex flex-col justify-center items-center  px-[5%]">
 
-                        <div class="swiper-slide">
-                            <div class="flex flex-col gap-8 bg-white rounded-lg p-6 items-center">
-                                <p class="text-[#808080] font-helveticaLight text-text18 text-center max-w-[600px]">
-                                    Era escéptico de los productos químicos para piscinas, pero
-                                    ahora estoy muy contento con los resultados. Mi piscina está
-                                    siempre limpia y cristalina, y los recomiendo a cualquiera
-                                    que tenga una piscina.
-                                </p>
+                                <video class="w-full h-[700px] border border-gray-200 rounded-3xl" controls>
+                                    <source src="/docs/videos/flowbite.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
 
-                                <div class="flex flex-col gap-3 max-w-[600px]">
-                                    <p class="font-helveticaBold text-text20 text-[#161A32]">
-                                        Carmén Arámbulo
-                                    </p>
-                                    <div class="flex justify-center items-center gap-2">
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                            </div>
+
+                            <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
+
+                                <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
+                                    Donec molestie, urna scelerisque auctor bibendum, libero libero sollicitudin diam,
+                                    et eleifend massa nisi vitae ipsum. In massa mauris, porttitor id eros et, ornare
+                                    laoreet magna. Y sera designado<span class="text-primario font-jakartaExtraBoldItalic"> para
+                                        ti!.</span>
+                                </h2>
+                                <div class="flex flex-col justify-start items-center">
+                                    <div class="flex flex-row items-center gap-3">
+                                        <img class="rounded-full w-20 h-20 object-cover"
+                                            src="{{ asset('images/img/person_3.png') }}" />
+                                        <div>
+                                            <h3 class="text-lg font-outfitSemiBold">Carlos Silessss</h3>
+                                            <p class="text-base font-outfitLight">Representante Exclusivo Doulton Perú</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+                            <div class="flex flex-col justify-center items-center  px-[5%]">
 
-                        <div class="swiper-slide">
-                            <div class="flex flex-col gap-8 bg-white rounded-lg p-6 items-center">
-                                <p class="text-[#808080] font-helveticaLight text-text18 text-center max-w-[600px]">
-                                    Era escéptico de los productos químicos para piscinas, pero
-                                    ahora estoy muy contento con los resultados. Mi piscina está
-                                    siempre limpia y cristalina, y los recomiendo a cualquiera
-                                    que tenga una piscina.
-                                </p>
+                                <video class="w-full h-[700px] border border-gray-200 rounded-3xl" controls>
+                                    <source src="/docs/videos/flowbite.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
 
-                                <div class="flex flex-col gap-3 max-w-[600px]">
-                                    <p class="font-helveticaBold text-text20 text-[#161A32]">
-                                        Carmén Arámbulo
-                                    </p>
-                                    <div class="flex justify-center items-center gap-2">
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                    </div>
-                                </div>
                             </div>
-                        </div>
 
-                        <div class="swiper-slide">
-                            <div class="flex flex-col gap-8 bg-white rounded-lg p-6 items-center">
-                                <p class="text-[#808080] font-helveticaLight text-text18 text-center max-w-[600px]">
-                                    Era escéptico de los productos químicos para piscinas, pero
-                                    ahora estoy muy contento con los resultados. Mi piscina está
-                                    siempre limpia y cristalina, y los recomiendo a cualquiera
-                                    que tenga una piscina.
-                                </p>
+                            <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
 
-                                <div class="flex flex-col gap-3 max-w-[600px]">
-                                    <p class="font-helveticaBold text-text20 text-[#161A32]">
-                                        Carmén Arámbulo
-                                    </p>
-                                    <div class="flex justify-center items-center gap-2">
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
-                                        <img src="{{ asset('images/svg/image_29.svg') }}" alt="start" />
+                                <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
+                                    Donec molestie, urna scelerisque auctor bibendum, libero libero sollicitudin diam,
+                                    et eleifend massa nisi vitae ipsum. In massa mauris, porttitor id eros et, ornare
+                                    laoreet magna. Y sera designado<span class="text-primario font-jakartaExtraBoldItalic"> para
+                                    ti!.</span>
+                                </h2>
+                                <div class="flex flex-col justify-start items-center">
+                                    <div class="flex flex-row items-center gap-3">
+                                        <img class="rounded-full w-20 h-20 object-cover"
+                                            src="{{ asset('images/img/person_3.png') }}" />
+                                        <div>
+                                            <h3 class="text-lg font-outfitSemiBold">Carlos Silessss</h3>
+                                            <p class="text-base font-outfitLight">Representante Exclusivo Doulton Perú</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="custom-swiper-buttons xl:flex xl:absolute hidden">
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+            </div>
+
+            <div class="custom-swiper-buttons absolute bottom-0">
+                <div class="flex flex-row gap5 w-24">
+                    <div class="swiper-button-prev left-0"></div>
+                    <div class="swiper-button-next left-28"></div>
                 </div>
-                <div class="swiper-pagination !-bottom-[56px] block xl:hidden mb-[6px] xl:mb-0"></div>
             </div>
         </section>
+
+
+        <section class="z-10 col-span-2 pt-12 lg:pt-28">
+            <div class="px-1 py-2 h-20 lg:-mt-20 bg-cardflip">
+                <div x-data="{}" x-init="$nextTick(() => {
+                    let ul = $refs.logos;
+                    ul.insertAdjacentHTML('afterend', ul.outerHTML);
+                    ul.nextSibling.setAttribute('aria-hidden', 'true');
+                })"
+                    class="px-[5%] w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_40px,_black_calc(100%-40px),transparent_100%)] md:[mask-image:_linear-gradient(to_right,transparent_0,_black_100px,_black_calc(100%-100px),transparent_100%)]">
+                    <ul x-ref="logos"
+                        class="h-16 flex flex-row justify-between items-center  [&_li]:mx-10   animate-infinite-scroll">
+
+                        <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/svg/evernote.svg') }}" /></li>
+                        <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/svg/adobe.svg') }}" /></li>
+                        <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/svg/amazon.svg') }}" /></li>
+                        <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/svg/paypal.svg') }}" /></li>
+                        <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/svg/spotif.svg') }}" /></li>
+
+                    </ul>
+
+                    <ul x-ref="logos"
+                        class="h-16 flex flex-row justify-between items-center  [&_li]:mx-10   animate-infinite-scroll"
+                        aria-hidden="true">
+
+                        <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/svg/evernote.svg') }}" /></li>
+                        <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/svg/adobe.svg') }}" /></li>
+                        <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/svg/amazon.svg') }}" /></li>
+                        <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/svg/paypal.svg') }}" /></li>
+                        <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/svg/spotif.svg') }}" /></li>
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="pt-16 pb-16 md:pb-0  lg:pt-20 bg-[#110101]">
+            <div class="grid grid-cols-1 lg:grid-cols-2 w-11/12 mx-auto gap-5 lg:gap-24">
+                <div class="flex flex-col gap-6 md:gap-12 max-w-[665px] justify-center items-start">
+
+                    <h2 class="font-outfitSemiBold  text-5xl leading-none md:text-6xl  text-white max-w-4xl  text-left">
+                        ¿Listo para trabaja con <span class="text-primario font-jakartaExtraBoldItalic">Nosotros?</span>
+                    </h2>
+                    <p class="text-xl font-outfitExtraLight text-white">Etiam lacinia tortor sed nisi imperdiet, eu rhoncus
+                        felis semper.
+                        Fusce venenatis magna vel fermentum feugiat. Integer ullamcorper mauris sit amet.</p>
+
+                    <div class="flex flex-row justify-start"><img class="object-left"
+                            src="{{ asset('images/img/hombresentado.png') }}" /></div>
+                </div>
+
+
+                <div class="flex flex-col gap-10 justify-start items-center mt-6 lg:mt-0">
+                    <div class="bg-transparent flex flex-col items-center justify-start min-h-screen w-full">
+                        <div class="bg-transparent w-full ">
+                            <form class="text-black font-fontBook gap-6 bg-transparent" id="formContactos">
+                                @csrf
+
+                                <div class="flex flex-col md:flex-row justify-between items-center relative mb-10 gap-4">
+                                    <div id="meeting-container"
+                                        class="btn-secondary py-4 flex flex-row gap-3 justify-center items-center bg-[#FFFFFF1F]">
+                                        <input id="meeting" type="radio" name="type_meet"
+                                            class="checked:bg-black checked:active:bg-black checked:focus:bg-black  border-0 border-none focus:ring-0 focus:border-b-2 focus:border-transparent"
+                                            value="Programar una reunión"> </input>
+                                        <label for="meeting">Programar una reunión</label>
+                                    </div>
+                                    <div id="call-container"
+                                        class="btn-secondary py-4 flex flex-row gap-3 justify-center items-center bg-[#FFFFFF1F]">
+                                        <input id="call" type="radio" name="type_meet"
+                                            class="checked:bg-black checked:active:bg-black checked:focus:bg-black border-0 border-none focus:ring-0 focus:border-b-2 focus:border-transparent"
+                                            value="Programar una llamada"> </input>
+                                        <label for="call">Programar una llamada</label>
+                                    </div>
+                                </div>
+
+                                <div class="relative mb-4">
+                                    <input name="name" type="text" required style="font-size: 17px"
+                                        class="bg-white  mt-1 block w-full border-0 border-none rounded-xl p-4  focus:ring-0 focus:border-b-2 focus:border-gray-500"
+                                        placeholder="Nombre">
+                                    {{-- <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14">Obligatorio</span> --}}
+                                </div>
+
+                                <div class="flex flex-col md:flex-row md:gap-4">
+
+                                    <div class="relative mb-4 w-full">
+                                        <input id="email" name="email" type="email" style="font-size: 17px"
+                                            class="bg-white mt-1 block w-full border-0  border-none rounded-xl p-4  focus:ring-0 focus:border-b-2 focus:border-gray-500"
+                                            placeholder="E-mail">
+                                        {{-- <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span> --}}
+                                    </div>
+
+                                    <div class="relative mb-4 w-full">
+                                        <input id="telefono" name="cellphone" type="text" style="font-size: 17px"
+                                            class="bg-white mt-1 block w-full border-0  border-none rounded-xl p-4  focus:ring-0 focus:border-b-2 focus:border-gray-500"
+                                            placeholder="Número de celular">
+                                        {{-- <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span> --}}
+                                    </div>
+
+                                </div>
+
+
+                                <div class="flex flex-col md:flex-row md:gap-4">
+
+                                    <div class="relative mb-4 w-full">
+                                        <input id="email" name="email" type="email" style="font-size: 17px"
+                                            class="bg-white mt-1 block w-full border-0  border-none rounded-xl p-4  focus:ring-0 focus:border-b-2 focus:border-gray-500"
+                                            placeholder="E-mail">
+                                        {{-- <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span> --}}
+                                    </div>
+
+                                    <div class="relative mb-4 w-full">
+                                        <input id="empresa" name="empresa" type="text" style="font-size: 17px"
+                                            class="bg-white mt-1 block w-full border-0  border-none rounded-xl p-4  focus:ring-0 focus:border-b-2 focus:border-gray-500"
+                                            placeholder="¿A que empresa representas?">
+                                        {{-- <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span> --}}
+                                    </div>
+
+                                </div>
+
+                                <div class="relative mb-4">
+                                    <textarea name="message" style="font-size: 17px; height: auto; "
+                                        class="min-h-28 lg:min-h-14 tracking-tight placeholder:text-base bg-white mt-1 block w-full border-0  border-none rounded-xl p-4 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500"
+                                        placeholder="Necesito..."></textarea>
+                                    {{-- <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span> --}}
+                                </div>
+
+                                <div class="flex flex-col justify-center items-end pt-8">
+                                    <button type="submit" rel="noopener" class="btn-secondary">Enviar solicitud</button>
+                                </div>
+                                {{-- <div class="mt-6">
+                                    <button type="submit" class="w-full bg-verdecreditomype text-white py-3 rounded-3xl hover:bg-green-600 mt-3">Quiero una cotización</button>
+                                </div> --}}
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="py-12 lg:py-20 flex flex-col w-full gap-12 relative">
+            <div class="flex flex-col justify-center items-center w-11/12 mx-auto gap-3">
+                <h3 class="font-jakartaExtraBoldItalic text-primario text-lg">FAQs</h3>
+                <h2 class="font-outfitSemiBold text-4xl lg:text-5xl leading-none  text-terciario">
+                    Preguntas Frecuentes
+                </h2>
+            </div>
+
+            <div class="flex flex-col justify-center items-center w-11/12 mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 w-full">
+
+                    <div class="py-3 lg:py-5">
+                        <details class="group bg-cardflip px-5 py-2 rounded-2xl">
+                            <summary
+                                class="flex cursor-pointer list-none items-center justify-between font-medium gap-10">
+                                <span class="text-[20px] text-[#151515] font-outfitSemiBold text-xl">
+                                    ¿Cuando podré ver los resultados?
+                                </span>
+                                <span class="transition group-open:rotate-180">
+                                    <img src="{{ asset('images/svg/icono.svg') }}" />
+                                </span>
+                            </summary>
+                            <p class="group-open:animate-fadeIn mt-3 text-neutral-600 font-outfitLight text-lg">
+                                Etiam lacinia tortor sed nisi imperdiet, eu rhoncus felis semper.
+                                Fusce venenatis magna vel fermentum feugiat. Integer ullamcorper mauris sit amet.
+                            </p>
+                        </details>
+                    </div>
+
+                    <div class="py-3 lg:py-5">
+                        <details class="group bg-cardflip px-5 py-2 rounded-2xl">
+                            <summary
+                                class="flex cursor-pointer list-none items-center justify-between font-medium gap-10">
+                                <span class="text-[20px] text-[#151515] font-outfitSemiBold text-xl">
+                                    ¿Cuando podré ver los resultados?
+                                </span>
+                                <span class="transition group-open:rotate-180">
+                                    <img src="{{ asset('images/svg/icono.svg') }}" />
+                                </span>
+                            </summary>
+                            <p class="group-open:animate-fadeIn mt-3 text-neutral-600 font-outfitLight text-lg">
+                                Etiam lacinia tortor sed nisi imperdiet, eu rhoncus felis semper.
+                                Fusce venenatis magna vel fermentum feugiat. Integer ullamcorper mauris sit amet.
+                            </p>
+                        </details>
+                    </div>
+
+                    <div class="py-3 lg:py-5">
+                        <details class="group bg-cardflip px-5 py-2 rounded-2xl">
+                            <summary
+                                class="flex cursor-pointer list-none items-center justify-between font-medium gap-10">
+                                <span class="text-[20px] text-[#151515] font-outfitSemiBold text-xl">
+                                    ¿Cuando podré ver los resultados?
+                                </span>
+                                <span class="transition group-open:rotate-180">
+                                    <img src="{{ asset('images/svg/icono.svg') }}" />
+                                </span>
+                            </summary>
+                            <p class="group-open:animate-fadeIn mt-3 text-neutral-600 font-outfitLight text-lg">
+                                Etiam lacinia tortor sed nisi imperdiet, eu rhoncus felis semper.
+                                Fusce venenatis magna vel fermentum feugiat. Integer ullamcorper mauris sit amet.
+                            </p>
+                        </details>
+                    </div>
+
+                    <div class="py-3 lg:py-5">
+                        <details class="group bg-cardflip px-5 py-2 rounded-2xl">
+                            <summary
+                                class="flex cursor-pointer list-none items-center justify-between font-medium gap-10">
+                                <span class="text-[20px] text-[#151515] font-outfitSemiBold text-xl">
+                                    ¿Cuando podré ver los resultados?
+                                </span>
+                                <span class="transition group-open:rotate-180">
+                                    <img src="{{ asset('images/svg/icono.svg') }}" />
+                                </span>
+                            </summary>
+                            <p class="group-open:animate-fadeIn mt-3 text-neutral-600 font-outfitLight text-lg">
+                                Etiam lacinia tortor sed nisi imperdiet, eu rhoncus felis semper.
+                                Fusce venenatis magna vel fermentum feugiat. Integer ullamcorper mauris sit amet.
+                            </p>
+                        </details>
+                    </div>
+
+
+                    <div class="py-3 lg:py-5">
+                        <details class="group bg-cardflip px-5 py-2 rounded-2xl">
+                            <summary
+                                class="flex cursor-pointer list-none items-center justify-between font-medium gap-10">
+                                <span class="text-[20px] text-[#151515] font-outfitSemiBold text-xl">
+                                    ¿Cuando podré ver los resultados?
+                                </span>
+                                <span class="transition group-open:rotate-180">
+                                    <img src="{{ asset('images/svg/icono.svg') }}" />
+                                </span>
+                            </summary>
+                            <p class="group-open:animate-fadeIn mt-3 text-neutral-600 font-outfitLight text-lg">
+                                Etiam lacinia tortor sed nisi imperdiet, eu rhoncus felis semper.
+                                Fusce venenatis magna vel fermentum feugiat. Integer ullamcorper mauris sit amet.
+                            </p>
+                        </details>
+                    </div>
+
+
+                    <div class="py-3 lg:py-5">
+                        <details class="group bg-cardflip px-5 py-2 rounded-2xl">
+                            <summary
+                                class="flex cursor-pointer list-none items-center justify-between font-medium gap-10">
+                                <span class="text-[20px] text-[#151515] font-outfitSemiBold text-xl">
+                                    ¿Cuando podré ver los resultados?
+                                </span>
+                                <span class="transition group-open:rotate-180">
+                                    <img src="{{ asset('images/svg/icono.svg') }}" />
+                                </span>
+                            </summary>
+                            <p class="group-open:animate-fadeIn mt-3 text-neutral-600 font-outfitLight text-lg">
+                                Etiam lacinia tortor sed nisi imperdiet, eu rhoncus felis semper.
+                                Fusce venenatis magna vel fermentum feugiat. Integer ullamcorper mauris sit amet.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="flex flex-col justify-center items-center w-11/12 mx-auto rounded-[35px] py-20 bg-[#110101] gap-6 mb-16 lg:mb-24 px-5">
+            
+            <h2 class="font-outfitSemiBold  text-4xl leading-none md:text-5xl  text-white max-w-3xl  text-center">
+                ¿Listo para convertirte en un líder de la <span class="text-primario font-jakartaExtraBoldItalic">Industria</span>
+            </h2>
+            <p class="text-lg font-outfitExtraLight text-white text-center max-w-3xl">Etiam lacinia tortor sed nisi imperdiet, eu rhoncus
+                felis semper. Fusce venenatis magna vel fermentum feugiat. Integer ullamcorper mauris sit amet.</p>
+
+            <div class="flex flex-col justify-start items-center w-60 ">
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=51123456789&text=hola" rel="noopener"
+                    class="btn-secondary">Solicitar Presupuesto</a>
+            </div>       
+        </section>
+
     </main>
 
     <div id="default-modal" tabindex="-1" aria-hidden="true"
@@ -597,7 +789,7 @@
         /*  */
         var swiper = new Swiper(".testimonios", {
             slidesPerView: 1,
-            spaceBetween: 30,
+            spaceBetween: -30,
             loop: true,
             grabCursor: true,
             centeredSlides: false,
@@ -612,9 +804,11 @@
             breakpoints: {
                 0: {
                     slidesPerView: 1,
+                    spaceBetween: 30,
                 },
                 768: {
-                    slidesPerView: 2,
+                    slidesPerView: 1,
+                    spaceBetween: 30,
                 },
                 1024: {
                     slidesPerView: 1,
@@ -647,41 +841,28 @@
     </script>
 
     <script>
-        let modal = document.getElementById("default-modal");
-        let btn = document.getElementById("open-modal");
-        let btn2 = document.getElementById("open-modal2");
-        let closeButtons = document.querySelectorAll("[data-modal-hide='default-modal']");
-        let body = document.body;
+        document.addEventListener('DOMContentLoaded', function() {
+            const meetingContainer = document.getElementById('meeting-container');
+            const callContainer = document.getElementById('call-container');
+            const inputs = document.querySelectorAll('input[name="type_meet"]');
 
-        btn.onclick = function() {
-            modal.classList.remove("hidden");
-            modal.classList.add("flex");
-            body.classList.add("modal-open");
-        }
-
-        btn2.onclick = function() {
-            modal.classList.remove("hidden");
-            modal.classList.add("flex");
-            body.classList.add("modal-open");
-        }
-
-        closeButtons.forEach(button => {
-            button.onclick = function() {
-                modal.classList.remove("flex");
-                modal.classList.add("hidden");
-                body.classList.remove("modal-open");
-            }
+            inputs.forEach(input => {
+                input.addEventListener('change', function() {
+                    if (this.checked && this.value === 'Programar una reunión') {
+                        meetingContainer.classList.add('bg-primario');
+                        meetingContainer.classList.remove('bg-[#FFFFFF1F]');
+                        callContainer.classList.add('bg-[#FFFFFF1F]');
+                        callContainer.classList.remove('bg-primario');
+                    } else if (this.checked && this.value === 'Programar una llamada') {
+                        callContainer.classList.add('bg-primario');
+                        callContainer.classList.remove('bg-[#FFFFFF1F]');
+                        meetingContainer.classList.add('bg-[#FFFFFF1F]');
+                        meetingContainer.classList.remove('bg-primario');
+                    }
+                });
+            });
         });
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.classList.remove("flex");
-                modal.classList.add("hidden");
-                body.classList.remove("modal-open");
-            }
-        }
     </script>
-
 @stop
 
 @stop
