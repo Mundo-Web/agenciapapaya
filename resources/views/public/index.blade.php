@@ -185,7 +185,7 @@
 
 
 
-        <section class="pt-[5%] py-12 lg:py-20 bg-cover object-top" style="background-image: url('{{ asset('images/svg/textura2.svg') }}');">
+        <section class="pt-[5%] py-12 lg:py-20 bg-cover object-top " style="background-image: url('{{ asset('images/svg/textura2.svg') }}');">
             <div class="grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto gap-5">
                 <div class="flex flex-col gap-10 max-w-[665px]">
                     <h2 class="text-terciario text-4xl lg:text-secondary font-outfitSemiBold leading-tight">
