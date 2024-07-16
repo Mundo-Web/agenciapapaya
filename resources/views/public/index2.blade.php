@@ -285,7 +285,7 @@
 
 
 
-        <section class="pt-[5%] py-12  bg-cover object-top " style="background-image: url('{{ asset('images/svg/textura2.svg') }}');">
+        <section class="pt-[5%] py-12 lg:py-20 bg-cover object-top " style="background-image: url('{{ asset('images/svg/textura2.svg') }}');">
             <div class="grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto gap-5">
                 <div class="flex flex-col gap-10 max-w-[665px]">
                     <h2 class="text-terciario text-4xl lg:text-secondary font-outfitSemiBold leading-tight">
@@ -296,10 +296,10 @@
                 <div class="flex flex-col gap-7 lg:gap-10 group rounded-xl">
                     <p class="text-xl font-outfitLight">Etiam lacinia tortor sed nisi imperdiet, eu rhoncus felis semper.
                         Fusce venenatis magna vel fermentum feugiat. Integer ullamcorper mauris sit amet.</p>
-                    {{-- <div class="flex flex-col justify-start items-center w-60 ">
+                    <div class="flex flex-col justify-start items-center w-60 ">
                         <a target="_blank" href="https://api.whatsapp.com/send?phone=51123456789&text=hola" rel="noopener"
                             class="btn-secondary">Solicitar Presupuesto</a>
-                    </div> --}}
+                    </div>
                 </div>
 
             </div>
@@ -441,7 +441,7 @@
         </section>
 
 
-        {{-- <section class="py-12 lg:py-20 flex flex-col w-full gap-12 relative">
+        <section class="py-12 lg:py-20 flex flex-col w-full gap-12 relative">
             <div class="w-11/12 mx-auto">
                 <h2 class=" font-outfitSemiBold text-4xl lg:text-5xl leading-none  text-terciario">
                     Lo que piensan de <span class="text-primario font-jakartaExtraBoldItalic">PMD</span>
@@ -555,7 +555,7 @@
                     <div class="swiper-button-next left-28"></div>
                 </div>
             </div>
-        </section> --}}
+        </section>
 
 
         <section class="z-10 col-span-2 pt-12 lg:pt-28">
