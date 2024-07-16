@@ -392,7 +392,7 @@
 
 
 
-        {{-- <section class="pt-[5%] py-12 lg:py-20">
+        <section class="pt-[5%] py-12 lg:py-20">
             <div class="grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto gap-5">
                 <div class="flex flex-col gap-10 max-w-[665px]">
                     <img src="{{ asset('images/svg/orbita.svg') }}" />
@@ -407,7 +407,7 @@
                 </div>
 
             </div>
-        </section> --}}
+        </section>
 
 
 
