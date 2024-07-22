@@ -33,6 +33,19 @@ class IndexController extends Controller
         return view('public.index', compact('servicios', 'titulos', 'generales', 'testimonios', 'logos'));
     }
 
+    public function index2()
+    {
+        //
+        $servicios = Service::where('status', '=', true)->where('visible', '=', true)->get();
+        $titulos = Category::where('status', '=', true)->where('visible', '=', true)->get();
+        $testimonios = Testimony::where('status', '=', true)->where('visible', '=', true)->get();
+        $logos = ClientLogos::all();
+        $generales = General::all()->first();
+
+        return view('public.index2', compact('servicios', 'titulos', 'generales', 'testimonios', 'logos'));
+    }
+
+
     public function servicios($id)
     {
         $servicioById = Service::where('id', '=', $id)->first();
