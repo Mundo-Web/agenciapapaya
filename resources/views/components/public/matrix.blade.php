@@ -111,7 +111,7 @@
             Swal.fire({
 
                 title: 'Procesando información',
-                html: `Enviando... 
+                html: `Enviando.. 
                     <p class=" text-text12">Revise su correo de Span</p>
                         <div class="max-w-2xl mx-auto overflow-hidden flex justify-center items-center mt-4 ">
                             <div role="status">
