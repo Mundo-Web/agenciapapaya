@@ -167,10 +167,10 @@
                                     ¿Estás listo para convertirte en el líder de la <span
                                         class="text-primario font-jakartaExtraBoldItalic">industria?</span>
                                 </h2>
-                                <form class="text-black font-fontBook gap-6 bg-transparent" id="formContactos">
+                                <form class="text-gray-600 font-fontBook gap-6 bg-transparent" id="formContactos">
                                     @csrf
                                     
-                                    <div class="flex flex-col xl:flex-row justify-between items-start relative py-5 gap-4">
+                                    {{-- <div class="flex flex-col xl:flex-row justify-between items-start relative py-5 gap-4">
                                         <div id="meeting-container"
                                             class="text-sm btn-secondary py-2 flex flex-row gap-2 justify-start items-center bg-transparent px-0">
                                             <input id="meeting" type="radio" name="type_meet"
@@ -185,9 +185,10 @@
                                                 value="Programar una llamada"> </input>
                                             <label for="call">Programar una llamada</label>
                                         </div>
-                                    </div>
-    
-                                    <div class="relative mb-4">
+                                    </div> --}}
+                                    
+
+                                    <div class="relative mb-4 mt-5">
                                         <input name="name" type="text" required style="font-size: 17px"
                                             class="bg-white  mt-1 block w-full border-0 border-none rounded-xl p-3  focus:ring-0 focus:border-b-2 focus:border-gray-500"
                                             placeholder="Nombre">
@@ -230,7 +231,22 @@
                                         </div>
     
                                     </div>
-    
+                                    
+                                    <div class="relative mb-4">
+                                        <select name="name" type="text" required style="font-size: 17px"
+                                            class="bg-white text-gray-600  mt-1 block w-full border-0 border-none rounded-xl p-3  focus:ring-0 focus:border-b-2 focus:border-gray-500"
+                                            placeholder="Nombre">
+                                            <option value="">Seleccione nro. de trabajadores</option>
+                                            <option value="1 a 2 Trabajadores">1 a 2 Trabajadores</option>
+                                            <option value="3 a 5 Trabajadores">3 a 5 Trabajadores</option>
+                                            <option value="6 a 10 Trabajadores">6 a 10 Trabajadores</option>
+                                            <option value="10 a más Trabajadores">10 a más Trabajadores</option>
+                                        
+                                        </select>
+                                        
+                                    </div>
+
+
                                     <div class="relative mb-4">
                                         <textarea name="message" style="font-size: 17px; height: auto; "
                                             class="min-h-28 lg:min-h-14 tracking-tight placeholder:text-base bg-white mt-1 block w-full border-0  border-none rounded-xl p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500"
