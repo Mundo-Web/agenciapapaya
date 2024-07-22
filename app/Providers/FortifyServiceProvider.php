@@ -13,16 +13,35 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Laravel\Fortify\Fortify;
 
+
+use App\Http\Responses\LoginResponse;
+use Laravel\Fortify\Contracts\LoginResponse as LoginResponseContract;
+
+use Laravel\Fortify\Contracts\TwoFactorLoginResponse as TwoFactorLoginResponseContract;
+use App\Http\Responses\TwoFactorLoginResponse;
+
+use App\Http\Responses\RegisterResponse;
+use Laravel\Fortify\Contracts\RegisterResponse as RegisterResponseContract;
+
+
 class FortifyServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
      */
+    
     public function register(): void
     {
-        //
+        $this->registerResponseBindings();
     }
 
+    protected function registerResponseBindings()
+    {
+        $this->app->singleton(LoginResponseContract::class, LoginResponse::class);
+        $this->app->singleton(RegisterResponseContract::class, RegisterResponse::class);
+
+        // $this->app->singleton(TwoFactorLoginResponseContract::class, TwoFactorLoginResponse::class);
+    }
     /**
      * Bootstrap any application services.
      */

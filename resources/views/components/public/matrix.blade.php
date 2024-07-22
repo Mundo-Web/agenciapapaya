@@ -15,38 +15,36 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
    
     {{-- <link rel="icon" href="{{asset('images/svg/Logo_redondo_2.svg')}}" type="image/svg+xml"> --}}
-    <link rel="icon" href="{{ asset('logohidromec.svg') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('images/svg/logoblancoheader.svg') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
-
-
-    </script>
 
     {{-- Aqui van los CSS --}}
     @yield('css_improtados')
 
-    {{-- Swipper --}}
+      {{-- Swipper --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hidromec - Sector Agrícola</title>
+    <title>AgenciaPapaya</title>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    {{-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KZWD9M9F');</script>
+    })(window,document,'script','dataLayer','GTM-KZWD9M9F');</script> --}}
+    
+    @include('components.shortcode.contain_head')
 
 </head>
-
+    
 <body id="inicio">
-
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZWD9M9F"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+     @include('components.shortcode.contain_body')
+   
 
     @include('components.public.header')
 
@@ -143,7 +141,7 @@
                         title: response.message,
                         icon: "success",
                     }).then(function() {
-                        window.location.href = '{{ route('agradecimiento') }}';
+                        window.location.href = '{{ route('index') }}';
                     });
 
 

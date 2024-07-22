@@ -21,7 +21,7 @@
       </button>
       <!-- Logo -->
       <a class="block" href="{{ route('mensajes.index') }}">
-        <img src="{{asset('images/img/logohidromec.png')}}" />
+        <img src="{{asset('images/svg/logoblancoheader.svg')}}" />
       </a>
     </div>
 
@@ -32,45 +32,75 @@
         <h3 class="text-xs uppercase text-slate-500 font-semibold pl-3">
           <span class="hidden lg:block lg:sidebar-expanded:hidden 2xl:hidden text-center w-6"
             aria-hidden="true">•••</span>
-          <span class="lg:hidden lg:sidebar-expanded:block 2xl:block">Hidromec - Agrícola</span>
+          <span class="lg:hidden lg:sidebar-expanded:block 2xl:block">Landing AgenciaPapaya</span>
         </h3>
         <ul class="mt-3">
 
           <!-- Messages -->
-          <li
-            class="px-3 py-2 rounded-sm mb-0.5 last:mb-0 @if (in_array(Request::segment(2), ['mensajes'])) {{ 'bg-slate-900' }} @endif">
-            <a class="block text-slate-200 hover:text-white truncate transition duration-150 @if (in_array(Request::segment(2), ['mensajes'])) {{ 'hover:text-slate-200' }} @endif"
-              href="{{ route('mensajes.index') }}">
-              <div class="flex items-center justify-between">
-                <div class="grow flex items-center">
+          @role('Customer')
+              <li
+                class="px-3 py-2 rounded-sm mb-0.5 last:mb-0 @if (in_array(Request::segment(2), ['mensajes'])) {{ 'bg-slate-900' }} @endif">
+                <a class="block text-slate-200 hover:text-white truncate transition duration-150 @if (in_array(Request::segment(2), ['mensajes'])) {{ 'hover:text-slate-200' }} @endif"
+                  href="{{ route('mensajes.index') }}">
+                  <div class="flex items-center justify-between">
+                    <div class="grow flex items-center">
+                      <svg class="shrink-0 h-6 w-6" viewBox="0 0 24 24">
+                        <path
+                          class="fill-current @if (in_array(Request::segment(2), ['mensajes'])) {{ 'text-indigo-500' }}@else{{ 'text-slate-600' }} @endif"
+                          d="M14.5 7c4.695 0 8.5 3.184 8.5 7.111 0 1.597-.638 3.067-1.7 4.253V23l-4.108-2.148a10 10 0 01-2.692.37c-4.695 0-8.5-3.184-8.5-7.11C6 10.183 9.805 7 14.5 7z" />
+                        <path
+                          class="fill-current @if (in_array(Request::segment(2), ['mensajes'])) {{ 'text-indigo-300' }}@else{{ 'text-slate-400' }} @endif"
+                          d="M11 1C5.477 1 1 4.582 1 9c0 1.797.75 3.45 2 4.785V19l4.833-2.416C8.829 16.85 9.892 17 11 17c5.523 0 10-3.582 10-8s-4.477-8-10-8z" />
+                      </svg>
+                      <span
+                        class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Mensajes</span>
+                    </div>
+                    <!-- Badge -->
+                    <div class="flex flex-shrink-0 ml-2">
+                      @if ($mensajes !== 0)
+                        <span
+                        class="inline-flex items-center justify-center h-5 text-xs font-medium text-white bg-indigo-500 px-2 rounded">
+                        {{ $mensajes }}
+                        </span>
+                      @endif
+                      
+                    </div>
+                  </div>
+                </a>
+              </li>
+          @endrole
+
+
+
+
+            <!-- Shortcode -->
+
+          @role('Admin')
+            <li
+              class="px-3 py-2 rounded-sm mb-0.5 last:mb-0 @if (in_array(Request::segment(2), ['shortcode'])) {{ 'bg-slate-900' }} @endif">
+              <a class="block text-slate-200 hover:text-white truncate transition duration-150 @if (in_array(Request::segment(2), ['shortcode'])) {{ 'hover:text-slate-200' }} @endif"
+                href="{{ route('shortcode.edit', 1) }}">
+                <div class="flex items-center">
                   <svg class="shrink-0 h-6 w-6" viewBox="0 0 24 24">
                     <path
-                      class="fill-current @if (in_array(Request::segment(2), ['mensajes'])) {{ 'text-indigo-500' }}@else{{ 'text-slate-600' }} @endif"
-                      d="M14.5 7c4.695 0 8.5 3.184 8.5 7.111 0 1.597-.638 3.067-1.7 4.253V23l-4.108-2.148a10 10 0 01-2.692.37c-4.695 0-8.5-3.184-8.5-7.11C6 10.183 9.805 7 14.5 7z" />
+                      class="fill-current @if (in_array(Request::segment(2), ['shortcode'])) {{ 'text-indigo-500' }}@else{{ 'text-slate-600' }} @endif"
+                      d="M1 3h22v20H1z" />
                     <path
-                      class="fill-current @if (in_array(Request::segment(2), ['mensajes'])) {{ 'text-indigo-300' }}@else{{ 'text-slate-400' }} @endif"
-                      d="M11 1C5.477 1 1 4.582 1 9c0 1.797.75 3.45 2 4.785V19l4.833-2.416C8.829 16.85 9.892 17 11 17c5.523 0 10-3.582 10-8s-4.477-8-10-8z" />
+                      class="fill-current @if (in_array(Request::segment(2), ['shortcode'])) {{ 'text-indigo-300' }}@else{{ 'text-slate-400' }} @endif"
+                      d="M21 3h2v4H1V3h2V1h4v2h10V1h4v2Z" />
                   </svg>
                   <span
-                    class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Mensajes</span>
+                    class="text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Códigos cortos</span>
                 </div>
-                <!-- Badge -->
-                <div class="flex flex-shrink-0 ml-2">
-                  @if ($mensajes !== 0)
-                    <span
-                    class="inline-flex items-center justify-center h-5 text-xs font-medium text-white bg-indigo-500 px-2 rounded">
-                    {{ $mensajes }}
-                    </span>
-                  @endif
-                  
-                </div>
-              </div>
-            </a>
-          </li>
+              </a>
+            </li>
+          @endrole
+
+
 
           <!-- Suscripciones -->
 
-          <li
+          {{-- <li
             class="px-3 py-2 rounded-sm mb-0.5 last:mb-0 @if (in_array(Request::segment(2), ['suscripcion'])) {{ 'bg-slate-900' }} @endif">
             <a class="block text-slate-200 hover:text-white truncate transition duration-150 @if (in_array(Request::segment(2), ['suscripcion'])) {{ 'hover:text-slate-200' }} @endif"
               href="{{ route('subscripciones') }}">
@@ -89,7 +119,7 @@
                 </div>
               </div>
             </a>
-          </li>
+          </li> --}}
 
           <!-- Datos generales -->
           {{-- <li
@@ -111,6 +141,9 @@
               </div>
             </a>
           </li> --}}
+
+        
+
 
           {{-- <!-- Servicios -->
           <li

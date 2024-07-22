@@ -51,97 +51,46 @@ export default {
                 blue: "2px solid rgba(0, 112, 244, 0.5)",
             },
             fontFamily: {
-                helveticaBold: ["helveticaBold", "sans-serif"],
-                helveticaMedium: ["helveticaMedium", "sans-serif"],
-                helveticaRegular: ["helveticaRegular", "sans-serif"],
-                helveticaLight: ["helveticaLight", "sans-serif"],
+                jakartaExtraBold: ["jakartaExtraBold", "sans-serif"],
+                jakartaBold: ["jakartaBold", "sans-serif"],
+                jakartaSemiBold: ["jakartaSemiBold", "sans-serif"],
+                jakartaMedium: ["jakartaMedium", "sans-serif"],
+                jakartaRegular: ["jakartaRegular", "sans-serif"],
+                jakartaExtraBoldItalic: ["jakartaExtraBoldItalic", "sans-serif"],
+
+                outfitExtraBold: ["outfitExtraBold", "sans-serif"],
+                outfitBold: ["outfitBold", "sans-serif"],
+                outfitSemiBold: ["outfitSemiBold", "sans-serif"],
+                outfitMedium: ["outfitMedium", "sans-serif"],
+                outfitRegular: ["outfitRegular", "sans-serif"],
+                outfitLight: ["outfitLight", "sans-serif"],
+                outfitExtraLight: ["outfitExtraLight", "sans-serif"],
+
             },
             fontSize: {
-                xs: ["0.75rem", { lineHeight: "1.5" }],
-                sm: ["0.875rem", { lineHeight: "1.5715" }],
-                base: ["1rem", { lineHeight: "1.5", letterSpacing: "-0.01em" }],
-                lg: [
-                    "1.125rem",
-                    { lineHeight: "1.5", letterSpacing: "-0.01em" },
-                ],
-                xl: [
-                    "1.25rem",
-                    { lineHeight: "1.5", letterSpacing: "-0.01em" },
-                ],
-                "2xl": [
-                    "1.5rem",
-                    { lineHeight: "1.33", letterSpacing: "-0.01em" },
-                ],
-                "3xl": [
-                    "1.88rem",
-                    { lineHeight: "1.33", letterSpacing: "-0.01em" },
-                ],
-                "4xl": [
-                    "2.25rem",
-                    { lineHeight: "1.25", letterSpacing: "-0.02em" },
-                ],
-                "5xl": [
-                    "3rem",
-                    { lineHeight: "1.25", letterSpacing: "-0.02em" },
-                ],
-                "6xl": [
-                    "3.75rem",
-                    { lineHeight: "1.2", letterSpacing: "-0.02em" },
-                ],
-
-                text8: "8px",
-                text10: "10px",
-                text12: "12px",
-                text14: "14px",
-                text16: "16px",
-                text18: "18px",
-                text20: "20px",
-                text22: "22px",
-                text24: "24px",
-                text26: "26px",
-                text28: "28px",
-                text32: "32px",
-                text34: "34px",
-                text36: "36px",
-                text40: "40px",
-                text44: "44px",
-                text46: "46px",
-                text48: "48px",
-                text50: "50px",
-                text52: "52px",
-                text56: "56px",
-                text60: "60px",
-                text64: "64px",
-                text72: "72px",
-                text76: "76px",
-                text80: "80px",
-            },
-
-            backgroundImage: {
-                Hero_Doctor_mobile:
-                    "url('/public/images/img/Hero_Doctor_mobile.png')",
-                Hero_Doctor: "url('/public/images/img/Hero_Doctor.png')",
+                primary: "70px",
+                secondary: "54px",
+                
             },
 
             backgroundColor: {
-                primario: "#232B52",
+                primario: "#EB1717",
                 secundario: "#007FC8",
-                terciario: "#161A32",
+                terciario: "#080101",
+                cardflip: "#F5F6F7"
             },
             textColor: {
-                primario: "#232B52",
+                primario: "#EB1717",
                 secundario: "#007FC8",
-                terciario: "#161A32",
+                terciario: "#080101",
             },
             borderColor: {
                 selectCheck: "#173525",
                 borderOrange: "#E38533",
                 borderverde: "#33BF82",
             },
-
             screens: {
-                xs: "320px",
-                "2xs": "370px",
+                "xs": "500px",
                 sm: "640px",
                 "2sm": "700px",
                 md: "768px",
@@ -151,9 +100,6 @@ export default {
                 lg: "1024px",
                 xl: "1280px",
                 "2xl": "1536px",
-            },
-            borderWidth: {
-                3: "3px",
             },
             minWidth: {
                 36: "9rem",
@@ -167,8 +113,12 @@ export default {
                 "8xl": "88rem",
                 "9xl": "96rem",
             },
-            zIndex: {
-                60: "60",
+            height: {
+                '700': '700px', 
+                '600': '600px', 
+                '400': '400px', 
+                '500': '500px', 
+                
             },
             backgroundSize: {
                 'auto': 'auto',
@@ -176,6 +126,21 @@ export default {
                 'contain': 'contain',
                 '100%': '100%',
                 '16': '4rem',
+            },
+
+            animation: {
+                'infinite-scroll': 'infinite-scroll 25s linear infinite',
+            },
+            
+            keyframes: {
+                'infinite-scroll': {
+                  from: { transform: 'translateX(0)' },
+                  to: { transform: 'translateX(-100%)' },
+                }
+            },
+
+            backgroundImage: {
+                'textura1': "url('/images/svg/textura1.svg')",
             },
         },
     },

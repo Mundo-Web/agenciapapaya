@@ -22,6 +22,7 @@ use App\Http\Controllers\LogosClientController;
 
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\NewsletterSubscriberController;
+use App\Http\Controllers\ShortcodeController;
 use App\Http\Controllers\StaffController;
 
 /*
@@ -60,6 +61,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
         //Datos Generales
         Route::resource('/datosgenerales', GeneralController::class);
+
+         //shortcode
+         Route::resource('/shortcode', ShortcodeController::class);
 
         //Testimonies
         Route::resource('/testimonios', TestimonyController::class);
