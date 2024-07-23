@@ -379,7 +379,7 @@ class IndexController extends Controller
     private function envioCorreoCliente($data)
     {
         $generales = General::first();
-        $name = $data['full_name'];
+        $name = $data['name'];
         $mensaje = 'Gracias por comunicarte - Agencia Papaya';
         $mail = EmailConfig::config($name, $mensaje);
         $baseUrl = 'https://' . $_SERVER['HTTP_HOST'] . '/mail';
