@@ -189,8 +189,8 @@ class IndexController extends Controller
 
 
             $formlanding = Message::create($data);
-            // $this->envioCorreoAdmin($formlanding);
-            // $this->envioCorreoCliente($formlanding);
+             $this->envioCorreoAdmin($formlanding);
+             $this->envioCorreoCliente($formlanding);
 
             return response()->json(['message' => 'Mensaje enviado con exito']);
         } catch (ValidationException $e) {
@@ -203,9 +203,9 @@ class IndexController extends Controller
         $generales = General::first();
         // $name = $data['full_name'];
         $name = 'Administrador';
-        $mensaje = 'tienes un nuevo mensaje - Hidromec Agrícola';
+        $mensaje = 'tienes un nuevo mensaje - Agencia Papaya';
         $mail = EmailConfig::config($name, $mensaje);
-        $emailadmin = 'ventas.digital@hidromecingenieros.com';
+        $emailadmin = 'hola@mundoweb.pe';
         $baseUrl = 'https://' . $_SERVER['HTTP_HOST'] . '/mail';
         $baseUrllink = 'https://' . $_SERVER['HTTP_HOST'] . '/';
 
@@ -263,7 +263,7 @@ class IndexController extends Controller
                 $baseUrllink .
                 '" target="_blank" style="text-align:center" ><img src="' .
                 $baseUrl .
-                '/logo.png" alt="hpi" /></a>
+                '/logo.svg" alt="hpi" /></a>
             </th>
           </tr>
         </thead>
@@ -320,7 +320,7 @@ class IndexController extends Controller
           <tr style="margin-top: 300px">
              <td>
               <a
-                href="https://www.facebook.com/hidromecingenieros"
+                href="https://www.facebook.com/"
                 target="_blank"
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
@@ -330,7 +330,7 @@ class IndexController extends Controller
               /></a>
 
               <a
-                href="https://www.instagram.com/hidromecingenieros/?hl=es"
+                href="https://www.instagram.com/"
                 target="_blank"
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
@@ -340,7 +340,7 @@ class IndexController extends Controller
               /></a>
 
               <a
-                href="https://www.linkedin.com/company/hidromecingenieros/"
+                href="https://www.linkedin.com/"
                 target="_blank"
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
@@ -350,7 +350,7 @@ class IndexController extends Controller
               /></a>
 
               <a
-                href="https://www.youtube.com/channel/UC3VTnRz6b1aFrpQleveaxmw"
+                href="https://www.youtube.com/"
                 target="_blank"
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
@@ -380,7 +380,7 @@ class IndexController extends Controller
     {
         $generales = General::first();
         $name = $data['full_name'];
-        $mensaje = 'Gracias por comunicarte - Hidromec Agrícola';
+        $mensaje = 'Gracias por comunicarte - Agencia Papaya';
         $mail = EmailConfig::config($name, $mensaje);
         $baseUrl = 'https://' . $_SERVER['HTTP_HOST'] . '/mail';
         $baseUrllink = 'https://' . $_SERVER['HTTP_HOST'] . '/';
@@ -439,7 +439,7 @@ class IndexController extends Controller
                 $baseUrllink .
                 '" target="_blank" style="text-align:center" ><img src="' .
                 $baseUrl .
-                '/logo.png" alt="hidromec" /></a>
+                '/logo.svg" alt="hidromec" /></a>
             </th>
           </tr>
         </thead>
@@ -542,7 +542,7 @@ class IndexController extends Controller
           <tr>
             <td>
               <a
-                href="https://www.facebook.com/hidromecingenieros"
+                href="https://www.facebook.com/"
                 target="_blank"
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
@@ -552,7 +552,7 @@ class IndexController extends Controller
               /></a>
 
               <a
-                href="https://www.instagram.com/hidromecingenieros/?hl=es"
+                href="https://www.instagram.com/"
                 target="_blank"
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
@@ -562,7 +562,7 @@ class IndexController extends Controller
               /></a>
 
               <a
-                href="https://www.linkedin.com/company/hidromecingenieros/"
+                href="https://www.linkedin.com/"
                 target="_blank"
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
@@ -572,7 +572,7 @@ class IndexController extends Controller
               /></a>
 
               <a
-                href="https://www.youtube.com/channel/UC3VTnRz6b1aFrpQleveaxmw"
+                href="https://www.youtube.com/"
                 target="_blank"
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
