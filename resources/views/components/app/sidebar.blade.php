@@ -37,7 +37,7 @@
         <ul class="mt-3">
 
           <!-- Messages -->
-          @role('Customer')
+          @role('Customer|Admin')
               <li
                 class="px-3 py-2 rounded-sm mb-0.5 last:mb-0 @if (in_array(Request::segment(2), ['mensajes'])) {{ 'bg-slate-900' }} @endif">
                 <a class="block text-slate-200 hover:text-white truncate transition duration-150 @if (in_array(Request::segment(2), ['mensajes'])) {{ 'hover:text-slate-200' }} @endif"
