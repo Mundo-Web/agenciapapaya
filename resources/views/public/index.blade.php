@@ -134,6 +134,10 @@
 
 @stop
 
+@section('headseo')
+    {!! SEO::generate() !!}
+@stop
+
 @section('content')
 
     <main class="-mt-20">
@@ -144,11 +148,11 @@
                     <div class="flex flex-col gap-10 items-center py-10 px-[2%]">
                         <h2
                             class="font-outfitSemiBold  text-4xl leading-none lg:text-primary  text-white max-w-4xl  text-center">
-                            Vive la experiencia Papaya Marketing <span
-                                class="text-primario font-jakartaExtraBoldItalic">Digital</span>
+                            Multiplica tus Ventas B2B y B2C y Dispara tu <span
+                                class="text-primario font-jakartaExtraBoldItalic">Crecimiento Empresarial</span>
                         </h2>
-                        <p class="text-white text-xl tracking-wider text-center font-outfitLight">
-                            Vestibulum dignissim vestibulum tellus non semper. Cras dignissim lacus id pellentesque blandit.
+                        <p class="text-white text-xl tracking-wider text-center font-outfitLight max-w-4xl">
+                            Nuestra agencia especializada está aquí para potenciar tu éxito. Triplica tus ventas B2B y  B2C y transforma tu negocio con estrategias probadas y resultados tangibles.
                         </p>
                     </div>
                 </div>

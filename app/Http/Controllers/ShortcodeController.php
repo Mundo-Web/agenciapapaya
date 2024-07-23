@@ -59,11 +59,16 @@ class ShortcodeController extends Controller
     public function update(Request $request, $id)
     {
       
+        $validatedData = $request->validate([
+            'head' => 'required',  // Ejemplo de campo requerido
+            'body' => 'required',  // Ejemplo de campo opcional
+            // Agrega las reglas de validación para tus campos aquí
+        ]);
 
         $shortcode = Shortcode::findOrfail($id); 
 
         // Actualizar los campos del registro con los datos del formulario
-        $shortcode->update($request->all());
+         $shortcode->update($request->all());
 
         // Guardar 
         $shortcode->save();  

@@ -15,6 +15,10 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 use PhpParser\Node\Stmt\TryCatch;
 use App\Helpers\EmailConfig;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Facades\SEOTools;
+use Illuminate\Support\Facades\URL;
 
 class IndexController extends Controller
 {
@@ -29,6 +33,22 @@ class IndexController extends Controller
         $testimonios = Testimony::where('status', '=', true)->where('visible', '=', true)->get();
         $logos = ClientLogos::all();
         $generales = General::all()->first();
+        $baseUrllink = 'https://' . $_SERVER['HTTP_HOST'] . '/';
+        
+
+        SEOMeta::setTitle($generales->seo_title);
+        SEOMeta::setDescription($generales->seo_description);
+        SEOMeta::setCanonical($baseUrllink);
+        SEOMeta::addKeyword([$generales->seo_keywords]);
+        SEOTools::setDescription($generales->seo_description);
+
+        OpenGraph::setDescription($generales->seo_description);
+        OpenGraph::setTitle($generales->seo_title);
+        OpenGraph::setUrl($baseUrllink);
+        OpenGraph::addProperty('type', 'website');
+        OpenGraph::addProperty('locale', 'es-es');
+        
+        OpenGraph::addImage(URL::to('/logocreditomype.svg'));
 
         return view('public.index', compact('servicios', 'titulos', 'generales', 'testimonios', 'logos'));
     }
