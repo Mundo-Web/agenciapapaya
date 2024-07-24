@@ -17,7 +17,7 @@
                                 <th>Nombre</th>
                                 <th>Correo</th>
                                 <th>Teléfono</th>
-                                <th>DNI</th>
+                                <th>Empresa</th>
                                 <th>Acción</th>
                             </tr>
                         </thead>
@@ -29,16 +29,16 @@
                                     <td>
                                         @if ($item->is_read == '0')
                                             <a href="{{ route('mensajes.show', $item->id) }}"><span class="mr-4"><i
-                                                        class="fa-regular fa-envelope"></i></span><span class="font-bold">{{ $item->full_name }}</span></a>
+                                                        class="fa-regular fa-envelope"></i></span><span class="font-bold">{{ $item->name }}</span></a>
                                         @else
                                             <a href="{{ route('mensajes.show', $item->id) }}"><span class="mr-4"><i
                                                         class="fa-regular fa-envelope-open"></i></span><span
-                                                    >{{ $item->full_name }}</span></a>
+                                                    >{{ $item->name }}</span></a>
                                         @endif
                                     </td>
                                     <td>{{ $item->email }}</td>
                                     <td>{{ $item->cellphone }}</td>
-                                    <td>{{ $item->document }}</td>
+                                    <td>{{ $item->business }}</td>
                                     <td>
                                         <form action="" method="POST">
                                             @csrf
@@ -56,7 +56,7 @@
                                 <th>Nombre</th>
                                 <th>Correo</th>
                                 <th>Teléfono</th>
-                                <th>DNI</th>
+                                <th>Empresa</th>
                                 <th>Acciones</th>
                             </tr>
                         </tfoot>
