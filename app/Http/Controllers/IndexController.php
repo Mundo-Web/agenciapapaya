@@ -263,7 +263,7 @@ class IndexController extends Controller
                 $baseUrllink .
                 '" target="_blank" style="text-align:center" ><img src="' .
                 $baseUrl .
-                '/logo.svg" alt="hpi" /></a>
+                '/logo.svg" alt="agenciapapaya" /></a>
             </th>
           </tr>
         </thead>
@@ -439,7 +439,7 @@ class IndexController extends Controller
                 $baseUrllink .
                 '" target="_blank" style="text-align:center" ><img src="' .
                 $baseUrl .
-                '/logo.svg" alt="hidromec" /></a>
+                '/logo.svg" alt="agenciapapaya" /></a>
             </th>
           </tr>
         </thead>
