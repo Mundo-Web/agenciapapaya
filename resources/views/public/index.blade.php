@@ -692,10 +692,9 @@
                             <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
 
                                 <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
-                                    Donec molestie, urna scelerisque auctor bibendum, libero libero sollicitudin diam,
-                                    et eleifend massa nisi vitae ipsum. In massa mauris, porttitor id eros et, ornare
-                                    laoreet magna. Y sera designado<span class="text-primario font-jakartaExtraBoldItalic"> para
-                                        ti!.</span>
+                                   "La agencia transformó nuestra presencia digital. Gracias a su estrategia innovadora, 
+                                   incrementamos nuestras ventas online y construimos una marca sólida y  <span class="text-primario font-jakartaExtraBoldItalic"> reconocida en 
+                                   el mercado."</span>
                                 </h2>
                                 <div class="flex flex-col justify-start items-center">
                                     <div class="flex flex-row items-center gap-3">
@@ -724,10 +723,10 @@
                             <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
 
                                 <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
-                                    Donec molestie, urna scelerisque auctor bibendum, libero libero sollicitudin diam,
-                                    et eleifend massa nisi vitae ipsum. In massa mauris, porttitor id eros et, ornare
-                                    laoreet magna. Y sera designado<span class="text-primario font-jakartaExtraBoldItalic"> para
-                                        ti!.</span>
+                                    "Trabajar con esta agencia ha sido increíble. Su equipo es profesional y sus 
+                                    soluciones creativas nos han ayudado a alcanzar nuevos niveles de 
+                                    <span class="text-primario font-jakartaExtraBoldItalic"> éxito y 
+                                    crecimiento."</span>
                                 </h2>
                                 <div class="flex flex-col justify-start items-center">
                                     <div class="flex flex-row items-center gap-3">
@@ -756,10 +755,9 @@
                             <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
 
                                 <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
-                                    Donec molestie, urna scelerisque auctor bibendum, libero libero sollicitudin diam,
-                                    et eleifend massa nisi vitae ipsum. In massa mauris, porttitor id eros et, ornare
-                                    laoreet magna. Y sera designado<span class="text-primario font-jakartaExtraBoldItalic"> para
-                                    ti!.</span>
+                                   "Desde que contratamos a la agencia, hemos visto un aumento significativo en el tráfico web y 
+                                   en las conversiones. Su enfoque personalizado ha sido 
+                                   <span class="text-primario font-jakartaExtraBoldItalic"> clave para nuestro éxito."</span>
                                 </h2>
                                 <div class="flex flex-col justify-start items-center">
                                     <div class="flex flex-row items-center gap-3">
@@ -790,10 +788,10 @@
         <section class="flex flex-col justify-center items-center w-11/12 mx-auto rounded-[35px] py-20 bg-[#110101] gap-6 mb-16 lg:mb-24 px-5 bg-center object-left-top bg-cover bg-no-repeat" style="background-image: url('{{ asset('images/img/textura4.webp') }}');">
             
             <h2 class="font-outfitSemiBold  text-4xl leading-none md:text-5xl  text-white max-w-3xl  text-center">
-                ¿Listo para convertirte en un líder de la <span class="text-primario font-jakartaExtraBoldItalic">Industria</span>
+                ¿Listo para convertirte en un líder de la <span class="text-primario font-jakartaExtraBoldItalic">Industria?</span>
             </h2>
-            <p class="text-lg font-outfitExtraLight text-white text-center max-w-3xl">Etiam lacinia tortor sed nisi imperdiet, eu rhoncus
-                felis semper. Fusce venenatis magna vel fermentum feugiat. Integer ullamcorper mauris sit amet.</p>
+            <p class="text-lg font-outfitExtraLight text-white text-center max-w-3xl">Prepárate para marcar la diferencia y liderar la industria con estrategias innovadoras y un enfoque audaz. 
+            Transforma tus ideas en logros y destaca en un mercado competitivo.</p>
 
             <div class="flex flex-col justify-start items-center w-60 ">
                 <a target="_blank" href="https://api.whatsapp.com/send?phone=51123456789&text=hola" rel="noopener"
