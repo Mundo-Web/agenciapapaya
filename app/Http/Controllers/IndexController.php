@@ -192,7 +192,7 @@ class IndexController extends Controller
 
 
             $formlanding = Message::create($data);
-            //  $this->envioCorreoAdmin($formlanding);
+             $this->envioCorreoAdmin($formlanding);
              $this->envioCorreoCliente($formlanding);
 
             return response()->json(['message' => 'Mensaje enviado con exito']);
