@@ -17,8 +17,13 @@
                                 <th>Nombre</th>
                                 <th>Correo</th>
                                 <th>Teléfono</th>
-                                <th>DNI</th>
-                                <th>Acción</th>
+                                <th>IP</th>
+                                <th>Dispositivo</th>
+                                <th>Latitud</th>
+                                <th>Longitud</th>
+                                <th>Sistema</th>
+                                <th>Registrado</th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -29,16 +34,21 @@
                                     <td>
                                         @if ($item->is_read == '0')
                                             <a href="{{ route('mensajes.show', $item->id) }}"><span class="mr-4"><i
-                                                        class="fa-regular fa-envelope"></i></span><span class="font-bold">{{ $item->full_name }}</span></a>
+                                                        class="fa-regular fa-envelope"></i></span><span class="font-bold">{{ $item->name }}</span></a>
                                         @else
                                             <a href="{{ route('mensajes.show', $item->id) }}"><span class="mr-4"><i
                                                         class="fa-regular fa-envelope-open"></i></span><span
-                                                    >{{ $item->full_name }}</span></a>
+                                                    >{{ $item->name }}</span></a>
                                         @endif
                                     </td>
                                     <td>{{ $item->email }}</td>
                                     <td>{{ $item->cellphone }}</td>
-                                    <td>{{ $item->document }}</td>
+                                    <td>{{ $item->ip }}</td>
+                                    <td>{{ $item->device }}</td>
+                                    <td>{{ $item->client_latitude }}</td>
+                                    <td>{{ $item->client_longitude }}</td>
+                                    <td>{{ $item->client_system }}</td>
+                                    <td>{{ $item->created_at->format('d-m-Y') }}</td>
                                     <td>
                                         <form action="" method="POST">
                                             @csrf
@@ -56,7 +66,12 @@
                                 <th>Nombre</th>
                                 <th>Correo</th>
                                 <th>Teléfono</th>
-                                <th>DNI</th>
+                                <th>IP</th>
+                                <th>Dispositivo</th>
+                                <th>Latitud</th>
+                                <th>Longitud</th>
+                                <th>Sistema</th>
+                                <th>Registrado</th>
                                 <th>Acciones</th>
                             </tr>
                         </tfoot>

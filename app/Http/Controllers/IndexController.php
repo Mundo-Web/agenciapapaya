@@ -142,11 +142,14 @@ class IndexController extends Controller
             $reglasValidacion = [
                 'name' => 'required|string|max:255',
                 'cellphone' => 'required|string|max:99999999999',
+                'email' => 'required|email|max:255',
             ];
             $mensajes = [
                 'name.required' => 'El campo nombre es obligatorio.',
                 'cellphone.required' => 'El campo teléfono es obligatorio.',
                 'cellphone.integer' => 'El campo teléfono debe ser un número entero.',
+                'email.required' => 'El campo correo electrónico es obligatorio.',
+                'email.email' => 'El formato del correo electrónico no es válido.',
             ];
 
             $request->validate($reglasValidacion, $mensajes);
