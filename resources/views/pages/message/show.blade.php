@@ -24,13 +24,21 @@
                                 <td class="border px-4 py-2 font-bold text-[16px]">Correo</td>
                                 <td class="border px-4 py-2 text-[15px]">{{$message->email}}</td>
                             </tr>
+                             <tr>
+                                <td class="border px-4 py-2 font-bold text-[16px]">Puesto en empresa</td>
+                                <td class="border px-4 py-2 text-[15px]">{{$message->job}}</td>
+                            </tr>
                             <tr>
-                                <td class="border px-4 py-2 font-bold text-[16px]">DNI</td>
-                                <td class="border px-4 py-2 text-[15px]">{{$message->document}}</td>
+                                <td class="border px-4 py-2 font-bold text-[16px]">Empresa</td>
+                                <td class="border px-4 py-2 text-[15px]">{{$message->business}}</td>
+                            </tr>
+                             <tr>
+                                <td class="border px-4 py-2 font-bold text-[16px]">Nro. de trabajadores</td>
+                                <td class="border px-4 py-2 text-[15px]">{{$message->total_personal}}</td>
                             </tr>
                             <tr>
                                 <td class="border px-4 py-2 font-bold text-[16px]">Mensaje</td>
-                                <td class="border px-4 py-2 text-[15px]">{{$message->address}}</td>
+                                <td class="border px-4 py-2 text-[15px]">{{$message->message}}</td>
                             </tr>
                         </tbody>
                     </table>
