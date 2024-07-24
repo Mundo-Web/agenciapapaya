@@ -25,12 +25,8 @@
                                 <td class="border px-4 py-2 text-[15px]">{{$message->email}}</td>
                             </tr>
                              <tr>
-                                <td class="border px-4 py-2 font-bold text-[16px]">Puesto en empresa</td>
-                                <td class="border px-4 py-2 text-[15px]">{{$message->job}}</td>
-                            </tr>
-                            <tr>
-                                <td class="border px-4 py-2 font-bold text-[16px]">Empresa</td>
-                                <td class="border px-4 py-2 text-[15px]">{{$message->business}}</td>
+                                <td class="border px-4 py-2 font-bold text-[16px]">Sector Empresa</td>
+                                <td class="border px-4 py-2 text-[15px]">{{$message->sector_business}}</td>
                             </tr>
                              <tr>
                                 <td class="border px-4 py-2 font-bold text-[16px]">Nro. de trabajadores</td>

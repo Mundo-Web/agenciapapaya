@@ -220,25 +220,37 @@
                 </div>
 
 
-                <div class="flex flex-col md:flex-row md:gap-4">
+                <div class="relative mb-5">
 
-                  <div class="relative mb-4 w-full">
+                  {{-- <div class="relative mb-4 w-full">
                     <input id="contact_position" name="job" type="job" style="font-size: 17px"
                       class="bg-white mt-1 block w-full border-0  border-none rounded-xl p-3 focus:ring-0 focus:border-b-2 focus:border-gray-500"
                       placeholder="Puesto laboral">
-                    {{-- <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span> --}}
+                   
                   </div>
 
                   <div class="relative mb-4 w-full">
                     <input id="tradename" name="business" type="text" style="font-size: 17px"
                       class="bg-white mt-1 block w-full border-0  border-none rounded-xl p-3  focus:ring-0 focus:border-b-2 focus:border-gray-500"
                       placeholder="Empresa">
-                    {{-- <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span> --}}
-                  </div>
+                    
+                  </div> --}}
+
+                  <select id="sector_business" name="sector_business" type="text" required style="font-size: 17px"
+                    class="bg-white text-gray-600  mt-1 block w-full border-0 border-none rounded-xl p-3  focus:ring-0 focus:border-b-2 focus:border-gray-500"
+                    >
+                    <option value="">Seleccione el rubro de su empresa</option>
+                    <option value="Rubro">Rubro</option>
+                    <option value="Comercial">Comercial</option>
+                    <option value="Industrial">Industrial</option>
+                    <option value="Inmobiliario">Inmobiliario</option>
+                    <option value="Otros">Otros</option>
+
+                  </select>
 
                 </div>
 
-                <div class="relative mb-4">
+                <div class="relative mb-5">
                   <select id="workers" name="total_personal" type="text" required style="font-size: 17px"
                     class="bg-white text-gray-600  mt-1 block w-full border-0 border-none rounded-xl p-3  focus:ring-0 focus:border-b-2 focus:border-gray-500"
                     placeholder="Nombre">

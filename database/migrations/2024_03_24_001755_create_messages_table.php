@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('document')->nullable();
             $table->string('job')->nullable();
             $table->string('business')->nullable();
+            $table->string('sector_business')->nullable();
             $table->string('total_personal')->nullable();
             $table->string('email')->nullable();
             $table->string('cellphone')->nullable();
