@@ -244,7 +244,7 @@ class IndexController extends Controller
           text-align: center;
           background-image: url(' .
                 $baseUrl .
-                '/fondo.png);
+                'fondo.png);
           background-repeat: no-repeat;
           background-position: center;
           background-size: cover;
@@ -266,7 +266,7 @@ class IndexController extends Controller
                 $baseUrllink .
                 '" target="_blank" style="text-align:center" ><img src="' .
                 $baseUrl .
-                '/logo.svg" alt="hpi" /></a>
+                'logo.svg" alt="agenciapapaya" /></a>
             </th>
           </tr>
         </thead>
@@ -420,7 +420,7 @@ class IndexController extends Controller
           text-align: center;
           background-image: url(' .
                 $baseUrl .
-                '/fondo.png);
+                'fondo.png);
           background-repeat: no-repeat;
           background-position: center;
           background-size: cover;
@@ -442,7 +442,7 @@ class IndexController extends Controller
                 $baseUrllink .
                 '" target="_blank" style="text-align:center" ><img src="' .
                 $baseUrl .
-                '/logo.svg" alt="hidromec" /></a>
+                'logo.svg" alt="agenciapapaya" /></a>
             </th>
           </tr>
         </thead>
