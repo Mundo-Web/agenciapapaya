@@ -1,0 +1,25 @@
+@font-face {
+font-family: "font_Bold";
+src: url("/fonts/gothambold.woff") format("woff");
+}
+
+@font-face {
+font-family: "font_Book";
+src: url("/fonts/gothambook.woff") format("woff");
+}
+
+@font-face {
+font-family: "font_Light";
+src: url("/fonts/gothamlight.woff") format("woff");
+}
+
+@font-face {
+font-family: "font_Medium";
+src: url("/fonts/gothammedium.woff") format("woff");
+}
+
+@font-face {
+font-family: "font_Thin";
+src: url("/fonts/gothamthin.woff") format("woff");
+}
+

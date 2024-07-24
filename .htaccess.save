@@ -1,0 +1,29 @@
+did not have mod_rewrite enabled
+
+RewriteEngine On
+# RewriteBase /
+# NOT needed unless you're using mod_alias to redirect
+
+RewriteCond %{REQUEST_URI} !/public
+<<<<<<< HEAD
+RewriteRule ^(.*)$ public/$1 [L]
+# Direct all requests to /public folder
+
+</IfModule>
+=======
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^public
+RewriteRule ^(.*)$ public/$1 [L]
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php81” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php81___lsphp .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
+>>>>>>> f2c6a8a243a100251703e63dcbf92059dcbca759
+=======
+RewriteRule ^(.*)$ public/$1 [L]
+# Direct all requests to /public folder
+
+</IfModule>
+>>>>>>> f7189a3c0e841eff1a7ee547f7ddafddca2df19a
