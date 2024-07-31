@@ -709,7 +709,7 @@
                 </div> --}}
 
                 <div class="w-full h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/rimbocare.png') }}');">
-                  <div class="absolute inset-0 flex items-center justify-center bg-opacity-50 cursor-pointer" onclick="showVideo()">
+                  <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo()">
                     <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/svg/iconoplayblanco.svg') }}" /></button>
                   </div>
                   <iframe id="videoIframe" class="w-full h-full hidden" src="https://www.youtube.com/embed/qoUcwenpYOY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -1085,7 +1085,7 @@
 <script>
   function showVideo() {
     document.querySelector('.bg-cover').style.backgroundImage = 'none';
-    document.querySelector('.bg-black').style.display = 'none';
+    document.querySelector('.disparo').style.display = 'none';
     document.getElementById('videoIframe').classList.remove('hidden');
   }
 </script>
