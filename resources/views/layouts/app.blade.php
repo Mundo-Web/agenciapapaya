@@ -16,7 +16,8 @@
 
        <!-- funciones -->
        
-
+        <!-- Include the Quill library -->
+        <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
 
         <!-- DataTable -->
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
@@ -38,7 +39,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
          <!-- TinyMCE -->
-        <script src="https://cdn.tiny.cloud/1/i2lf2egqns56ftu0812lpnih9nl0vnndkgjjeun1bhg24xsp/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+        {{-- <script src="https://cdn.tiny.cloud/1/i2lf2egqns56ftu0812lpnih9nl0vnndkgjjeun1bhg24xsp/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script> --}}
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])

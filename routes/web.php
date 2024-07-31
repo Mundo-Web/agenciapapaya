@@ -45,7 +45,8 @@ Route::get('/servicios/{id}', [IndexController::class, 'servicios'] )->name('ser
 
 Route::post('/subscripciones/guardar', [NewsletterSubscriberController::class, 'saveSubscripciones'])->name('subscripciones.guardar');
 Route::post('guardarContactos', [IndexController::class, 'guardarContacto'] )->name('guardarContactos');
-
+Route::get('/blog/{filtro}', [IndexController::class, 'blog'])->name('blog');
+Route::get('/post/{id}', [IndexController::class, 'detalleBlog'])->name('detalleBlog');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
@@ -84,8 +85,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
         //Blog
         Route::resource('/blog', BlogController::class);
-        Route::post('/blog/deleteBlog', [BlogController::class, 'deleteBlog'] )->name('blog.deleteBlog');
-        Route::post('/blog/updateVisible', [BlogController::class, 'updateVisible'] )->name('blog.updateVisible');
+        Route::post('/blog/deleteBlog', [BlogController::class, 'deleteBlog'])->name('blog.deleteBlog');
+        Route::post('/blog/updateVisible', [BlogController::class, 'updateVisible'])->name('blog.updateVisible');
 
         //Crud Logos
         Route::resource('/logos', LogosClientController::class);

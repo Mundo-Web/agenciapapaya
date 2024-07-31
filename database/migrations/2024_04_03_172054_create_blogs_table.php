@@ -16,11 +16,16 @@ return new class extends Migration
             $table->unsignedBigInteger('category_id');
 
             $table->string('title');
-            $table->text('description');
+            $table->text('extract')->nullable();
+            $table->text('description')->nullable();
             $table->string('url_image')->nullable();
             $table->string('name_image')->nullable();
+            $table->string('url_video')->nullable();
             $table->boolean('visible')->default(false);
             $table->boolean('status')->default(false);
+            $table->string('meta_title')->nullable();
+            $table->text('meta_description')->nullable();
+            $table->string('meta_keywords')->nullable();
 
             $table->timestamps();
 

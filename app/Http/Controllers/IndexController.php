@@ -15,10 +15,12 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 use PhpParser\Node\Stmt\TryCatch;
 use App\Helpers\EmailConfig;
+use App\Models\Blog;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\SEOTools;
 use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Str;
 
 class IndexController extends Controller
 {
@@ -31,6 +33,7 @@ class IndexController extends Controller
         $servicios = Service::where('status', '=', true)->where('visible', '=', true)->get();
         $titulos = Category::where('status', '=', true)->where('visible', '=', true)->get();
         $testimonios = Testimony::where('status', '=', true)->where('visible', '=', true)->get();
+        $blogs = Blog::where('status', '=', 1)->where('visible', '=', 1)->orderBy('id', 'desc')->take(3)->get();
         $logos = ClientLogos::all();
         $generales = General::all()->first();
         $baseUrllink = 'https://' . $_SERVER['HTTP_HOST'] . '/';
@@ -50,7 +53,7 @@ class IndexController extends Controller
         
         OpenGraph::addImage(URL::to('/logocreditomype.svg'));
 
-        return view('public.index', compact('servicios', 'titulos', 'generales', 'testimonios', 'logos'));
+        return view('public.index', compact('servicios', 'titulos', 'generales', 'testimonios', 'logos', 'blogs'));
     }
 
     public function index2()
@@ -121,6 +124,41 @@ class IndexController extends Controller
     {
         //
     }
+    
+    public function blog($filtro)
+    {
+        try {
+            $categorias = Category::where('status', '=', 1)->where('visible', '=', 1)->get();
+
+            if ($filtro == 0) {
+                $posts = Blog::where('status', '=', 1)->where('visible', '=', 1)->get();
+
+                $categoria = Category::where('status', '=', 1)->where('visible', '=', 1)->get();
+
+                $lastpost = Blog::where('status', '=', 1)->where('visible', '=', 1)->orderBy('created_at', 'desc')->first();
+            } else {
+                $posts = Blog::where('status', '=', 1)->where('visible', '=', 1)->where('category_id', '=', $filtro)->get();
+
+                $categoria = Category::where('status', '=', 1)->where('visible', '=', 1)->where('id', '=', $filtro)->get();
+
+                $lastpost = Blog::where('status', '=', 1)->where('visible', '=', 1)->orderBy('created_at', 'desc')->where('category_id', '=', $filtro)->first();
+            }
+
+            return view('public.blog', compact('posts', 'categoria', 'categorias', 'filtro', 'lastpost'));
+        } catch (\Throwable $th) {
+        }
+    }
+
+    public function detalleBlog($id)
+    {
+        $post = Blog::where('status', '=', 1)->where('visible', '=', 1)->where('id', '=', $id)->first();
+        $meta_title = $post->meta_title ?? $post->title;
+        $meta_description = $post->meta_description  ?? Str::limit($post->extract, 160);
+        $meta_keywords = $post->meta_keywords ?? '';
+
+        return view('public.post', compact('meta_title','meta_description','meta_keywords','post'));
+    }
+
     
     public function agradecimiento(){
       return view('public.thankyou');

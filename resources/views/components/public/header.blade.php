@@ -2,7 +2,7 @@
 <header class="bg-transparent top-0 h-20">
     <div class="flex flex-col md:flex-row justify-between items-center w-11/12 mx-auto py-5 gap-5">
         <div class="flex justify-center items-center">
-            <a href="#">
+            <a href="{{route('index')}}">
                 <img src="{{ asset('images/svg/logoblancoheader.svg') }}" alt="Hidromec" class="w-full" />
             </a>
         </div>

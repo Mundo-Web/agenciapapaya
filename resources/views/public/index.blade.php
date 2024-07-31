@@ -4,67 +4,67 @@
   <style>
     @font-face {
       font-family: "jakartaExtraBold";
-      src: url("./fonts/jakarta/PlusJakartaSans-ExtraBold.woff") format("woff");
+      src: url("/fonts/jakarta/PlusJakartaSans-ExtraBold.woff") format("woff");
     }
 
     @font-face {
       font-family: "jakartaBold";
-      src: url("./fonts/jakarta/PlusJakartaSans-Bold.woff") format("woff");
+      src: url("/fonts/jakarta/PlusJakartaSans-Bold.woff") format("woff");
     }
 
     @font-face {
       font-family: "jakartaSemiBold";
-      src: url("./fonts/jakarta/PlusJakartaSans-SemiBold.woff") format("woff");
+      src: url("/fonts/jakarta/PlusJakartaSans-SemiBold.woff") format("woff");
     }
 
     @font-face {
       font-family: "jakartaMedium";
-      src: url("./fonts/jakarta/PlusJakartaSans-Medium.woff") format("woff");
+      src: url("/fonts/jakarta/PlusJakartaSans-Medium.woff") format("woff");
     }
 
     @font-face {
       font-family: "jakartaRegular";
-      src: url("./fonts/jakarta/PlusJakartaSans-Regular.woff") format("woff");
+      src: url("/fonts/jakarta/PlusJakartaSans-Regular.woff") format("woff");
     }
 
     @font-face {
       font-family: "jakartaExtraBoldItalic";
-      src: url("./fonts/jakarta/PlusJakartaSans-ExtraBoldItalic.woff") format("woff");
+      src: url("/fonts/jakarta/PlusJakartaSans-ExtraBoldItalic.woff") format("woff");
     }
 
     @font-face {
       font-family: "outfitExtraBold";
-      src: url("./fonts/outfit/Outfit-ExtraBold.woff") format("woff");
+      src: url("/fonts/outfit/Outfit-ExtraBold.woff") format("woff");
     }
 
     @font-face {
       font-family: "outfitBold";
-      src: url("./fonts/outfit/Outfit-Bold.woff") format("woff");
+      src: url("/fonts/outfit/Outfit-Bold.woff") format("woff");
     }
 
     @font-face {
       font-family: "outfitSemiBold";
-      src: url("./fonts/outfit/Outfit-SemiBold.woff") format("woff");
+      src: url("/fonts/outfit/Outfit-SemiBold.woff") format("woff");
     }
 
     @font-face {
       font-family: "outfitMedium";
-      src: url("./fonts/outfit/Outfit-Medium.woff") format("woff");
+      src: url("/fonts/outfit/Outfit-Medium.woff") format("woff");
     }
 
     @font-face {
       font-family: "outfitRegular";
-      src: url("./fonts/outfit/Outfit-Regular.woff") format("woff");
+      src: url("/fonts/outfit/Outfit-Regular.woff") format("woff");
     }
 
     @font-face {
       font-family: "outfitLight";
-      src: url("./fonts/outfit/Outfit-Light.woff") format("woff");
+      src: url("/fonts/outfit/Outfit-Light.woff") format("woff");
     }
 
     @font-face {
       font-family: "outfitExtraLight";
-      src: url("./fonts/outfit/Outfit-ExtraLight.woff") format("woff");
+      src: url("/fonts/outfit/Outfit-ExtraLight.woff") format("woff");
     }
 
     .flip-card-inner {
@@ -160,7 +160,7 @@
 
       <div
         class="grid grid-cols-1 lg:grid-cols-2 w-full pl-[5%] lg:pl-[0%] pr-[5%] gap-5 lg:gap-24 object-left bg-cover lg:bg-contain bg-no-repeat"
-        style="background-image: url('{{ asset('images/img/hombresentado2.png') }}');">
+        style="background-image: url('{{ asset('images/img/hombresentado3.png') }}');">
         <div class="flex flex-col gap-6 md:gap-12 max-w-[665px] justify-center items-end lg:h-[700px]">
           {{-- <div class="flex flex-row justify-start"><img class="object-left"
                             src="{{ asset('images/img/hombresentado2.png') }}" /></div> --}}
@@ -703,34 +703,41 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
               <div class="flex flex-col justify-center items-center  px-[5%]">
 
-                <video class="w-full h-[700px] border border-gray-200 rounded-3xl" controls>
-                  <source src="/docs/videos/flowbite.mp4" type="video/mp4">
+                {{-- <div class="w-full h-[700px] border border-gray-200 rounded-3xl overflow-hidden" controls>
+                  <iframe class="" width="100%" height="100%" src="https://www.youtube.com/embed/qoUcwenpYOY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   Your browser does not support the video tag.
-                </video>
+                </div> --}}
 
+                <div class="w-full h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/rimbocare.png') }}');">
+                  <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 cursor-pointer" onclick="showVideo()">
+                    <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/svg/iconoplayblanco.svg') }}" /></button>
+                  </div>
+                  <iframe id="videoIframe" class="w-full h-full hidden" src="https://www.youtube.com/embed/qoUcwenpYOY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+  
               </div>
 
               <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
 
                 <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
-                  Donec molestie, urna scelerisque auctor bibendum, libero libero sollicitudin diam,
-                  et eleifend massa nisi vitae ipsum. In massa mauris, porttitor id eros et, ornare
-                  laoreet magna. Y sera designado<span class="text-primario font-jakartaExtraBoldItalic"> para
-                    ti!.</span>
+                  La dinámica de trabajo es bastante transparente con 
+                  bastante flexibilidad ante cualquier observación que de repente podíamos tener <span class="text-primario font-jakartaExtraBoldItalic"> la atención era inmediata en 
+                  las reuniones.</span>
                 </h2>
                 <div class="flex flex-col justify-start items-center">
                   <div class="flex flex-row items-center gap-3">
                     <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/person_3.png') }}" />
                     <div>
-                      <h3 class="text-lg font-outfitSemiBold">Carlos Sile</h3>
-                      <p class="text-base font-outfitLight">Representante Exclusivo Doulton Perú</p>
+                      <h3 class="text-lg font-outfitSemiBold">Elizabeth Ponce</h3>
+                      <p class="text-base font-outfitLight">CO-Founder & CEO Rimboccare</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="swiper-slide">
+          {{-- <div class="swiper-slide">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
               <div class="flex flex-col justify-center items-center  px-[5%]">
 
@@ -791,7 +798,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> --}}
         </div>
       </div>
 
@@ -823,39 +830,79 @@
       </div>
     </section>
 
-    <section class="z-10 col-span-2 pt-12 lg:pt-28">
-      <div class="px-1 py-2 h-20 lg:-mt-20 bg-cardflip">
-        <div x-data="{}" x-init="$nextTick(() => {
-            let ul = $refs.logos;
-            ul.insertAdjacentHTML('afterend', ul.outerHTML);
-            ul.nextSibling.setAttribute('aria-hidden', 'true');
-        })"
-          class="px-[5%] w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_40px,_black_calc(100%-40px),transparent_100%)] md:[mask-image:_linear-gradient(to_right,transparent_0,_black_100px,_black_calc(100%-100px),transparent_100%)]">
-          <ul x-ref="logos"
-            class="h-16 flex flex-row justify-between items-center  [&_li]:mx-10   animate-infinite-scroll">
+  
 
-            <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/svg/evernote.svg') }}" /></li>
-            <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/svg/adobe.svg') }}" /></li>
-            <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/svg/amazon.svg') }}" /></li>
-            <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/svg/paypal.svg') }}" /></li>
-            <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/svg/spotif.svg') }}" /></li>
 
-          </ul>
 
-          <ul x-ref="logos"
-            class="h-16 flex flex-row justify-between items-center  [&_li]:mx-10   animate-infinite-scroll"
-            aria-hidden="true">
+     {{-- Seccion Blog --}}
+     @if ($blogs->count() > 0)
+     <section class="w-full px-[5%] pb-7 lg:pb-14" data-aos="fade-up">
+          <div class="flex flex-col md:flex-row justify-between w-full gap-3">
+            <h2 class=" font-outfitSemiBold text-4xl lg:text-5xl leading-none  text-terciario">
+              Últimas <span class="text-primario font-jakartaExtraBoldItalic">Publicaciones</span>
+            </h2>
+            <a href="/blog/0" class="flex items-center text-base font-jakartaSemiBold font-semibold text-primario">Ver todas
+              las publicaciones &rarr;</a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-14 gap-10 sm:gap-5">
+            @foreach ($blogs as $post)
+              <x-blog.container-post :post="$post" />
+            @endforeach
+          </div>
+        </section>
+      @endif
 
-            <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/svg/evernote.svg') }}" /></li>
-            <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/svg/adobe.svg') }}" /></li>
-            <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/svg/amazon.svg') }}" /></li>
-            <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/svg/paypal.svg') }}" /></li>
-            <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/svg/spotif.svg') }}" /></li>
 
-          </ul>
+      <section class="z-10 col-span-2 pt-12 lg:pt-28">
+        <div class="px-1 py-2 h-20 lg:-mt-20 bg-cardflip">
+          <div x-data="{}" x-init="$nextTick(() => {
+              let ul = $refs.logos;
+              ul.insertAdjacentHTML('afterend', ul.outerHTML);
+              ul.nextSibling.setAttribute('aria-hidden', 'true');
+          })"
+            class="px-[5%] w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_40px,_black_calc(100%-40px),transparent_100%)] md:[mask-image:_linear-gradient(to_right,transparent_0,_black_100px,_black_calc(100%-100px),transparent_100%)]">
+            <ul x-ref="logos"
+              class="h-16 flex flex-row justify-between items-center  [&_li]:mx-10   animate-infinite-scroll">
+  
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo1p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo2p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo3p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo4p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo5p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo6p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo7p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo8p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo9p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo10p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo11p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo12p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo13p.png') }}" /></li>
+  
+            </ul>
+  
+            <ul x-ref="logos"
+              class="h-16 flex flex-row justify-between items-center  [&_li]:mx-10   animate-infinite-scroll"
+              aria-hidden="true">
+  
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo1p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo2p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo3p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo4p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo5p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo6p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo7p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo8p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo9p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo10p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo11p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo12p.png') }}" /></li>
+              <li class="w-32 py-8"><img class="object-contain" src="{{ asset('images/img/logo13p.png') }}" /></li>
+  
+            </ul>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
 
   </main>
 
@@ -1034,6 +1081,14 @@
         document.getElementById('largodispositivo').value = screenHeight;
 
     </script>
+
+<script>
+  function showVideo() {
+    document.querySelector('.bg-cover').style.backgroundImage = 'none';
+    document.querySelector('.bg-black').style.display = 'none';
+    document.getElementById('videoIframe').classList.remove('hidden');
+  }
+</script>
 @stop
 
 @stop

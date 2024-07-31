@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout title="Blogs">
     <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
         
         <section class="py-4 border-b border-slate-100 dark:border-slate-700">
@@ -33,7 +33,7 @@
                                 <tr>
                                     <td>{{$item->title}}</td>
                                     <td>{{$item->categories->name}}</td>
-                                    <td class="px-3 py-2"><img class="w-20" src="{{ asset('storage/images/posts/'.$item->name_image) }}" alt=""></td>
+                                    <td class="px-3 py-2"><img class="w-20" src="{{ asset($item->url_image.$item->name_image) }}" alt=""></td>
                                     <td>
                                         <form method="POST" action="">
                                           @csrf
