@@ -161,7 +161,7 @@
       <div
         class="grid grid-cols-1 lg:grid-cols-2 w-full pl-[5%] lg:pl-[0%] pr-[5%] gap-5 lg:gap-24 object-left bg-cover lg:bg-contain bg-no-repeat"
         style="background-image: url('{{ asset('images/img/hombresentado3.png') }}');">
-        <div class="flex flex-col gap-6 md:gap-12 max-w-[665px] justify-center items-end lg:h-[700px]">
+        <div class="flex flex-col gap-6 md:gap-12 max-w-[665px] justify-center items-end lg:h-[600px]">
           {{-- <div class="flex flex-row justify-start"><img class="object-left"
                             src="{{ asset('images/img/hombresentado2.png') }}" /></div> --}}
         </div>
@@ -220,9 +220,9 @@
                 </div>
 
 
-                <div class="relative mb-5">
+                {{-- <div class="relative mb-5">
 
-                  {{-- <div class="relative mb-4 w-full">
+                  <div class="relative mb-4 w-full">
                     <input id="contact_position" name="job" type="job" style="font-size: 17px"
                       class="bg-white mt-1 block w-full border-0  border-none rounded-xl p-3 focus:ring-0 focus:border-b-2 focus:border-gray-500"
                       placeholder="Puesto laboral">
@@ -234,7 +234,7 @@
                       class="bg-white mt-1 block w-full border-0  border-none rounded-xl p-3  focus:ring-0 focus:border-b-2 focus:border-gray-500"
                       placeholder="Empresa">
                     
-                  </div> --}}
+                  </div>
 
                   <select id="sector_business" name="sector_business" type="text" required style="font-size: 17px"
                     class="bg-white text-gray-600  mt-1 block w-full border-0 border-none rounded-xl p-3  focus:ring-0 focus:border-b-2 focus:border-gray-500"
@@ -248,13 +248,13 @@
 
                   </select>
 
-                </div>
+                </div> --}}
 
                 <div class="relative mb-5">
                   <select id="workers" name="total_personal" type="text" required style="font-size: 17px"
                     class="bg-white text-gray-600  mt-1 block w-full border-0 border-none rounded-xl p-3  focus:ring-0 focus:border-b-2 focus:border-gray-500"
                     placeholder="Nombre">
-                    <option value="">Seleccione nro. de trabajadores</option>
+                    <option value="">¿Cuantos trabajadores tienes en tu empresa?</option>
                     <option value="1 a 2 Trabajadores">1 a 2 Trabajadores</option>
                     <option value="3 a 5 Trabajadores">3 a 5 Trabajadores</option>
                     <option value="6 a 10 Trabajadores">6 a 10 Trabajadores</option>
@@ -721,13 +721,13 @@
               <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
 
                 <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
-                  La dinámica de trabajo es bastante transparente con 
-                  bastante flexibilidad ante cualquier observación que de repente podíamos tener <span class="text-primario font-jakartaExtraBoldItalic"> la atención era inmediata en 
-                  las reuniones.</span>
+                  "Nuestras ventas aumentaron un 400% gracias al metodo Papaya.
+                  La calidad del contenido mas las estrategias innovadoras<span class="text-primario font-jakartaExtraBoldItalic"> nos 
+                    permitieron crecer muy rapido."</span>
                 </h2>
                 <div class="flex flex-col justify-start items-center">
                   <div class="flex flex-row items-center gap-3">
-                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/person_3.png') }}" />
+                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/cliente-rimbocare.png') }}" />
                     <div>
                       <h3 class="text-lg font-outfitSemiBold">Elizabeth Ponce</h3>
                       <p class="text-base font-outfitLight">CO-Founder & CEO Rimboccare</p>
