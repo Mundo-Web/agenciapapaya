@@ -704,10 +704,10 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
               <div class="flex flex-col justify-center items-center  px-0 lg:px-[5%]">
                 <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/rimbocare.png') }}');">
-                  <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo()">
+                  <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo(this)">
                     <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/svg/iconoplayblanco.svg') }}" /></button>
                   </div>
-                  <iframe id="videoIframe" class="w-full h-full hidden" src="https://www.youtube.com/embed/7cdVdtrVUls" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe id="videoIframe" class="videoIframe w-full h-full hidden" src="https://www.youtube.com/embed/7cdVdtrVUls" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
 
@@ -735,10 +735,10 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
               <div class="flex flex-col justify-center items-center  px-[5%]">
                 <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/coverprime.png') }}');">
-                  <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo()">
+                  <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo(this)">
                     <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/svg/iconoplayblanco.svg') }}" /></button>
                   </div>
-                  <iframe id="videoIframe" class="w-full h-full hidden" src="https://www.youtube.com/embed/Q5_ALBh8Qe4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe id="videoIframe" class="videoIframe w-full h-full hidden" src="https://www.youtube.com/embed/Q5_ALBh8Qe4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
 
@@ -761,6 +761,69 @@
 
             </div>
           </div>
+
+          <div class="swiper-slide">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+              <div class="flex flex-col justify-center items-center  px-[5%]">
+                <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/donchurro.png') }}');">
+                  <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo(this)">
+                    <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/svg/iconoplayblanco.svg') }}" /></button>
+                  </div>
+                  <iframe id="videoIframe" class="videoIframe w-full h-full hidden" src="https://www.youtube.com/embed/HkwE_sflWsM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
+                <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
+                  "Nuestras ventas aumentaron un 400% gracias al metodo Papaya.
+                  La calidad del contenido mas las estrategias innovadoras<span class="text-primario font-jakartaExtraBoldItalic"> nos 
+                    permitieron crecer muy rapido."</span>
+                </h2>
+                <div class="flex flex-col justify-start items-center">
+                  <div class="flex flex-row items-center gap-3">
+                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/cliente-rimbocare.png') }}" />
+                    <div>
+                      <h3 class="text-lg font-outfitSemiBold">Jennifer</h3>
+                      <p class="text-base font-outfitLight">Fundadora de Don Churro</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+              <div class="flex flex-col justify-center items-center  px-[5%]">
+                <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/doulton.png') }}');">
+                  <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo(this)">
+                    <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/svg/iconoplayblanco.svg') }}" /></button>
+                  </div>
+                  <iframe id="videoIframe" class="videoIframe w-full h-full hidden" src="https://www.youtube.com/embed/WLiUj_mLBYg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
+                <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
+                  "Nuestras ventas aumentaron un 400% gracias al metodo Papaya.
+                  La calidad del contenido mas las estrategias innovadoras<span class="text-primario font-jakartaExtraBoldItalic"> nos 
+                    permitieron crecer muy rapido."</span>
+                </h2>
+                <div class="flex flex-col justify-start items-center">
+                  <div class="flex flex-row items-center gap-3">
+                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/cliente-rimbocare.png') }}" />
+                    <div>
+                      <h3 class="text-lg font-outfitSemiBold">Carlos Siles</h3>
+                      <p class="text-base font-outfitLight">Representante Exclusivo Doulton</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
           {{-- <div class="swiper-slide">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
               <div class="flex flex-col justify-center items-center  px-[5%]">
@@ -1107,10 +1170,12 @@
     </script>
 
 <script>
-  function showVideo() {
-    document.querySelector('.bg-cover').style.backgroundImage = 'none';
-    document.querySelector('.disparo').style.display = 'none';
-    document.getElementById('videoIframe').classList.remove('hidden');
+  function showVideo(element) {
+    const slide = element.closest('.swiper-slide');
+    const videoIframe = slide.querySelector('.videoIframe');
+    videoIframe.classList.remove('hidden');
+    videoIframe.src += "?autoplay=1";
+    element.style.display = 'none';
   }
 </script>
 @stop
