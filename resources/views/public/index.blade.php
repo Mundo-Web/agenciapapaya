@@ -690,24 +690,24 @@
             </div>
         </section> --}}
 
-    <section class="py-12 lg:py-20 flex flex-col w-full gap-12 relative">
+    <section class="pt-10 pb-12  lg:py-20 flex flex-col w-full gap-12 relative">
       <div class="w-11/12 mx-auto">
         <h2 class=" font-outfitSemiBold text-4xl lg:text-5xl leading-none  text-terciario">
-          Lo que piensan de <span class="text-primario font-jakartaExtraBoldItalic">PMD</span>
+          Casos de  <span class="text-primario font-jakartaExtraBoldItalic">Éxito</span>
         </h2>
       </div>
 
       <div class="swiper testimonios flex flex-row w-full !px-[5%] !lg:pl-[5%]">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            
+
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-              <div class="flex flex-col justify-center items-center  px-[5%]">
-                <div class="w-full h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/rimbocare.png') }}');">
+              <div class="flex flex-col justify-center items-center  px-0 lg:px-[5%]">
+                <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/rimbocare.png') }}');">
                   <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo()">
                     <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/svg/iconoplayblanco.svg') }}" /></button>
                   </div>
-                  <iframe id="videoIframe" class="w-full h-full hidden" src="https://www.youtube.com/embed/qoUcwenpYOY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe id="videoIframe" class="w-full h-full hidden" src="https://www.youtube.com/embed/7cdVdtrVUls" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
 
@@ -734,7 +734,7 @@
           <div class="swiper-slide">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
               <div class="flex flex-col justify-center items-center  px-[5%]">
-                <div class="w-full h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/coverprime.png') }}');">
+                <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/coverprime.png') }}');">
                   <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo()">
                     <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/svg/iconoplayblanco.svg') }}" /></button>
                   </div>
