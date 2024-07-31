@@ -149,7 +149,7 @@
         <section class="w-11/12 md:w-10/12 mx-auto flex flex-col gap-10 pt-10 pb-16" data-aos="fade-up" data-aos-offset="150">
             <div class="flex flex-col gap-3">
                 <h3 class="font-semibold font-jakartaSemiBold text-base text-primario">Blog</h3>
-                <h2 class="font-jakartaSemiBold font-bold text-5xl md:text-text56 text-[#082252] leading-tight tracking-tight">
+                <h2 class="font-jakartaExtraBold font-bold text-5xl md:text-text56 text-[#082252] leading-tight tracking-tight">
                     {{$post->title}}
                 </h2>
                 <p class="font-jakartaRegular font-semibold text-base text-[#0C4AC3]">{{ \Carbon\Carbon::parse($post->created_at)->translatedFormat('d F, Y') }}</p>
