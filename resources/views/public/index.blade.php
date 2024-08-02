@@ -277,7 +277,7 @@
                 <input type="hidden" name="client_latitude" id="latitud">
                 <input type="hidden" name="client_longitude" id="longitud">
                 <input type="hidden" name="client_system" id="sistema">
-                <input type="hidden" id="tipo" placeholder="tipo" name="source" value="Inicio" />  
+                <input type="hidden" name="source" value="[Papaya] - Landing" />  
 
                 <div class="flex flex-col justify-center items-end pt-8">
                   <button type="submit" rel="noopener" class="btn-secondary">Enviar solicitud</button>
@@ -1132,7 +1132,7 @@
           tradename: $('#tradename').val(),
           workers: $('#workers').val(),
           message: $('#message').val(),
-          origin: 'Landing Papaya'
+          origin: '[Papaya] - Landing'
         }
         const res = await fetch('https://atalaya.mundoweb.pe/free/clients', {
           method: 'POST',
