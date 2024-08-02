@@ -1132,7 +1132,8 @@
           tradename: $('#tradename').val(),
           workers: $('#workers').val(),
           message: $('#message').val(),
-          origin: '[Papaya] - Landing'
+          origin: '[Papaya] - Landing',
+          source: '[Papaya] - Landing',
         }
         const res = await fetch('https://atalaya.mundoweb.pe/free/clients', {
           method: 'POST',
