@@ -148,12 +148,12 @@
       <div class="flex flex-col justify-center items-center gap-2 w-full ">
         <div class="flex flex-col gap-10 items-center py-10 px-[2%]">
           <h2 class="font-outfitSemiBold  text-4xl leading-none lg:text-primary  text-white max-w-4xl  text-center">
-            Multiplica tus Ventas B2B y B2C y Dispara tu <span
-              class="text-primario font-jakartaExtraBoldItalic">Crecimiento Empresarial</span>
+            Multiplica tus ventas B2B y B2C y potencia<span
+              class="text-primario font-jakartaExtraBoldItalic"> tu éxito empresarial.</span>
           </h2>
           <p class="text-white text-xl tracking-wider text-center font-outfitLight max-w-4xl">
-            Nuestra agencia especializada está aquí para potenciar tu éxito. Triplica tus ventas B2B y B2C y transforma tu
-            negocio con estrategias probadas y resultados tangibles.
+            Transforma tu negocio con estrategias efectivas y resultados visibles. 
+            Nuestra agencia está lista para multiplicar tus ingresos.
           </p>
         </div>
       </div>
@@ -823,69 +823,6 @@
 
             </div>
           </div>
-
-          {{-- <div class="swiper-slide">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-              <div class="flex flex-col justify-center items-center  px-[5%]">
-
-                <video class="w-full h-[700px] border border-gray-200 rounded-3xl" controls>
-                  <source src="/docs/videos/flowbite.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-
-              </div>
-
-              <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
-
-                <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
-                  Donec molestie, urna scelerisque auctor bibendum, libero libero sollicitudin diam,
-                  et eleifend massa nisi vitae ipsum. In massa mauris, porttitor id eros et, ornare
-                  laoreet magna. Y sera designado<span class="text-primario font-jakartaExtraBoldItalic"> para
-                    ti!.</span>
-                </h2>
-                <div class="flex flex-col justify-start items-center">
-                  <div class="flex flex-row items-center gap-3">
-                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/person_3.png') }}" />
-                    <div>
-                      <h3 class="text-lg font-outfitSemiBold">Carlos Silessss</h3>
-                      <p class="text-base font-outfitLight">Representante Exclusivo Doulton Perú</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-              <div class="flex flex-col justify-center items-center  px-[5%]">
-
-                <video class="w-full h-[700px] border border-gray-200 rounded-3xl" controls>
-                  <source src="/docs/videos/flowbite.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-
-              </div>
-
-              <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
-
-                <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
-                  Donec molestie, urna scelerisque auctor bibendum, libero libero sollicitudin diam,
-                  et eleifend massa nisi vitae ipsum. In massa mauris, porttitor id eros et, ornare
-                  laoreet magna. Y sera designado<span class="text-primario font-jakartaExtraBoldItalic"> para
-                    ti!.</span>
-                </h2>
-                <div class="flex flex-col justify-start items-center">
-                  <div class="flex flex-row items-center gap-3">
-                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/person_3.png') }}" />
-                    <div>
-                      <h3 class="text-lg font-outfitSemiBold">Carlos Silessss</h3>
-                      <p class="text-base font-outfitLight">Representante Exclusivo Doulton Perú</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> --}}
         </div>
       </div>
 
@@ -905,15 +842,14 @@
 
       <h2 class="font-outfitSemiBold  text-4xl leading-none md:text-5xl  text-white max-w-3xl  text-center">
         ¿Listo para convertirte en un líder de la <span
-          class="text-primario font-jakartaExtraBoldItalic">Industria</span>
+          class="text-primario font-jakartaExtraBoldItalic">Industria?</span>
       </h2>
-      <p class="text-lg font-outfitExtraLight text-white text-center max-w-3xl">Etiam lacinia tortor sed nisi imperdiet,
-        eu rhoncus
-        felis semper. Fusce venenatis magna vel fermentum feugiat. Integer ullamcorper mauris sit amet.</p>
+      <p class="text-lg font-outfitExtraLight text-white text-center max-w-3xl">Cuéntanos cómo podemos ayudarte. 
+        Tenemos una eficaz metodología y casos de éxito comprobados</p>
 
       <div class="flex flex-col justify-start items-center w-60 ">
-        <a target="_blank" href="https://api.whatsapp.com/send?phone=51123456789&text=hola" rel="noopener"
-          class="btn-secondary">Solicitar Presupuesto</a>
+        <a target="_blank" href="https://wa.link/o8prqi" rel="noopener"
+          class="btn-secondary">Conversemos</a>
       </div>
     </section>
 
@@ -1067,6 +1003,22 @@
           slidesPerView: 1,
         },
       },
+      on: {
+          slideChange: function() {
+              // Detener el video cuando se desliza a otro slide
+              let iframes = document.querySelectorAll('.videoIframe');
+              iframes.forEach(iframe => {
+                  let src = iframe.src;
+                  iframe.src = src.replace("?autoplay=1", ""); // Remueve el autoplay
+                  iframe.classList.add('hidden');
+              });
+              // Mostrar los botones de play
+              let playButtons = document.querySelectorAll('.disparo');
+              playButtons.forEach(button => {
+                  button.style.display = 'flex';
+              });
+          }
+      }
     });
     /*  */
     var swiper = new Swiper(".logos", {
@@ -1168,7 +1120,7 @@
         document.getElementById('anchodispositivo').value = screenWidth;
         document.getElementById('largodispositivo').value = screenHeight;
 
-    </script>
+  </script>
 
 <script>
   function showVideo(element) {

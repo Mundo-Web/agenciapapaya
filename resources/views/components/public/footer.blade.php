@@ -5,9 +5,8 @@
                 <img src="{{asset('images/svg/logofooter.svg')}}" alt="Hidromec" />
             </a>
             <p class="text-white font-outfitLight text-lg">
-                Somos una empresa con más de 17 años de experiencia en el mercado
-                peruano especializada en el suministro e instalación de equipos de
-                bombeo para aplicación industrial, residencial, agrícola y minera.
+                Como expertos en marketing digital, aceleramos tu negocio de manera sostenida, con 
+                resultados comprobados en branding, performance y automatización de procesos.
             </p>
         </div>
 
@@ -18,16 +17,16 @@
 
             <div class="flex flex-col gap-5">
                 <div class="flex flex-col justify-end items-start md:items-end ml-0 md:ml-auto">
-                    <a target="_blank" href="https://api.whatsapp.com/send?phone=51123456789&text=hola" rel="noopener"
+                    <a href="#formContactos" rel="noopener"
                         class="btn-third">Solicitar Presupuesto</a>
                 </div>
 
                 <div class="flex flex-col justify-end items-start md:items-end text-white font-outfitLight text-base">
-                    <p>+51 999-999-999</p>
-                    <p>info@papaya.pe</p>
-                    <p>Calle Papapya 345</p>
-                    <p>San Isidro</p>
-                    <p>Lima - Perú</p>
+                    <p>+51 908 857 558</p>
+                    <p>hola@mundoweb.pe</p>
+                    <p>Centro Empresarial Peruano - Suizo</p>
+                    <p>Av. Andrés Aramburú 166</p>
+                    <p>Miraflores, Oficina 4B. Lima - Perú</p>
                 </div>
             </div>
         </div>
