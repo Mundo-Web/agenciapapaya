@@ -160,7 +160,7 @@
 
       <div
         class="grid grid-cols-1 lg:grid-cols-2 w-full pl-[5%] lg:pl-[0%] pr-[5%] gap-5 lg:gap-24 object-left bg-cover lg:bg-contain bg-no-repeat"
-        style="background-image: url('{{ asset('images/img/hombresentado3.png') }}');">
+        style="background-image: url('{{ asset('images/img/hombresentado4.png') }}');">
         <div class="flex flex-col gap-6 md:gap-12 max-w-[665px] justify-center items-end lg:h-[600px]">
           {{-- <div class="flex flex-row justify-start"><img class="object-left"
                             src="{{ asset('images/img/hombresentado2.png') }}" /></div> --}}
@@ -719,7 +719,7 @@
                 </h2>
                 <div class="flex flex-col justify-start items-center">
                   <div class="flex flex-row items-center gap-3">
-                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/cliente-rimbocare.png') }}" />
+                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/rimbocareuser.png') }}" />
                     <div>
                       <h3 class="text-lg font-outfitSemiBold">Elizabeth Ponce</h3>
                       <p class="text-base font-outfitLight">CO-Founder & CEO Rimboccare</p>
@@ -751,7 +751,7 @@
                 </h2>
                 <div class="flex flex-col justify-start items-center">
                   <div class="flex flex-row items-center gap-3">
-                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/cliente-rimbocare.png') }}" />
+                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/coverprimeuser.png') }}" />
                     <div>
                       <h3 class="text-lg font-outfitSemiBold">Wendy Mendoza</h3>
                       <p class="text-base font-outfitLight">Grte. de Marketing Cover Prime</p>
@@ -782,7 +782,7 @@
                 </h2>
                 <div class="flex flex-col justify-start items-center">
                   <div class="flex flex-row items-center gap-3">
-                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/cliente-rimbocare.png') }}" />
+                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/donchurrouser.png') }}" />
                     <div>
                       <h3 class="text-lg font-outfitSemiBold">Jennifer</h3>
                       <p class="text-base font-outfitLight">Fundadora de Don Churro</p>
@@ -794,7 +794,7 @@
             </div>
           </div>
 
-          <d  iv class="swiper-slide">
+          <div class="swiper-slide">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
               <div class="flex flex-col justify-center items-center  px-[5%]">
                 <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/doulton.png') }}');">
@@ -813,7 +813,7 @@
                 </h2>
                 <div class="flex flex-col justify-start items-center">
                   <div class="flex flex-row items-center gap-3">
-                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/cliente-rimbocare.png') }}" />
+                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/doultonuser.png') }}" />
                     <div>
                       <h3 class="text-lg font-outfitSemiBold">Carlos Siles</h3>
                       <p class="text-base font-outfitLight">Representante Exclusivo Doulton</p>
