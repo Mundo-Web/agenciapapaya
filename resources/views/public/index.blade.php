@@ -162,7 +162,7 @@
         class="grid grid-cols-1 lg:grid-cols-2 w-full pl-[5%] lg:pl-[5%] pr-[5%] gap-5 lg:gap-24 object-left bg-cover lg:bg-contain bg-no-repeat"
         >
         <div class="flex flex-col gap-6 md:gap-12 justify-end items-start">
-          <img class="object-left lg:h-[600px]" src="{{ asset('images/img/personalanding.png') }}" />
+          <img class="object-left lg:h-[600px] object-contain" src="{{ asset('images/img/personalanding.png') }}" />
         </div>
 
         <div class="flex flex-col gap-10 justify-start items-start mt-6 lg:mt-0  pb-[10%] xl:px-[8%]">

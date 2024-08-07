@@ -13,9 +13,9 @@
     </div>
 
     <div class="flex justify-end w-11/12 mx-auto  z-10">
-        <div class="fixed bottom-6 sm:bottom-[2rem] lg:bottom-[4rem] z-20">
+        <div class="fixed bottom-10 sm:bottom-12 lg:bottom-20 z-20">
             <a target="_blank" href="https://wa.link/o8prqi" rel="noopener">
-                <img src="{{ asset('images/svg/image_8.svg') }}" alt="whatsapp" class="w-20 h-20 md:w-full md:h-full">
+                <img src="{{ asset('images/svg/image_8.svg') }}" alt="whatsapp" class="w-18 h-18 md:w-full md:h-full">
             </a>
         </div>
     </div>
