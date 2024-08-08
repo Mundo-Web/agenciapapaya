@@ -743,10 +743,9 @@
 
               <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
                 <h2 class="font-outfitSemiBold text-2xl  md:text-4xl leading-none  text-black  text-left">
-                  Trabajar con Agencia Papaya tuvo un impacto positivo en nuestra empresa. Mejoraron nuestra imagen, 
-                  permitiéndonos captar una mayor cantidad de clientes y aumentar 
-                  La calidad del contenido mas las estrategias innovadoras
-                  <span class="text-primario font-jakartaExtraBoldItalic"> nuestra rentabilidad.</span>
+                  "Trabajar con agencia papaya trajo un impacto realmente positivo a la empresa,
+                   logrando una mejora en la imagen de la marca, permitiendo obtener mas clientes y mejorar
+                  <span class="text-primario font-jakartaExtraBoldItalic"> nuestra rentabilidad."</span>
                 </h2>
                 <div class="flex flex-col justify-start items-center">
                   <div class="flex flex-row items-center gap-3">
@@ -775,9 +774,11 @@
 
               <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
                 <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
-                  Gracias a Agencia Papaya superamos los problemas contenido en redes sociales, la falta de 
+                  "Logramos mejorar nuestro contenido, nuestra planificación y nuestras ventas con papaya. 
+                  De la mano de un equipo de trabajo con el que interactuamos constantemente, nos mantenemos 
+                  informados y 
                   <span class="text-primario font-jakartaExtraBoldItalic">
-                    planificación y las ventas."</span>
+                    alineados con los objetivos."</span>
                 </h2>
                 <div class="flex flex-col justify-start items-center">
                   <div class="flex flex-row items-center gap-3">
@@ -806,9 +807,10 @@
 
               <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
                 <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
-                  Con Papaya hemos incrementando nuestras ventas en un 30% a 35%. 
-                  Además, mejoramos el alcance e interacción en redes sociales con <span class="text-primario font-jakartaExtraBoldItalic">
-                     un contenido atractivo"</span>
+                  "Incrementamos en un 35% nuestras ventas mensuales. Hoy vemos un gran crecimiento en 
+                  el alcance 
+                  <span class="text-primario font-jakartaExtraBoldItalic">
+                    y la interacción."</span>
                 </h2>
                 <div class="flex flex-col justify-start items-center">
                   <div class="flex flex-row items-center gap-3">
