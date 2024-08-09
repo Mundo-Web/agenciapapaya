@@ -42,6 +42,7 @@ Route::get('agradecimiento', [IndexController::class, 'agradecimiento'] )->name(
 Route::get('/nosotros', [IndexController::class, 'index'] )->name('nosotros');
 /* Route::get('/servicios', [IndexController::class, 'index'] )->name('servicios'); */
 Route::get('/servicios/{id}', [IndexController::class, 'servicios'] )->name('servicios');
+Route::post('/save/crm', [IndexController::class, 'saveInAtalaya'])->name('save.crm');
 
 Route::post('/subscripciones/guardar', [NewsletterSubscriberController::class, 'saveSubscripciones'])->name('subscripciones.guardar');
 Route::post('guardarContactos', [IndexController::class, 'guardarContacto'] )->name('guardarContactos');

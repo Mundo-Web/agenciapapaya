@@ -146,6 +146,7 @@ export default {
     },
 
     plugins: [
+        require('tailwindcss-animated'),
         forms,
         typography,
         // add custom variant for expanding sidebar

@@ -19,8 +19,11 @@ use App\Models\Blog;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\SEOTools;
+use SoDe\Extend\Response;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Str;
+use SoDe\Extend\Fetch;
+use Exception;
 
 class IndexController extends Controller
 {
@@ -66,6 +69,30 @@ class IndexController extends Controller
         $generales = General::all()->first();
 
         return view('public.index2', compact('servicios', 'titulos', 'generales', 'testimonios', 'logos'));
+    }
+
+
+    public function saveInAtalaya(Request $request)
+    {   
+        $response = Response::simpleTryCatch(function (Response $response) use ($request) {
+            $body = $request->all();
+            $body['origin'] = $body['origin'] ?? '[Mundo Web] - Landing WebSite';
+            $body['source'] = $body['source'] ?? 'Integracion API';
+            $body['triggered_by'] = $body['triggered_by'] ?? 'Pauta';
+            $res = new Fetch('https://crm.atalaya.pe/free/leads', [
+                'method' => 'POST',
+                'headers' => [
+                    'Authorization' => 'Bearer 5485e4be-54e0-11ef-bfda-26a0a2e74226',
+                    'Content-Type' => 'application/json'
+                ],
+                'body' => $body
+            ]);
+            $data = $res->json();
+            if (!$res->ok) {
+                throw new Exception($data['message'] ?? 'Ocurrio un error inespesperado al guardar los datos');
+            }
+        });
+        return response($response->toArray(), $response->status);
     }
 
 

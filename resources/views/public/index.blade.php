@@ -161,8 +161,8 @@
       <div
         class="grid grid-cols-1 lg:grid-cols-2 w-full pl-[5%] lg:pl-[5%] pr-[5%] gap-5 lg:gap-24 object-left bg-cover lg:bg-contain bg-no-repeat"
         >
-        <div class="flex flex-col gap-6 md:gap-12 justify-end items-start">
-          <img class="object-left lg:h-[600px] object-contain" src="{{ asset('images/img/personalanding.png') }}" />
+        <div class="flex flex-col gap-6 md:gap-6 justify-end items-end">
+          <img class="object-left lg:h-[600px] object-contain" src="{{ asset('images/img/businesman.png') }}" />
         </div>
 
         <div class="flex flex-col gap-10 justify-start items-start mt-6 lg:mt-0  pb-[10%] xl:px-[8%]">
@@ -172,7 +172,7 @@
                 ¿Estás listo para convertirte en el líder de la <span
                   class="text-primario font-jakartaExtraBoldItalic">industria?</span>
               </h2>
-              <form class="text-gray-600 font-fontBook gap-6 bg-transparent" id="formContactos">
+              <form class="text-gray-600 font-outfitRegular gap-6 bg-transparent" id="formContactos">
                 @csrf
 
                 {{-- <div class="flex flex-col xl:flex-row justify-between items-start relative py-5 gap-4">
@@ -194,7 +194,7 @@
 
 
                 <div class="relative mb-4 mt-5">
-                  <input id="contact_name" name="name" type="text" required style="font-size: 17px"
+                  <input id="contact_name" name="contact_name" type="text" required style="font-size: 17px"
                     class="bg-white  mt-1 block w-full border-0 border-none rounded-xl p-3  focus:ring-0 focus:border-b-2 focus:border-gray-500"
                     placeholder="Nombre">
                   {{-- <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14">Obligatorio</span> --}}
@@ -203,14 +203,14 @@
                 <div class="flex flex-col md:flex-row md:gap-4">
 
                   <div class="relative mb-4 w-full">
-                    <input id="contact_email" name="email" type="email" style="font-size: 17px"
+                    <input id="contact_email" name="contact_email" type="email" style="font-size: 17px"
                       class="bg-white mt-1 block w-full border-0  border-none rounded-xl p-3  focus:ring-0 focus:border-b-2 focus:border-gray-500"
                       placeholder="E-mail">
                     {{-- <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span> --}}
                   </div>
 
                   <div class="relative mb-4 w-full">
-                    <input id="contact_phone" name="cellphone" type="text" style="font-size: 17px"
+                    <input id="contact_phone" name="contact_phone" type="text" style="font-size: 17px"
                       class="bg-white mt-1 block w-full border-0  border-none rounded-xl p-3  focus:ring-0 focus:border-b-2 focus:border-gray-500"
                       placeholder="Número de celular">
                     {{-- <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span> --}}
@@ -250,7 +250,7 @@
                 </div> --}}
 
                 <div class="relative mb-5">
-                  <select id="workers" name="total_personal" type="text" required style="font-size: 17px"
+                  <select id="workers" name="workers" type="text" required style="font-size: 17px"
                     class="bg-white text-gray-600  mt-1 block w-full border-0 border-none rounded-xl p-3  focus:ring-0 focus:border-b-2 focus:border-gray-500"
                     placeholder="Nombre">
                     <option value="">¿Cuantos trabajadores tienes en tu empresa?</option>
@@ -276,14 +276,15 @@
                 <input type="hidden" name="client_latitude" id="latitud">
                 <input type="hidden" name="client_longitude" id="longitud">
                 <input type="hidden" name="client_system" id="sistema">
-                <input type="hidden" name="source" value="[Papaya] - Landing" />  
-
+                <input type="hidden" name="source" id="source" value="Pauta">
+                <input type="hidden" name="origin" id="llegade" value="Pauta">
+                <input type="hidden" name="triggered_by" id="triggered"
+                value="Landing Papaya/Formulario">
                 <div class="flex flex-col justify-center items-end pt-8">
-                  <button type="submit" rel="noopener" class="btn-secondary">Enviar solicitud</button>
+                  
+                  <button id='procesarSolicitud' rel="noopener" class="btn-secondary">Enviar solicitud</button>
                 </div>
-                {{-- <div class="mt-6">
-                                        <button type="submit" class="w-full bg-verdecreditomype text-white py-3 rounded-3xl hover:bg-green-600 mt-3">Quiero una cotización</button>
-                                    </div> --}}
+               
               </form>
             </div>
           </div>
@@ -1070,60 +1071,31 @@
       });
     });
   </script>
-
-  <script>
-    document.getElementById('formContactos').addEventListener('submit', async function(e) {
-      e.preventDefault()
-      if (!validarTelefono($('#contact_phone').val())) return;
-      if (!validarEmail($('#contact_email').val())) return;
-
-      try {
-        const request = {
-          contact_name: $('#contact_name').val(),
-          contact_phone: $('#contact_phone').val(),
-          contact_email: $('#contact_email').val(),
-          contact_position: $('#contact_position').val(),
-          tradename: $('#tradename').val(),
-          workers: $('#workers').val(),
-          message: $('#message').val(),
-          origin: '[Papaya] - Landing',
-          source: '[Papaya] - Landing',
-        }
-        const res = await fetch('https://atalaya.mundoweb.pe/free/clients', {
-          method: 'POST',
-          headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(request)
-        })
-        const data = await res.json()
-      } catch (error) {
-        console.error(error)
-      }
-    })
-  </script>
   
   <script>
-        // Obtener información del navegador y del sistema operativo
-        const platform = navigator.platform;
-        document.getElementById('sistema').value = platform;
+    // Obtener información del navegador y del sistema operativo
+    const platform = navigator.platform;
+    document.getElementById('sistema').value = platform;
+    document.getElementById('sistema_wsp').value = platform;
 
-        // Obtener la geolocalización del usuario (si se permite)
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function(position) {
-                document.getElementById('latitud').value = position.coords.latitude;
-                document.getElementById('longitud').value = position.coords.longitude;
-            });
-        }
+    // Obtener la geolocalización del usuario (si se permite)
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            document.getElementById('latitud').value = position.coords.latitude;
+            document.getElementById('longitud').value = position.coords.longitude;
+            document.getElementById('latitud_wsp').value = position.coords.latitude;
+            document.getElementById('longitud_Wsp').value = position.coords.longitude;
+        });
+    }
 
-        // Obtener la resolución de la pantalla
-        const screenWidth = window.screen.width;
-        const screenHeight = window.screen.height;
-        document.getElementById('anchodispositivo').value = screenWidth;
-        document.getElementById('largodispositivo').value = screenHeight;
-
-  </script>
+    // Obtener la resolución de la pantalla
+    const screenWidth = window.screen.width;
+    const screenHeight = window.screen.height;
+    document.getElementById('anchodispositivo').value = screenWidth;
+    document.getElementById('largodispositivo').value = screenHeight;
+    document.getElementById('anchodispositivo_wsp').value = screenWidth;
+    document.getElementById('largodispositivo_wsp').value = screenHeight;
+</script>
 
 <script>
   function showVideo(element) {
@@ -1133,6 +1105,195 @@
     videoIframe.src += "?autoplay=1";
     element.style.display = 'none';
   }
+</script>
+
+<script>
+  function getParameterByName(name) {
+      name = name.replace(/[\[\]]/g, '\\$&');
+      let url = window.location.href;
+
+      let regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+      let results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+  let utmSource = getParameterByName('utm_source');
+  
+  if (utmSource) {
+      let sourceInputWsp = document.getElementById('source_wsp');
+      let sourceInput = document.getElementById('source');
+    
+      let sourceInputWspOrigin = document.getElementById('llegade_wsp');
+      let sourceInputOrigin = document.getElementById('llegade');
+      
+      let currentValue = sourceInput.value;
+      let currentValueWsp = sourceInputWsp.value;
+
+      let currentValueOrigin = sourceInputOrigin.value;
+      let currentValueWspOrigin = sourceInputWspOrigin.value;
+
+
+      let nuevo = utmSource;
+      let nuevoWsp = utmSource;
+
+
+      sourceInput.value = nuevo;
+      sourceInputWsp.value = nuevoWsp;
+
+      sourceInputOrigin.value = nuevo;
+      sourceInputWspOrigin.value = nuevoWsp;
+      
+      console.log(sourceInput.value);
+      console.log(sourceInputWsp.value);
+  }
+</script>
+
+<script>
+  document.getElementById('whatsapp-toggle').addEventListener('click', function() {
+      var chatBox = document.getElementById('whatsapp-chat');
+      if (chatBox.classList.contains('hidden')) {
+          chatBox.classList.remove('hidden');
+          chatBox.classList.add('animate-fade-up');
+      } else {
+          chatBox.classList.add('hidden');
+          chatBox.classList.remove('animate-fade-up');
+      }
+  });
+</script>
+
+<script>
+  $('#procesarSolicitud').on('click', function() {
+      console.log('precionando btn envio');
+      event.preventDefault();
+      let formulario = $('#formContactos').serialize()
+      console.log(formulario);   
+      Swal.fire({
+
+          title: 'Procesando información',
+          html: `Enviando... 
+        <div class="max-w-2xl mx-auto overflow-hidden flex justify-center items-center mt-4 ">
+            <div role="status">
+                <svg aria-hidden="true" class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+                    <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+                </svg>
+                
+            </div>
+        </div>
+        `,
+          allowOutsideClick: false,
+          onBeforeOpen: () => {
+              Swal.showLoading();
+          }
+      });
+
+      fetch("{{ route('save.crm') }}", {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                  _token: $('[name="_token"]').val(),
+                  contact_name: $('[name="contact_name"]').val(),
+                  contact_email: $('[name="contact_email"]').val(),
+                  contact_phone: `51${$('[name="contact_phone"]').val()}`,
+                  // tradename: $('[name="name"]').val(),
+                  // sector: $('[name="sector"]').val(),
+                  workers: $('#workers').val(),
+                  // web_url: $('[name="web_url"]').val(),
+                  source: $('[name="source"]').val(),
+                  origin: $('[name="origin"]').val(),
+                  client_width: $('[name="client_width"]').val(),
+                  client_height: $('[name="client_height"]').val(),
+                  client_latitude: $('[name="client_latitude"]').val(),
+                  client_longitude: $('[name="client_longitude"]').val(),
+                  client_system: $('[name="client_system"]').val(),
+                  message: $('[name="message"]').val(),
+                  triggered_by: $('[name="triggered_by"]').val()
+              })
+          })
+          .then(async res => {
+              const data = await res.json()
+              if (!res.ok) throw new Error(data?.message ?? 'Ocurrio un error inesperado')
+              return data
+          })
+          .then(response => {
+              Swal.close();
+              Swal.fire({
+                  title: response.message,
+                  icon: "success",
+              });
+
+              $('#formContactos')[0].reset();
+
+              //window.location.href = 'https://mundoweb.pe/website#formularioListo';
+          }).catch((error) => {
+              Swal.close();
+              Swal.fire({
+                  title: error,
+                  icon: "error",
+              });
+          })
+
+  })
+</script>
+
+<script>
+  $('#procesarSolicitud2').on('click', function() {
+      event.preventDefault();
+      console.log('precionando btn envio');
+
+      let formulario = $('#dataWhatsapp').serialize()
+
+      fetch("{{ route('save.crm') }}", {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                  _token: $('[name="_token"]').val(),
+                  contact_name: $('[name="contact_name_wsp"]').val(),
+                  contact_email: $('[name="contact_email_wsp"]').val(),
+                  contact_phone: `51${$('[name="contact_phone_wsp"]').val()}`,
+                  tradename: $('[name="name_wsp"]').val(),
+                  sector: $('[name="sector_wsp"]').val(),
+                  web_url: $('[name="web_url_wsp"]').val(),
+                  source: $('[name="source_wsp"]').val(),
+                  origin: $('[name="source_wsp"]').val(),
+                  client_width: $('[name="client_width_wsp"]').val(),
+                  client_height: $('[name="client_height_wsp"]').val(),
+                  client_latitude: $('[name="client_latitude_wsp"]').val(),
+                  client_longitude: $('[name="client_longitude_wsp"]').val(),
+                  client_system: $('[name="client_system_wsp"]').val(),
+                  message: $('[name="message_wsp"]').val(),
+                  triggered_by: $('[name="triggered_by_wsp"]').val(),
+              })
+          })
+          .then(async res => {
+              const data = await res.json()
+              if (!res.ok) throw new Error(data?.message ?? 'Ocurrio un error inesperado')
+              return data
+          })
+          .then(response => {
+              Swal.close();
+              Swal.fire({
+                  title: response.message,
+                  icon: "success",
+              });
+
+              $('#dataWhatsapp')[0].reset();
+
+               window.location.href = 'https://wa.link/tgjbni';
+          }).catch((error) => {
+              Swal.close();
+              Swal.fire({
+                  title: error,
+                  icon: "error",
+              });
+          })
+
+  })
 </script>
 @stop
 
