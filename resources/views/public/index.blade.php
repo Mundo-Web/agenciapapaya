@@ -253,7 +253,7 @@
                   <select id="workers" name="workers" type="text" required style="font-size: 17px"
                     class="bg-white text-gray-600  mt-1 block w-full border-0 border-none rounded-xl p-3  focus:ring-0 focus:border-b-2 focus:border-gray-500"
                     placeholder="Nombre">
-                    <option value="">¿Cuantos trabajadores tienes en tu empresa?</option>
+                    <option value="">¿Nro. trabajadores en tu empresa?</option>
                     <option value="1 a 2 Trabajadores">1 a 2 Trabajadores</option>
                     <option value="3 a 5 Trabajadores">3 a 5 Trabajadores</option>
                     <option value="6 a 10 Trabajadores">6 a 10 Trabajadores</option>
