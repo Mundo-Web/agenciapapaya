@@ -280,7 +280,7 @@
                 <input type="hidden" name="origin" id="llegade" value="Pauta">
                 <input type="hidden" name="triggered_by" id="triggered"
                 value="Landing Papaya/Formulario">
-                <div class="flex flex-col justify-center items-end pt-8">
+                <div class="flex flex-col justify-center items-end">
                   
                   <button id='procesarSolicitud' rel="noopener" class="btn-secondary">Enviar solicitud</button>
                 </div>
@@ -713,9 +713,9 @@
 
               <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
                 <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
-                  "Nuestras ventas aumentaron un 400% gracias al metodo Papaya.
-                  La calidad del contenido mas las estrategias innovadoras<span class="text-primario font-jakartaExtraBoldItalic"> nos 
-                    permitieron crecer muy rapido."</span>
+                  "Nuestras ventas aumentaron un 400% gracias al método Papaya.
+                  La calidad del contenido más las estrategias innovadoras<span class="text-primario font-jakartaExtraBoldItalic"> nos 
+                    permitieron crecer muy rápido."</span>
                 </h2>
                 <div class="flex flex-col justify-start items-center">
                   <div class="flex flex-row items-center gap-3">
@@ -745,7 +745,7 @@
               <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
                 <h2 class="font-outfitSemiBold text-2xl  md:text-4xl leading-none  text-black  text-left">
                   "Trabajar con agencia papaya trajo un impacto realmente positivo a la empresa,
-                   logrando una mejora en la imagen de la marca, permitiendo obtener mas clientes y mejorar
+                   logrando una mejora en la imagen de la marca, permitiendo obtener más clientes y mejorar
                   <span class="text-primario font-jakartaExtraBoldItalic"> nuestra rentabilidad."</span>
                 </h2>
                 <div class="flex flex-col justify-start items-center">
@@ -795,7 +795,7 @@
             </div>
           </div>
 
-          <div class="swiper-slide">
+          {{-- <div class="swiper-slide">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
               <div class="flex flex-col justify-center items-center  px-[5%]">
                 <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/doulton.png') }}');">
@@ -825,7 +825,7 @@
               </div>
 
             </div>
-          </div>
+          </div> --}}
         </div>
       </div>
 
@@ -1227,7 +1227,7 @@
 
               $('#formContactos')[0].reset();
 
-              //window.location.href = 'https://mundoweb.pe/website#formularioListo';
+              window.location.href = 'http://landing.agenciapapaya.pe/#formularioListo';
           }).catch((error) => {
               Swal.close();
               Swal.fire({
