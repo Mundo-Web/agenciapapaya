@@ -161,7 +161,7 @@
       <div
         class="grid grid-cols-1 lg:grid-cols-2 w-full pl-[5%] lg:pl-[5%] pr-[5%] gap-5 lg:gap-24 object-left bg-cover lg:bg-contain bg-no-repeat"
         >
-        <div class="flex flex-col gap-6 md:gap-6 justify-end items-end">
+        <div class="lg:flex flex-col gap-6 md:gap-6 justify-end items-end hidden ">
           <img class="object-left lg:h-[600px] object-contain" src="{{ asset('images/img/businesman.png') }}" />
         </div>
 
