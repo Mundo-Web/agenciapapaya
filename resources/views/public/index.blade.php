@@ -194,8 +194,8 @@
 
 
                 <div class="relative mb-4 mt-5">
-                  <input id="contact_name" name="contact_name" type="text" required style="font-size: 17px"
-                    class="bg-white  mt-1 block w-full border-0 border-none rounded-xl p-3  focus:ring-0 focus:border-b-2 focus:border-gray-500"
+                  <input id="contact_name" name="contact_name" type="text" required 
+                    class="bg-white  mt-1 block w-full border-0 border-none text-base rounded-xl p-3  focus:ring-0 focus:border-b-2 focus:border-gray-500"
                     placeholder="Nombre">
                   {{-- <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14">Obligatorio</span> --}}
                 </div>
@@ -203,15 +203,15 @@
                 <div class="flex flex-col md:flex-row md:gap-4">
 
                   <div class="relative mb-4 w-full">
-                    <input id="contact_email" name="contact_email" type="email" style="font-size: 17px"
-                      class="bg-white mt-1 block w-full border-0  border-none rounded-xl p-3  focus:ring-0 focus:border-b-2 focus:border-gray-500"
+                    <input id="contact_email" name="contact_email" type="email" 
+                      class="bg-white mt-1 block w-full border-0 text-base  border-none rounded-xl p-3  focus:ring-0 focus:border-b-2 focus:border-gray-500"
                       placeholder="E-mail">
                     {{-- <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span> --}}
                   </div>
 
                   <div class="relative mb-4 w-full">
-                    <input id="contact_phone" name="contact_phone" type="text" style="font-size: 17px"
-                      class="bg-white mt-1 block w-full border-0  border-none rounded-xl p-3  focus:ring-0 focus:border-b-2 focus:border-gray-500"
+                    <input id="contact_phone" name="contact_phone" type="text" ¿
+                      class="bg-white mt-1 block w-full border-0  text-base border-none rounded-xl p-3  focus:ring-0 focus:border-b-2 focus:border-gray-500"
                       placeholder="Número de celular">
                     {{-- <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span> --}}
                   </div>
@@ -250,8 +250,8 @@
                 </div> --}}
 
                 <div class="relative mb-5">
-                  <select id="workers" name="workers" type="text" required style="font-size: 17px"
-                    class="bg-white text-gray-600  mt-1 block w-full border-0 border-none rounded-xl p-3  focus:ring-0 focus:border-b-2 focus:border-gray-500"
+                  <select id="workers" name="workers" type="text" required 
+                    class="bg-white text-gray-600 text-base  mt-1 block w-full border-0 border-none rounded-xl p-3  focus:ring-0 focus:border-b-2 focus:border-gray-500"
                     placeholder="Nombre">
                     <option value="">¿Nro. trabajadores en tu empresa?</option>
                     <option value="1 a 2 Trabajadores">1 a 2 Trabajadores</option>
@@ -265,8 +265,8 @@
 
 
                 <div class="relative mb-4">
-                  <textarea id="message" name="message" style="font-size: 17px; height: auto; "
-                    class="min-h-28 lg:min-h-14 tracking-tight placeholder:text-base bg-white mt-1 block w-full border-0  border-none rounded-xl p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500"
+                  <textarea id="message" name="message" style="height: auto; "
+                    class="min-h-28 lg:min-h-14 tracking-tight text-base placeholder:text-base bg-white mt-1 block w-full border-0  border-none rounded-xl p-3 pr-24 focus:ring-0 focus:border-b-2 focus:border-gray-500"
                     placeholder="Necesito..."></textarea>
                   {{-- <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-verdecreditomype text-text14"></span> --}}
                 </div>
