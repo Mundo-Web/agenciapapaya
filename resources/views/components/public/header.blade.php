@@ -29,7 +29,7 @@
                         <div class="flex flex-row justify-start items-center gap-3">
                             <img class="w-10" src="{{ asset('images/img/asistente.png') }}" />
                             <div class="flex flex-col justify-start items-start">
-                                <p class="text-slate-400 font-outfitRegular text-text14 ">Agente Mundoweb</p>
+                                <p class="text-slate-400 font-outfitRegular text-text14 ">Agente Papaya</p>
                                 <div class="flex flex-row items-center justify-start gap-2">
                                     <div class="w-2 h-2 bg-green-400 rounded-full ml-1"></div>
                                     <p class="text-slate-400 font-outfitRegular text-text12">En Línea </p>
