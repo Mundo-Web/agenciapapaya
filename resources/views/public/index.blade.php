@@ -762,7 +762,7 @@
             </div>
           </div>
 
-          <div class="swiper-slide">
+          {{-- <div class="swiper-slide">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
               <div class="flex flex-col justify-center items-center  px-[5%]">
                 <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/donchurro.png') }}');">
@@ -793,9 +793,9 @@
               </div>
 
             </div>
-          </div>
+          </div> --}}
 
-          {{-- <div class="swiper-slide">
+          <div class="swiper-slide">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
               <div class="flex flex-col justify-center items-center  px-[5%]">
                 <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/doulton.png') }}');">
@@ -825,7 +825,7 @@
               </div>
 
             </div>
-          </div> --}}
+          </div>
         </div>
       </div>
 
