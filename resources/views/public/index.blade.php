@@ -1280,11 +1280,14 @@
               Swal.fire({
                   title: response.message,
                   icon: "success",
+              }).then((result) => {
+                    
+                    if (result.isConfirmed) {
+                        window.open("https://wa.link/tgjbni", "_blank");
+                        window.location.href = "https://www.agenciapapaya.pe/#whastapplisto";
+                    }
               });
-
-              $('#dataWhatsapp')[0].reset();
-
-               window.location.href = 'https://wa.link/tgjbni';
+              
           }).catch((error) => {
               Swal.close();
               Swal.fire({
