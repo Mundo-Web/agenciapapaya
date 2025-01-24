@@ -851,7 +851,7 @@
         Tenemos una eficaz metodología y casos de éxito comprobados</p>
 
       <div class="flex flex-col justify-start items-center w-60 ">
-        <a target="_blank" href="https://wa.link/o8prqi" rel="noopener"
+        <a href="#formContactos" rel="noopener"
           class="btn-secondary">Conversemos</a>
       </div>
     </section>
