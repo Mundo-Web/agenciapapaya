@@ -17,7 +17,7 @@
 
             <div class="flex flex-col gap-5">
                 <div class="flex flex-col justify-end items-start md:items-end ml-0 md:ml-auto">
-                    <a href="#formContactos" rel="noopener"
+                    <a href="{{route('index')}}#formContactos" rel="noopener"
                         class="btn-third">Solicitar Presupuesto</a>
                 </div>
 
@@ -40,8 +40,8 @@
             <a target="_blank" href="https://www.facebook.com/agenciapapaya.pe/?locale=es_LA"> <img src="{{asset('images/svg/redes5.svg')}}" /></a>
             <a target="_blank" href="https://www.instagram.com/papayamarketingdigital/"> <img src="{{asset('images/svg/redes3.svg')}}" /></a>
             <a target="_blank" href="https://www.tiktok.com/@papayamarketingdigital"> <img src="{{asset('images/svg/redes4.svg')}}" /></a>
-            <a target="_blank" href=""> <img src="{{asset('images/svg/redes1.svg')}}" /></a>
-            <a target="_blank" href="https://api.whatsapp.com/send?phone=51908857558&text=Hola.%20Deseo%20mayor%20informaci%C3%B3n%20%F0%9F%92%BB!!"> <img src="{{asset('images/svg/redes2.svg')}}" /></a>
+            {{-- <a target="_blank" href=""> <img src="{{asset('images/svg/redes1.svg')}}" /></a> --}}
+            {{-- <a target="_blank" href="https://api.whatsapp.com/send?phone=51908857558&text=Hola.%20Deseo%20mayor%20informaci%C3%B3n%20%F0%9F%92%BB!!"> <img src="{{asset('images/svg/redes2.svg')}}" /></a> --}}
             
             
         </div>
