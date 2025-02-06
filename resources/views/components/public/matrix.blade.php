@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
     {{-- Swipper --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
