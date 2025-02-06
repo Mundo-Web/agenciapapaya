@@ -1107,60 +1107,7 @@
   }
 </script>
 
-<script>
-  function getParameterByName(name) {
-      name = name.replace(/[\[\]]/g, '\\$&');
-      let url = window.location.href;
 
-      let regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
-      let results = regex.exec(url);
-      if (!results) return null;
-      if (!results[2]) return '';
-      return decodeURIComponent(results[2].replace(/\+/g, ' '));
-  }
-  let utmSource = getParameterByName('utm_source');
-  
-  if (utmSource) {
-      let sourceInputWsp = document.getElementById('source_wsp');
-      let sourceInput = document.getElementById('source');
-    
-      let sourceInputWspOrigin = document.getElementById('llegade_wsp');
-      let sourceInputOrigin = document.getElementById('llegade');
-      
-      let currentValue = sourceInput.value;
-      let currentValueWsp = sourceInputWsp.value;
-
-      let currentValueOrigin = sourceInputOrigin.value;
-      let currentValueWspOrigin = sourceInputWspOrigin.value;
-
-
-      let nuevo = utmSource;
-      let nuevoWsp = utmSource;
-
-
-      sourceInput.value = nuevo;
-      sourceInputWsp.value = nuevoWsp;
-
-      sourceInputOrigin.value = nuevo;
-      sourceInputWspOrigin.value = nuevoWsp;
-      
-      console.log(sourceInput.value);
-      console.log(sourceInputWsp.value);
-  }
-</script>
-
-<script>
-  document.getElementById('whatsapp-toggle').addEventListener('click', function() {
-      var chatBox = document.getElementById('whatsapp-chat');
-      if (chatBox.classList.contains('hidden')) {
-          chatBox.classList.remove('hidden');
-          chatBox.classList.add('animate-fade-up');
-      } else {
-          chatBox.classList.add('hidden');
-          chatBox.classList.remove('animate-fade-up');
-      }
-  });
-</script>
 
 
 @stop
