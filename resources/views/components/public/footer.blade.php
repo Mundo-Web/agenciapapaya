@@ -40,7 +40,7 @@
             <a target="_blank" href="https://www.facebook.com/agenciapapaya.pe/?locale=es_LA"> <img src="{{asset('images/svg/redes5.svg')}}" /></a>
             <a target="_blank" href="https://www.instagram.com/papayamarketingdigital/"> <img src="{{asset('images/svg/redes3.svg')}}" /></a>
             <a target="_blank" href="https://www.tiktok.com/@papayamarketingdigital"> <img src="{{asset('images/svg/redes4.svg')}}" /></a>
-            <a target="_blank" href="https://pe.linkedin.com/company/agenciapapaya-pe"> <div class="bg-primario rounded-full p-6"><i class="fa-brands fa-linkedin text-2xl text-white"></i></div></a>
+            <a target="_blank" href="https://pe.linkedin.com/company/agenciapapaya-pe"> <div class="bg-primario rounded-full p-2"><i class="fa-brands fa-linkedin text-2xl text-white"></i></div></a>
             {{-- <a target="_blank" href="https://api.whatsapp.com/send?phone=51908857558&text=Hola.%20Deseo%20mayor%20informaci%C3%B3n%20%F0%9F%92%BB!!"> <img src="{{asset('images/svg/redes2.svg')}}" /></a> --}}
             
             
