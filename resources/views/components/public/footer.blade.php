@@ -8,6 +8,9 @@
                 Como expertos en marketing digital, aceleramos tu negocio de manera sostenida, con 
                 resultados comprobados en branding, performance y automatización de procesos.
             </p>
+            <a href="https://www.google.com/partners/agency?id=3977416976" target="_blank">
+                <img src="https://www.gstatic.com/partners/badge/images/2024/PartnerBadgeClickable.svg"/>
+            </a>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0">
