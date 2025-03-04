@@ -26,7 +26,6 @@
 
                 <div class="flex flex-col justify-end items-start md:items-end text-white font-outfitLight text-base">
                     <p>+51 908 857 558</p>
-                    <p>hola@mundoweb.pe</p>
                     <p>Centro Empresarial Peruano - Suizo</p>
                     <p>Av. Andrés Aramburú 166</p>
                     <p>Miraflores, Oficina 4B. Lima - Perú</p>
