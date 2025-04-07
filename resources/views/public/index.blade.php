@@ -699,6 +699,162 @@
 
       <div class="swiper testimonios flex flex-row w-full !px-[5%] !lg:pl-[5%]">
         <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+              <div class="flex flex-col justify-center items-center  px-0 lg:px-[5%]">
+                <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/rimbocare.png') }}');">
+                  <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo(this)">
+                    <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/svg/iconoplayblanco.svg') }}" /></button>
+                  </div>
+                  <iframe id="videoIframe" class="videoIframe w-full h-full hidden" src="https://www.youtube.com/shorts/5GvpNRNPJbs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
+                <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
+                  "Realizar un trabajo en conjunto para tener mayor ventas y presencia en Redes Sociales.
+                  Trabajar con la Agencia Papaya ha dado como resultado el <span class="text-primario font-jakartaExtraBoldItalic">tráfico de nuestra pagina web"</span>
+                </h2>
+                <div class="flex flex-col justify-start items-center">
+                  <div class="flex flex-row items-center gap-3">
+                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/rimbocareuser.png') }}" />
+                    <div>
+                      <h3 class="text-lg font-outfitSemiBold">Wendy Mendoza</h3>
+                      <p class="text-base font-outfitLight">Grte. de Marketing Cover Prime</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+              <div class="flex flex-col justify-center items-center  px-0 lg:px-[5%]">
+                <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/rimbocare.png') }}');">
+                  <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo(this)">
+                    <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/svg/iconoplayblanco.svg') }}" /></button>
+                  </div>
+                  <iframe id="videoIframe" class="videoIframe w-full h-full hidden" src="https://www.youtube.com/shorts/ABu8TeQqsiA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
+                <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
+                  "Antes de trabajar de papaya, nuestros negocios se basaba en comunicacion con agentes a nivel internacional
+                  y clientes locales <span class="text-primario font-jakartaExtraBoldItalic">El trabajo ha sido facil y fluido"</span>
+                </h2>
+                <div class="flex flex-col justify-start items-center">
+                  <div class="flex flex-row items-center gap-3">
+                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/rimbocareuser.png') }}" />
+                    <div>
+                      <h3 class="text-lg font-outfitSemiBold">Raul Bravo</h3>
+                      <p class="text-base font-outfitLight">Gerente General de Partners Logistics Perú</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+              <div class="flex flex-col justify-center items-center  px-0 lg:px-[5%]">
+                <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/rimbocare.png') }}');">
+                  <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo(this)">
+                    <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/svg/iconoplayblanco.svg') }}" /></button>
+                  </div>
+                  <iframe id="videoIframe" class="videoIframe w-full h-full hidden" src="https://www.youtube.com/shorts/NXJZc1-t2bs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
+                <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
+                  "Hemos conseguido mejorar nuestros ratios de converersion y tambien formar un proceso
+                  de trabajo <span class="text-primario font-jakartaExtraBoldItalic"> muchisimo mas fluido"</span>
+                </h2>
+                <div class="flex flex-col justify-start items-center">
+                  <div class="flex flex-row items-center gap-3">
+                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/rimbocareuser.png') }}" />
+                    <div>
+                      <h3 class="text-lg font-outfitSemiBold">Jorge Smith</h3>
+                      <p class="text-base font-outfitLight">Gerente de Marketing La Boutique</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+              <div class="flex flex-col justify-center items-center  px-0 lg:px-[5%]">
+                <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/rimbocare.png') }}');">
+                  <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo(this)">
+                    <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/svg/iconoplayblanco.svg') }}" /></button>
+                  </div>
+                  <iframe id="videoIframe" class="videoIframe w-full h-full hidden" src="https://www.youtube.com/shorts/SuTaYTUYxIo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
+                <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
+                  "Tenemos un incremento de ventas de un 20% y un mayor alcance en nuestras redes sociales,
+                  en <span class="text-primario font-jakartaExtraBoldItalic"> instagram hemos duplicado y en facebook hemos crecido un 60%."</span>
+                </h2>
+                <div class="flex flex-col justify-start items-center">
+                  <div class="flex flex-row items-center gap-3">
+                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/rimbocareuser.png') }}" />
+                    <div>
+                      <h3 class="text-lg font-outfitSemiBold">Ricardo Agüero</h3>
+                      <p class="text-base font-outfitLight">Gerente General Puro Mar</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+              <div class="flex flex-col justify-center items-center  px-0 lg:px-[5%]">
+                <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/rimbocare.png') }}');">
+                  <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo(this)">
+                    <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/svg/iconoplayblanco.svg') }}" /></button>
+                  </div>
+                  <iframe id="videoIframe" class="videoIframe w-full h-full hidden" src="https://www.youtube.com/shorts/F8rZXR5RXNM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
+                <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
+                  "Hemos logrado entrar a todo este mundo digital de manera ordenada,
+                  Estamos llegando a un publico nuevo que antes no teniamos <span class="text-primario font-jakartaExtraBoldItalic">
+                    con una ventana de contacto."</span>
+                </h2>
+                <div class="flex flex-col justify-start items-center">
+                  <div class="flex flex-row items-center gap-3">
+                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/rimbocareuser.png') }}" />
+                    <div>
+                      <h3 class="text-lg font-outfitSemiBold">Daniela Urquiaga</h3>
+                      <p class="text-base font-outfitLight">Supervisora de Comunicaciones</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
           <div class="swiper-slide">
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
