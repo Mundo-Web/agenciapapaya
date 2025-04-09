@@ -704,7 +704,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
               <div class="flex flex-col justify-center items-center  px-0 lg:px-[5%]">
-                <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/rimbocare.png') }}');">
+                <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/coverprimefondo.png') }}');">
                   <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo(this)">
                     <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/svg/iconoplayblanco.svg') }}" /></button>
                   </div>
@@ -719,7 +719,7 @@
                 </h2>
                 <div class="flex flex-col justify-start items-center">
                   <div class="flex flex-row items-center gap-3">
-                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/rimbocareuser.png') }}" />
+                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/coverprimejf.png') }}" />
                     <div>
                       <h3 class="text-lg font-outfitSemiBold">Wendy Mendoza</h3>
                       <p class="text-base font-outfitLight">Grte. de Marketing Cover Prime</p>
@@ -735,7 +735,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
               <div class="flex flex-col justify-center items-center  px-0 lg:px-[5%]">
-                <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/rimbocare.png') }}');">
+                <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/partnerfondo.png') }}');">
                   <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo(this)">
                     <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/svg/iconoplayblanco.svg') }}" /></button>
                   </div>
@@ -750,7 +750,7 @@
                 </h2>
                 <div class="flex flex-col justify-start items-center">
                   <div class="flex flex-row items-center gap-3">
-                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/rimbocareuser.png') }}" />
+                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/partnerjf.png') }}" />
                     <div>
                       <h3 class="text-lg font-outfitSemiBold">Raul Bravo</h3>
                       <p class="text-base font-outfitLight">Gerente General de Partners Logistics Perú</p>
@@ -766,7 +766,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
               <div class="flex flex-col justify-center items-center  px-0 lg:px-[5%]">
-                <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/rimbocare.png') }}');">
+                <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/laboutique.png') }}');">
                   <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo(this)">
                     <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/svg/iconoplayblanco.svg') }}" /></button>
                   </div>
@@ -781,7 +781,7 @@
                 </h2>
                 <div class="flex flex-col justify-start items-center">
                   <div class="flex flex-row items-center gap-3">
-                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/rimbocareuser.png') }}" />
+                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/laboutiquejf.JPG') }}" />
                     <div>
                       <h3 class="text-lg font-outfitSemiBold">Jorge Smith</h3>
                       <p class="text-base font-outfitLight">Gerente de Marketing La Boutique</p>
@@ -797,7 +797,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
               <div class="flex flex-col justify-center items-center  px-0 lg:px-[5%]">
-                <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/rimbocare.png') }}');">
+                <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/puromar.png') }}');">
                   <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo(this)">
                     <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/svg/iconoplayblanco.svg') }}" /></button>
                   </div>
@@ -812,7 +812,7 @@
                 </h2>
                 <div class="flex flex-col justify-start items-center">
                   <div class="flex flex-row items-center gap-3">
-                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/rimbocareuser.png') }}" />
+                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/puromarjf.jpg') }}" />
                     <div>
                       <h3 class="text-lg font-outfitSemiBold">Ricardo Agüero</h3>
                       <p class="text-base font-outfitLight">Gerente General Puro Mar</p>
@@ -828,7 +828,7 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
               <div class="flex flex-col justify-center items-center  px-0 lg:px-[5%]">
-                <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/rimbocare.png') }}');">
+                <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/hidromex.png') }}');">
                   <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo(this)">
                     <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/svg/iconoplayblanco.svg') }}" /></button>
                   </div>
@@ -844,7 +844,7 @@
                 </h2>
                 <div class="flex flex-col justify-start items-center">
                   <div class="flex flex-row items-center gap-3">
-                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/rimbocareuser.png') }}" />
+                    <img class="rounded-full w-20 h-20 object-cover" src="{{ asset('images/img/hidromecjf.jpeg') }}" />
                     <div>
                       <h3 class="text-lg font-outfitSemiBold">Daniela Urquiaga</h3>
                       <p class="text-base font-outfitLight">Supervisora de Comunicaciones</p>
@@ -1137,7 +1137,6 @@
     /*  */
     var swiper = new Swiper(".testimonios", {
       slidesPerView: 1,
-      spaceBetween: -30,
       loop: true,
       grabCursor: true,
       centeredSlides: false,
@@ -1152,11 +1151,11 @@
       breakpoints: {
         0: {
           slidesPerView: 1,
-          spaceBetween: 30,
+          spaceBetween: 10,
         },
         768: {
           slidesPerView: 1,
-          spaceBetween: 30,
+          spaceBetween: 10,
         },
         1024: {
           slidesPerView: 1,
@@ -1262,9 +1261,6 @@
     element.style.display = 'none';
   }
 </script>
-
-
-
 
 @stop
 
