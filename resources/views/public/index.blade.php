@@ -714,8 +714,7 @@
 
               <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
                 <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
-                  "Realizar un trabajo en conjunto para tener mayor ventas y presencia en Redes Sociales.
-                  Trabajar con la Agencia Papaya ha dado como resultado el <span class="text-primario font-jakartaExtraBoldItalic">tráfico de nuestra pagina web"</span>
+                  "Trabajar con Papaya nos ayudó a mejorar nuestros ingresos, <span class="text-primario font-jakartaExtraBoldItalic">incrementar el tráfico en la página web y generar mayor visibilidad."</span>
                 </h2>
                 <div class="flex flex-col justify-start items-center">
                   <div class="flex flex-row items-center gap-3">
@@ -745,8 +744,7 @@
 
               <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
                 <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
-                  "Antes de trabajar de papaya, nuestros negocios se basaba en comunicacion con agentes a nivel internacional
-                  y clientes locales <span class="text-primario font-jakartaExtraBoldItalic">El trabajo ha sido facil y fluido"</span>
+                  "Antes de trabajar con Papaya, nuestra comunicación era solo con agentes internacionales y clientes locales. <span class="text-primario font-jakartaExtraBoldItalic">Hoy contamos con un programa de publicidad en ambos idiomas para nuestros agentes."</span>
                 </h2>
                 <div class="flex flex-col justify-start items-center">
                   <div class="flex flex-row items-center gap-3">
@@ -776,8 +774,7 @@
 
               <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
                 <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
-                  "Hemos conseguido mejorar nuestros ratios de converersion y tambien formar un proceso
-                  de trabajo <span class="text-primario font-jakartaExtraBoldItalic"> muchisimo mas fluido"</span>
+                  "Con Papaya mejoramos nuestros ratios de conversión, ordenamos el proceso de trabajo y logramos ventas online más estables, <span class="text-primario font-jakartaExtraBoldItalic"> con un ROAS mucho más alto que el que teníamos antes."</span>
                 </h2>
                 <div class="flex flex-col justify-start items-center">
                   <div class="flex flex-row items-center gap-3">
@@ -807,8 +804,7 @@
 
               <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
                 <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
-                  "Tenemos un incremento de ventas de un 20% y un mayor alcance en nuestras redes sociales,
-                  en <span class="text-primario font-jakartaExtraBoldItalic"> instagram hemos duplicado y en facebook hemos crecido un 60%."</span>
+                  "Incrementamos nuestras ventas en un 20% y ampliamos nuestro alcance en redes sociales, <span class="text-primario font-jakartaExtraBoldItalic">duplicando nuestra comunidad en Instagram y aumentando los seguidores en más del 60% en Facebook."</span>
                 </h2>
                 <div class="flex flex-col justify-start items-center">
                   <div class="flex flex-row items-center gap-3">
@@ -838,9 +834,8 @@
 
               <div class="flex flex-col gap-10 justify-center items-start w-[95%] lg:w-[85%]">
                 <h2 class="font-outfitSemiBold text-3xl  md:text-5xl leading-none  text-black  text-left">
-                  "Hemos logrado entrar a todo este mundo digital de manera ordenada,
-                  Estamos llegando a un publico nuevo que antes no teniamos <span class="text-primario font-jakartaExtraBoldItalic">
-                    con una ventana de contacto."</span>
+                    "Hemos logrado entrar a todo este mundo digital de manera ordenada. <span class="text-primario font-jakartaExtraBoldItalic">
+                    Estamos llegando a un público nuevo que antes no teníamos, con una ventana de contacto."</span>
                 </h2>
                 <div class="flex flex-col justify-start items-center">
                   <div class="flex flex-row items-center gap-3">
