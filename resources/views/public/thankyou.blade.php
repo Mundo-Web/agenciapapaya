@@ -50,7 +50,7 @@
             background-color: rgba(0, 0, 0, 1);
         }
 
-        #botoncotizar{
+        #botoncotizar {
             display: none;
         }
     </style>
@@ -59,38 +59,43 @@
 
 @section('content')
 
-<section class="relative">
-    <img src="{{asset('images/img/image_16.png')}}" alt="hidromec agricola"
-        class="w-full h-[600px] object-cover hidden md:block" />
+    <!-- Event snippet for Registro conversion page -->
+    <script>
+        gtag('event', 'conversion', {
+            'send_to': 'AW-16726937161/yLSkCOb_q4IbEMmcg6g-',
+            'value': 1.0,
+            'currency': 'PEN'
+        });
+    </script>
+    <section class="relative">
+        <img src="{{ asset('images/img/image_16.png') }}" alt="hidromec agricola"
+            class="w-full h-[600px] object-cover hidden md:block" />
 
-    <img src="{{asset('images/img/image_16.png')}}" alt="hidromec agricola"
-        class="w-full h-[380px] object-cover block md:hidden" />
+        <img src="{{ asset('images/img/image_16.png') }}" alt="hidromec agricola"
+            class="w-full h-[380px] object-cover block md:hidden" />
 
-    <div
-        class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-0 lg:top-1/2 w-11/12 mx-auto pt-[350px] sm:pt-[250px] md:pt-[500px] lg:pt-0">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24">
-            <div class="flex flex-col justify-center items-start gap-2 w-full lg:max-w-[700px]">
-               
+        <div
+            class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-0 lg:top-1/2 w-11/12 mx-auto pt-[350px] sm:pt-[250px] md:pt-[500px] lg:pt-0">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-24">
+                <div class="flex flex-col justify-center items-start gap-2 w-full lg:max-w-[700px]">
 
-                <div class="flex flex-col gap-5 items-start">
-                    <h1 class="font-helveticaBold text-text46 md:text-text64 leading-none  text-white">
-                       Gracias por escribirnos. Nos pondremos en contacto
-                    </h1>
-                  
+
+                    <div class="flex flex-col gap-5 items-start">
+                        <h1 class="font-helveticaBold text-text46 md:text-text64 leading-none  text-white">
+                            Gracias por escribirnos. Nos pondremos en contacto
+                        </h1>
+
+                    </div>
+
+
+                    <a href="{{ route('index') }}"
+                        class="bg-secundario tracking-wide text-white text-text16 rounded-xl py-3 px-10 w-full md:w-auto text-center font-helveticaBold">Regresar</a>
                 </div>
-
-                
-                <a
-                 href="{{route('index')}}"
-                 class="bg-secundario tracking-wide text-white text-text16 rounded-xl py-3 px-10 w-full md:w-auto text-center font-helveticaBold"
-                 >Regresar</a
-               >
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<div id="default-modal" tabindex="-1" aria-hidden="true"
+    <div id="default-modal" tabindex="-1" aria-hidden="true"
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative p-4 w-full max-w-2xl max-h-full">
             <!-- Modal content -->
@@ -134,42 +139,42 @@
 
 
 @section('scripts_improtados')
-    
-        <script>
-            let modal = document.getElementById("default-modal");
-            let btn = document.getElementById("open-modal");
-            let btn2 = document.getElementById("open-modal2");
-            let closeButtons = document.querySelectorAll("[data-modal-hide='default-modal']");
-            let body = document.body;
 
-            btn.onclick = function() {
-                modal.classList.remove("hidden");
-                modal.classList.add("flex");
-                body.classList.add("modal-open");
+    <script>
+        let modal = document.getElementById("default-modal");
+        let btn = document.getElementById("open-modal");
+        let btn2 = document.getElementById("open-modal2");
+        let closeButtons = document.querySelectorAll("[data-modal-hide='default-modal']");
+        let body = document.body;
+
+        btn.onclick = function() {
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+            body.classList.add("modal-open");
+        }
+
+        btn2.onclick = function() {
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+            body.classList.add("modal-open");
+        }
+
+        closeButtons.forEach(button => {
+            button.onclick = function() {
+                modal.classList.remove("flex");
+                modal.classList.add("hidden");
+                body.classList.remove("modal-open");
             }
+        });
 
-            btn2.onclick = function() {
-                modal.classList.remove("hidden");
-                modal.classList.add("flex");
-                body.classList.add("modal-open");
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.classList.remove("flex");
+                modal.classList.add("hidden");
+                body.classList.remove("modal-open");
             }
-
-            closeButtons.forEach(button => {
-                button.onclick = function() {
-                    modal.classList.remove("flex");
-                    modal.classList.add("hidden");
-                    body.classList.remove("modal-open");
-                }
-            });
-
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.classList.remove("flex");
-                    modal.classList.add("hidden");
-                    body.classList.remove("modal-open");
-                }
-            }
-        </script>
+        }
+    </script>
 @stop
 
 @stop
