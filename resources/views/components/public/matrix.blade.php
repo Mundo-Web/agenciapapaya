@@ -8,7 +8,7 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <link rel="icon" href="{{ asset('images/svg/logoblancoheader.svg') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('images/img/icono-papaya.png') }}" type="image/png">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
