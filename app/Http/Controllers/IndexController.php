@@ -54,7 +54,8 @@ class IndexController extends Controller
         OpenGraph::addProperty('type', 'website');
         OpenGraph::addProperty('locale', 'es-es');
         
-        OpenGraph::addImage(URL::to('/logocreditomype.svg'));
+        // OpenGraph::addImage(URL::to('/logocreditomype.svg'));
+        OpenGraph::addImage(URL::to('/images/img/icono-papaya.png'));
 
         return view('public.index', compact('servicios', 'titulos', 'generales', 'testimonios', 'logos', 'blogs'));
     }
