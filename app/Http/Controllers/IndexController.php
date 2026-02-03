@@ -27,261 +27,269 @@ use Exception;
 
 class IndexController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-        $servicios = Service::where('status', '=', true)->where('visible', '=', true)->get();
-        $titulos = Category::where('status', '=', true)->where('visible', '=', true)->get();
-        $testimonios = Testimony::where('status', '=', true)->where('visible', '=', true)->get();
-        $blogs = Blog::where('status', '=', 1)->where('visible', '=', 1)->orderBy('id', 'desc')->take(3)->get();
-        $logos = ClientLogos::all();
-        $generales = General::all()->first();
-        $baseUrllink = 'https://' . $_SERVER['HTTP_HOST'] . '/';
-        
+  /**
+   * Display a listing of the resource.
+   */
+  public function index()
+  {
+    //
+    $servicios = Service::where('status', '=', true)->where('visible', '=', true)->get();
+    $titulos = Category::where('status', '=', true)->where('visible', '=', true)->get();
+    $testimonios = Testimony::where('status', '=', true)->where('visible', '=', true)->get();
+    $blogs = Blog::where('status', '=', 1)->where('visible', '=', 1)->orderBy('id', 'desc')->take(3)->get();
+    $logos = ClientLogos::all();
+    $generales = General::all()->first();
+    $baseUrllink = 'https://' . $_SERVER['HTTP_HOST'] . '/';
 
-        SEOMeta::setTitle($generales->seo_title);
-        SEOMeta::setDescription($generales->seo_description);
-        SEOMeta::setCanonical($baseUrllink);
-        SEOMeta::addKeyword([$generales->seo_keywords]);
-        SEOTools::setDescription($generales->seo_description);
 
-        OpenGraph::setDescription($generales->seo_description);
-        OpenGraph::setTitle($generales->seo_title);
-        OpenGraph::setUrl($baseUrllink);
-        OpenGraph::addProperty('type', 'website');
-        OpenGraph::addProperty('locale', 'es-es');
-        
-        // OpenGraph::addImage(URL::to('/logocreditomype.svg'));
-        OpenGraph::addImage(URL::to('/images/img/icono-papaya.png'));
+    SEOMeta::setTitle($generales->seo_title);
+    SEOMeta::setDescription($generales->seo_description);
+    SEOMeta::setCanonical($baseUrllink);
+    SEOMeta::addKeyword([$generales->seo_keywords]);
+    SEOTools::setDescription($generales->seo_description);
 
-        return view('public.index', compact('servicios', 'titulos', 'generales', 'testimonios', 'logos', 'blogs'));
+    OpenGraph::setDescription($generales->seo_description);
+    OpenGraph::setTitle($generales->seo_title);
+    OpenGraph::setUrl($baseUrllink);
+    OpenGraph::addProperty('type', 'website');
+    OpenGraph::addProperty('locale', 'es-es');
+
+    // OpenGraph::addImage(URL::to('/logocreditomype.svg'));
+    OpenGraph::addImage(URL::to('/images/img/icono-papaya.png'));
+
+    return view('public.index', compact('servicios', 'titulos', 'generales', 'testimonios', 'logos', 'blogs'));
+  }
+
+  public function index2()
+  {
+    //
+    $servicios = Service::where('status', '=', true)->where('visible', '=', true)->get();
+    $titulos = Category::where('status', '=', true)->where('visible', '=', true)->get();
+    $testimonios = Testimony::where('status', '=', true)->where('visible', '=', true)->get();
+    $logos = ClientLogos::all();
+    $generales = General::all()->first();
+
+    return view('public.index2', compact('servicios', 'titulos', 'generales', 'testimonios', 'logos'));
+  }
+
+
+  public function saveInAtalaya(Request $request)
+  {
+    $response = Response::simpleTryCatch(function (Response $response) use ($request) {
+      $body = $request->all();
+
+      $mapping = [
+        'fb' => 'Facebook',
+        'ig' => 'Instagram',
+        'chatgpt.com' => 'Chat GPT',
+      ];
+
+      $body['origin'] = $mapping[$body['origin']] ?? $body['origin'] ?? '[Mundo Web] - Landing WebSite';
+      $body['source'] = $body['source'] ?? 'Integracion API';
+      $body['triggered_by'] = $body['triggered_by'] ?? 'Google';
+      $res = new Fetch('https://crm.atalaya.pe/free/leads', [
+        'method' => 'POST',
+        'headers' => [
+          'Authorization' => 'Bearer 5485e4be-54e0-11ef-bfda-26a0a2e74226',
+          'Content-Type' => 'application/json'
+        ],
+        'body' => $body
+      ]);
+      $data = $res->json();
+      if (!$res->ok) {
+        throw new Exception($data['message'] ?? 'Ocurrio un error inespesperado al guardar los datos');
+      }
+    });
+    return response($response->toArray(), $response->status);
+  }
+
+
+  public function servicios($id)
+  {
+    $servicioById = Service::where('id', '=', $id)->first();
+    $servicios = Service::where('status', '=', true)->where('visible', '=', true)->get();
+    $generales = General::all()->first();
+    return view('public.servicios', compact('generales', 'servicios', 'servicioById'));
+  }
+
+  /**
+   * Show the form for creating a new resource.
+   */
+  public function create()
+  {
+    //
+  }
+
+  /**
+   * Store a newly created resource in storage.
+   */
+  public function store(StoreIndexRequest $request)
+  {
+    //
+  }
+
+  /**
+   * Display the specified resource.
+   */
+  public function show(Index $index)
+  {
+    //
+  }
+
+  /**
+   * Show the form for editing the specified resource.
+   */
+  public function edit(Index $index)
+  {
+    //
+  }
+
+  /**
+   * Update the specified resource in storage.
+   */
+  public function update(UpdateIndexRequest $request, Index $index)
+  {
+    //
+  }
+
+  /**
+   * Remove the specified resource from storage.
+   */
+  public function destroy(Index $index)
+  {
+    //
+  }
+
+  public function blog($filtro)
+  {
+    try {
+      $categorias = Category::where('status', '=', 1)->where('visible', '=', 1)->get();
+
+      if ($filtro == 0) {
+        $posts = Blog::where('status', '=', 1)->where('visible', '=', 1)->get();
+
+        $categoria = Category::where('status', '=', 1)->where('visible', '=', 1)->get();
+
+        $lastpost = Blog::where('status', '=', 1)->where('visible', '=', 1)->orderBy('created_at', 'desc')->first();
+      } else {
+        $posts = Blog::where('status', '=', 1)->where('visible', '=', 1)->where('category_id', '=', $filtro)->get();
+
+        $categoria = Category::where('status', '=', 1)->where('visible', '=', 1)->where('id', '=', $filtro)->get();
+
+        $lastpost = Blog::where('status', '=', 1)->where('visible', '=', 1)->orderBy('created_at', 'desc')->where('category_id', '=', $filtro)->first();
+      }
+
+      return view('public.blog', compact('posts', 'categoria', 'categorias', 'filtro', 'lastpost'));
+    } catch (\Throwable $th) {
     }
+  }
 
-    public function index2()
-    {
-        //
-        $servicios = Service::where('status', '=', true)->where('visible', '=', true)->get();
-        $titulos = Category::where('status', '=', true)->where('visible', '=', true)->get();
-        $testimonios = Testimony::where('status', '=', true)->where('visible', '=', true)->get();
-        $logos = ClientLogos::all();
-        $generales = General::all()->first();
+  public function detalleBlog($id)
+  {
+    $post = Blog::where('status', '=', 1)->where('visible', '=', 1)->where('id', '=', $id)->first();
+    $meta_title = $post->meta_title ?? $post->title;
+    $meta_description = $post->meta_description  ?? Str::limit($post->extract, 160);
+    $meta_keywords = $post->meta_keywords ?? '';
 
-        return view('public.index2', compact('servicios', 'titulos', 'generales', 'testimonios', 'logos'));
+    return view('public.post', compact('meta_title', 'meta_description', 'meta_keywords', 'post'));
+  }
+
+
+  public function agradecimiento()
+  {
+    return view('public.thankyou');
+  }
+
+  /**
+   * Save contact from blade
+   */
+  public function guardarContacto(Request $request)
+  {
+    $data = $request->all();
+    $ipAddress = $request->ip();
+    $ancho = $request->client_width;
+    $latitud = $request->client_latitude;
+    $longitud = $request->client_longitude;
+    $sistema = $request->client_system;
+
+    try {
+      $reglasValidacion = [
+        'name' => 'required|string|max:255',
+        'cellphone' => 'required|string|max:99999999999',
+        'email' => 'required|email|max:255',
+      ];
+      $mensajes = [
+        'name.required' => 'El campo nombre es obligatorio.',
+        'cellphone.required' => 'El campo teléfono es obligatorio.',
+        'cellphone.integer' => 'El campo teléfono debe ser un número entero.',
+        'email.required' => 'El campo correo electrónico es obligatorio.',
+        'email.email' => 'El formato del correo electrónico no es válido.',
+      ];
+
+      $request->validate($reglasValidacion, $mensajes);
+
+
+      if (!is_null($ipAddress)) {
+        $data['ip'] = $ipAddress;
+      } else {
+        $data['ip'] = 'Sin data';
+      }
+
+      if (!is_null($latitud)) {
+        $data['client_latitude'] = $latitud;
+      } else {
+        $data['client_latitude'] = 'Sin data';
+      }
+
+      if (!is_null($longitud)) {
+        $data['client_longitude'] = $longitud;
+      } else {
+        $data['client_longitude'] = 'Sin data';
+      }
+
+      if (!is_null($sistema)) {
+        $data['client_system'] = $sistema;
+      } else {
+        $data['client_system'] = 'Sin data';
+      }
+
+
+      if ($ancho >= 1 && $ancho <= 767) {
+        $data['device'] = 'mobile';
+      } elseif ($ancho >= 768 && $ancho <= 1024) {
+        $data['device'] = 'tablet';
+      } elseif ($ancho >= 1025) {
+        $data['device'] = 'desktop';
+      } elseif (is_null($ancho)) {
+        $data['device'] = 'Sin data';
+      }
+
+
+      $formlanding = Message::create($data);
+      $this->envioCorreoAdmin($formlanding);
+      $this->envioCorreoCliente($formlanding);
+
+      return response()->json(['message' => 'Mensaje enviado con exito']);
+    } catch (ValidationException $e) {
+      return response()->json(['message' => $e->validator->errors()], 400);
     }
+  }
 
+  private function envioCorreoAdmin($data)
+  {
+    $generales = General::first();
+    // $name = $data['full_name'];
+    $name = 'Administrador';
+    $mensaje = 'tienes un nuevo mensaje - Agencia Papaya';
+    $mail = EmailConfig::config($name, $mensaje);
+    $emailadmin = 'hola@mundoweb.pe';
+    $baseUrl = 'https://' . $_SERVER['HTTP_HOST'] . '/mail';
+    $baseUrllink = 'https://' . $_SERVER['HTTP_HOST'] . '/';
 
-    public function saveInAtalaya(Request $request)
-    {   
-        $response = Response::simpleTryCatch(function (Response $response) use ($request) {
-            $body = $request->all();
-            $body['origin'] = $body['origin'] ?? '[Mundo Web] - Landing WebSite';
-            $body['source'] = $body['source'] ?? 'Integracion API';
-            $body['triggered_by'] = $body['triggered_by'] ?? 'Pauta';
-            $res = new Fetch('https://crm.atalaya.pe/free/leads', [
-                'method' => 'POST',
-                'headers' => [
-                    'Authorization' => 'Bearer 5485e4be-54e0-11ef-bfda-26a0a2e74226',
-                    'Content-Type' => 'application/json'
-                ],
-                'body' => $body
-            ]);
-            $data = $res->json();
-            if (!$res->ok) {
-                throw new Exception($data['message'] ?? 'Ocurrio un error inespesperado al guardar los datos');
-            }
-        });
-        return response($response->toArray(), $response->status);
-    }
-
-
-    public function servicios($id)
-    {
-        $servicioById = Service::where('id', '=', $id)->first();
-        $servicios = Service::where('status', '=', true)->where('visible', '=', true)->get();
-        $generales = General::all()->first();
-        return view('public.servicios', compact('generales', 'servicios', 'servicioById'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreIndexRequest $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Index $index)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Index $index)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateIndexRequest $request, Index $index)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Index $index)
-    {
-        //
-    }
-    
-    public function blog($filtro)
-    {
-        try {
-            $categorias = Category::where('status', '=', 1)->where('visible', '=', 1)->get();
-
-            if ($filtro == 0) {
-                $posts = Blog::where('status', '=', 1)->where('visible', '=', 1)->get();
-
-                $categoria = Category::where('status', '=', 1)->where('visible', '=', 1)->get();
-
-                $lastpost = Blog::where('status', '=', 1)->where('visible', '=', 1)->orderBy('created_at', 'desc')->first();
-            } else {
-                $posts = Blog::where('status', '=', 1)->where('visible', '=', 1)->where('category_id', '=', $filtro)->get();
-
-                $categoria = Category::where('status', '=', 1)->where('visible', '=', 1)->where('id', '=', $filtro)->get();
-
-                $lastpost = Blog::where('status', '=', 1)->where('visible', '=', 1)->orderBy('created_at', 'desc')->where('category_id', '=', $filtro)->first();
-            }
-
-            return view('public.blog', compact('posts', 'categoria', 'categorias', 'filtro', 'lastpost'));
-        } catch (\Throwable $th) {
-        }
-    }
-
-    public function detalleBlog($id)
-    {
-        $post = Blog::where('status', '=', 1)->where('visible', '=', 1)->where('id', '=', $id)->first();
-        $meta_title = $post->meta_title ?? $post->title;
-        $meta_description = $post->meta_description  ?? Str::limit($post->extract, 160);
-        $meta_keywords = $post->meta_keywords ?? '';
-
-        return view('public.post', compact('meta_title','meta_description','meta_keywords','post'));
-    }
-
-    
-    public function agradecimiento(){
-      return view('public.thankyou');
-    }
-    
-    /**
-     * Save contact from blade
-     */
-    public function guardarContacto(Request $request)
-    {
-        $data = $request->all();
-        $ipAddress = $request->ip();
-        $ancho = $request->client_width;
-        $latitud = $request->client_latitude;
-        $longitud = $request->client_longitude;
-        $sistema = $request->client_system;
-
-        try {
-            $reglasValidacion = [
-                'name' => 'required|string|max:255',
-                'cellphone' => 'required|string|max:99999999999',
-                'email' => 'required|email|max:255',
-            ];
-            $mensajes = [
-                'name.required' => 'El campo nombre es obligatorio.',
-                'cellphone.required' => 'El campo teléfono es obligatorio.',
-                'cellphone.integer' => 'El campo teléfono debe ser un número entero.',
-                'email.required' => 'El campo correo electrónico es obligatorio.',
-                'email.email' => 'El formato del correo electrónico no es válido.',
-            ];
-
-            $request->validate($reglasValidacion, $mensajes);
-
-            
-            if (!is_null($ipAddress)) {
-              $data['ip'] = $ipAddress;
-            }else{
-              $data['ip'] = 'Sin data';
-            }
-
-            if (!is_null($latitud)) {
-              $data['client_latitude'] = $latitud;
-            }else{
-              $data['client_latitude'] = 'Sin data';
-            }
-
-            if (!is_null($longitud)) {
-              $data['client_longitude'] = $longitud;
-            }else{
-              $data['client_longitude'] = 'Sin data';
-            }
-
-            if (!is_null($sistema)) {
-              $data['client_system'] = $sistema;
-            }else{
-              $data['client_system'] = 'Sin data';
-            }
-            
-
-            if ($ancho >= 1 && $ancho <= 767) {
-              $data['device'] = 'mobile';
-            } elseif ($ancho >= 768 && $ancho <= 1024) {
-              $data['device'] = 'tablet';
-            } elseif ($ancho >= 1025 ){
-              $data['device'] = 'desktop';
-            } elseif (is_null($ancho)){
-              $data['device'] = 'Sin data';
-            }
-
-
-            $formlanding = Message::create($data);
-             $this->envioCorreoAdmin($formlanding);
-             $this->envioCorreoCliente($formlanding);
-
-            return response()->json(['message' => 'Mensaje enviado con exito']);
-        } catch (ValidationException $e) {
-            return response()->json(['message' => $e->validator->errors()], 400);
-        }
-    }
-
-    private function envioCorreoAdmin($data)
-    {
-        $generales = General::first();
-        // $name = $data['full_name'];
-        $name = 'Administrador';
-        $mensaje = 'tienes un nuevo mensaje - Agencia Papaya';
-        $mail = EmailConfig::config($name, $mensaje);
-        $emailadmin = 'hola@mundoweb.pe';
-        $baseUrl = 'https://' . $_SERVER['HTTP_HOST'] . '/mail';
-        $baseUrllink = 'https://' . $_SERVER['HTTP_HOST'] . '/';
-
-        try {
-            $mail->addAddress($emailadmin);
-            $mail->Body =
-                '
+    try {
+      $mail->addAddress($emailadmin);
+      $mail->Body =
+        '
           <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -309,8 +317,8 @@ class IndexController extends Controller
           margin: 0 auto;
           text-align: center;
           background-image: url(' .
-                $baseUrl .
-                '/fondo.png);
+        $baseUrl .
+        '/fondo.png);
           background-repeat: no-repeat;
           background-position: center;
           background-size: cover;
@@ -329,10 +337,10 @@ class IndexController extends Controller
               "
             >
               <a href="' .
-                $baseUrllink .
-                '" target="_blank" style="text-align:center" ><img src="' .
-                $baseUrl .
-                'logo.png" alt="agenciapapaya" /></a>
+        $baseUrllink .
+        '" target="_blank" style="text-align:center" ><img src="' .
+        $baseUrl .
+        'logo.png" alt="agenciapapaya" /></a>
             </th>
           </tr>
         </thead>
@@ -352,8 +360,8 @@ class IndexController extends Controller
                 "
               >
                 <span style="display: block">Hola ' .
-                $name .
-                '</span>
+        $name .
+        '</span>
                 <span style="display: block">Tienes un nuevo mensaje</span>
               </p>
             </td>
@@ -364,8 +372,8 @@ class IndexController extends Controller
               <a
                 target="_blank"
                 href="' .
-                $baseUrllink .
-                '"
+        $baseUrllink .
+        '"
                 style="
                   text-decoration: none;
                   background-color: #fdfefd;
@@ -394,8 +402,8 @@ class IndexController extends Controller
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
                 <img src="' .
-                $baseUrl .
-                '/facebook.png" alt="facebook"
+        $baseUrl .
+        '/facebook.png" alt="facebook"
               /></a>
 
               <a
@@ -404,8 +412,8 @@ class IndexController extends Controller
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
                 <img src="' .
-                $baseUrl .
-                '/instagram.png" alt="instagram"
+        $baseUrl .
+        '/instagram.png" alt="instagram"
               /></a>
 
               <a
@@ -414,8 +422,8 @@ class IndexController extends Controller
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
                 <img src="' .
-                $baseUrl .
-                '/linkedin.png" alt="linkedin"
+        $baseUrl .
+        '/linkedin.png" alt="linkedin"
               /></a>
 
               <a
@@ -424,8 +432,8 @@ class IndexController extends Controller
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
                 <img src=" ' .
-                $baseUrl .
-                '/youtube.png" alt="youtube"
+        $baseUrl .
+        '/youtube.png" alt="youtube"
               /></a>
             </td>
           </tr>
@@ -438,26 +446,26 @@ class IndexController extends Controller
         
 ';
 
-            $mail->isHTML(true);
-            $mail->send();
-        } catch (\Throwable $th) {
-            //throw $th;
-        }
+      $mail->isHTML(true);
+      $mail->send();
+    } catch (\Throwable $th) {
+      //throw $th;
     }
+  }
 
-    private function envioCorreoCliente($data)
-    {
-        $generales = General::first();
-        $name = $data['name'];
-        $mensaje = 'Gracias por comunicarte - Agencia Papaya';
-        $mail = EmailConfig::config($name, $mensaje);
-        $baseUrl = 'https://' . $_SERVER['HTTP_HOST'] . '/mail';
-        $baseUrllink = 'https://' . $_SERVER['HTTP_HOST'] . '/';
+  private function envioCorreoCliente($data)
+  {
+    $generales = General::first();
+    $name = $data['name'];
+    $mensaje = 'Gracias por comunicarte - Agencia Papaya';
+    $mail = EmailConfig::config($name, $mensaje);
+    $baseUrl = 'https://' . $_SERVER['HTTP_HOST'] . '/mail';
+    $baseUrllink = 'https://' . $_SERVER['HTTP_HOST'] . '/';
 
-        try {
-            $mail->addAddress($data['email']);
-            $mail->Body =
-                '
+    try {
+      $mail->addAddress($data['email']);
+      $mail->Body =
+        '
               <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -485,8 +493,8 @@ class IndexController extends Controller
           margin: 0 auto;
           text-align: center;
           background-image: url(' .
-                $baseUrl .
-                '/fondo.png);
+        $baseUrl .
+        '/fondo.png);
           background-repeat: no-repeat;
           background-position: center;
           background-size: cover;
@@ -505,10 +513,10 @@ class IndexController extends Controller
               "
             >
                 <a href="' .
-                $baseUrllink .
-                '" target="_blank" style="text-align:center" ><img src="' .
-                $baseUrl .
-                '/logo.png" alt="agenciapapaya" /></a>
+        $baseUrllink .
+        '" target="_blank" style="text-align:center" ><img src="' .
+        $baseUrl .
+        '/logo.png" alt="agenciapapaya" /></a>
             </th>
           </tr>
         </thead>
@@ -542,8 +550,8 @@ class IndexController extends Controller
                 "
               >
                 ' .
-                $name .
-                '
+        $name .
+        '
               </p>
             </td>
           </tr>
@@ -586,8 +594,8 @@ class IndexController extends Controller
               <a
                  target="_blank"
                 href="' .
-                $baseUrllink .
-                '"
+        $baseUrllink .
+        '"
                 style="
                   text-decoration: none;
                   background-color: #fdfefd;
@@ -616,8 +624,8 @@ class IndexController extends Controller
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
                 <img src="' .
-                $baseUrl .
-                '/facebook.png" alt="facebook"
+        $baseUrl .
+        '/facebook.png" alt="facebook"
               /></a>
 
               <a
@@ -626,8 +634,8 @@ class IndexController extends Controller
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
                 <img src="' .
-                $baseUrl .
-                '/instagram.png" alt="instagram"
+        $baseUrl .
+        '/instagram.png" alt="instagram"
               /></a>
 
               <a
@@ -636,8 +644,8 @@ class IndexController extends Controller
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
                 <img src="' .
-                $baseUrl .
-                '/linkedin.png" alt="linkedin"
+        $baseUrl .
+        '/linkedin.png" alt="linkedin"
               /></a>
 
               <a
@@ -646,8 +654,8 @@ class IndexController extends Controller
                 style="padding: 0 5px 30px 0; display: inline-block"
               >
                 <img src=" ' .
-                $baseUrl .
-                '/youtube.png" alt="youtube"
+        $baseUrl .
+        '/youtube.png" alt="youtube"
               /></a>
             </td>
           </tr>
@@ -658,10 +666,10 @@ class IndexController extends Controller
 </html>
 
             ';
-            $mail->isHTML(true);
-            $mail->send();
-        } catch (\Throwable $th) {
-            //throw $th;
-        }
+      $mail->isHTML(true);
+      $mail->send();
+    } catch (\Throwable $th) {
+      //throw $th;
     }
+  }
 }
