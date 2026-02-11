@@ -84,8 +84,8 @@ class IndexController extends Controller
         'chatgpt.com' => 'Chat GPT',
       ];
 
-      $body['source'] = $mapping[$body['source']] ?? $body['source'] ?? 'Google';
-      $body['origin'] = 'Landing';
+      $body['origin'] = $mapping[$body['source']] ?? $body['source'] ?? 'Google';
+      $body['source'] = 'Landing';
       $body['triggered_by'] = $body['triggered_by'] ?? 'Formulario';
       $res = new Fetch('https://crm.atalaya.pe/free/leads', [
         'method' => 'POST',
