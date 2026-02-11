@@ -2,19 +2,18 @@
 <header class="bg-transparent top-0 h-20">
     <div class="flex flex-col md:flex-row justify-center items-center w-11/12 mx-auto py-5 gap-5">
         <div class="flex justify-center items-center">
-            <a href="{{route('index')}}">
+            <a href="{{ route('index') }}">
                 <img src="{{ asset('images/svg/logoblancoheader.svg') }}" alt="Hidromec" class="w-full" />
             </a>
         </div>
-      
+
     </div>
 
     {{-- whatssapp --}}
     <div class="flex justify-end w-11/12 mx-auto z-[100] relative">
         <div class="fixed bottom-6 sm:bottom-[2rem] lg:bottom-[4rem] z-20 cursor-pointer right-[20px] ">
             <a target="_blank" id="whatsapp-toggle">
-                <img src="{{ asset('images/svg/WhatsApp.svg') }}" alt="whatsapp"
-                    class="w-16 h-16 md:w-24 md:h-24">
+                <img src="{{ asset('images/svg/WhatsApp.svg') }}" alt="whatsapp" class="w-16 h-16 md:w-24 md:h-24">
             </a>
         </div>
     </div>
@@ -54,15 +53,13 @@
                                       text-gray-600 font-outfitRegular w-full py-2 px-2 rounded-xl text-text16  placeholder-opacity-25 font-light  bg-white">
                             <input type="hidden" name="source_wsp" id="source_wsp" value="Pauta">
                             <input type="hidden" name="origin_wsp" id="llegade_wsp" value="Pauta">
-                            <input type="hidden" name="triggered_by_wsp" id="triggered_wsp"
-                                value="Landing Papaya/Btn Whatsapp">
+                            <input type="hidden" name="triggered_by_wsp" id="triggered_wsp" value="Botón WhatsApp">
                             <input type="hidden" name="client_width_wsp" id="anchodispositivo_wsp">
                             <input type="hidden" name="client_height_wsp" id="largodispositivo_wsp">
                             <input type="hidden" name="client_latitude_wsp" id="latitud_wsp">
                             <input type="hidden" name="client_longitude_wsp" id="longitud_wsp">
                             <input type="hidden" name="client_system_wsp" id="sistema_wsp">
-                            <input type="hidden" name="message_wsp" id="mensaje"
-                                value="Lead de boton whatsapp">
+                            <input type="hidden" name="message_wsp" id="mensaje" value="Lead de boton whatsapp">
 
                             <button id='procesarSolicitud2'
                                 class="font-outfitRegular font-semibold text-white py-2 px-2 bg-green-500 justify-center items-center rounded-xl inline-flex text-text16 w-full">
@@ -76,7 +73,3 @@
     </div>
 
 </header>
-
-
-
-

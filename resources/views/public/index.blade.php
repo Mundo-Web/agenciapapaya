@@ -279,7 +279,7 @@
                 <input type="hidden" name="source" id="source" value="Pauta">
                 <input type="hidden" name="origin" id="llegade" value="Pauta">
                 <input type="hidden" name="triggered_by" id="triggered"
-                value="Landing Papaya/Formulario">
+                value="Formulario">
                 <div class="flex flex-col justify-center items-end">
                   
                   <button id='procesarSolicitud' rel="noopener" class="btn-secondary">Enviar solicitud</button>
