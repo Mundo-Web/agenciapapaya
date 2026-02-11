@@ -51,8 +51,8 @@
                                 required
                                 class="border-green-500 border-2 focus:!border-green-500 focus:!border-2 focus:!ring-0 focus:!ring-transparent
                                       text-gray-600 font-outfitRegular w-full py-2 px-2 rounded-xl text-text16  placeholder-opacity-25 font-light  bg-white">
-                            <input type="hidden" name="source_wsp" id="source_wsp" value="Pauta">
-                            <input type="hidden" name="origin_wsp" id="llegade_wsp" value="Pauta">
+                            <input type="hidden" name="source_wsp" id="source_wsp" value="Google">
+                            <input type="hidden" name="origin_wsp" id="llegade_wsp" value="Google">
                             <input type="hidden" name="triggered_by_wsp" id="triggered_wsp" value="Botón WhatsApp">
                             <input type="hidden" name="client_width_wsp" id="anchodispositivo_wsp">
                             <input type="hidden" name="client_height_wsp" id="largodispositivo_wsp">

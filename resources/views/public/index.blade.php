@@ -276,8 +276,8 @@
                 <input type="hidden" name="client_latitude" id="latitud">
                 <input type="hidden" name="client_longitude" id="longitud">
                 <input type="hidden" name="client_system" id="sistema">
-                <input type="hidden" name="source" id="source" value="Pauta">
-                <input type="hidden" name="origin" id="llegade" value="Pauta">
+                <input type="hidden" name="source" id="source" value="Google">
+                <input type="hidden" name="origin" id="llegade" value="Google">
                 <input type="hidden" name="triggered_by" id="triggered"
                 value="Formulario">
                 <div class="flex flex-col justify-center items-end">
