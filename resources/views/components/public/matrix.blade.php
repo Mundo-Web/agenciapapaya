@@ -48,15 +48,34 @@
 
     <!-- Atalaya Tracking Pixel -->
     <script>
-        (function() {
-            var a = document.createElement("script");
-            a.type = "text/javascript";
-            a.async = true;
-            a.src = "https://crm.atalaya.pe/free/pixel/5485e4be-54e0-11ef-bfda-26a0a2e74226?cookies=" +
-                encodeURIComponent(document.cookie);
-            var b = document.getElementsByTagName("script")[0];
-            b.parentNode.insertBefore(a, b);
-        })();
+    (function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmSource = urlParams.get('utm_source') || '';
+
+        const getCookie = (name) => {
+            const value = '; ' + document.cookie;
+            const parts = value.split('; ' + name + '=');
+            return parts.length === 2 ? parts.pop().split(';').shift() : null;
+        };
+
+        const xDropdownId = getCookie('X-Dropdown-ID');
+
+        const queryParams = new URLSearchParams();
+        if (utmSource) queryParams.append('utm_source', utmSource);
+        if (xDropdownId) queryParams.append('x-dropdown-id', xDropdownId);
+
+        const queryString = queryParams.toString();
+
+        const srcUrl = `https://crm.atalaya.localhost/free/pixel/867efe2b-5479-11ef-bfda-26a0a2e74226${queryString ? '?' + queryString : ''}`;
+
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.async = true;
+        script.src = srcUrl;
+
+        const firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(script, firstScript);
+    })();
     </script>
 </head>
 
