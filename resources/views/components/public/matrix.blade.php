@@ -37,12 +37,25 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6D288P6799"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
+
         function gtag() {
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
         gtag('config', 'G-6D288P6799'); // Google Analytics o global tag
         gtag('config', 'AW-16726937161'); // Google Ads
+    </script>
+
+    <!-- Atalaya Tracking Pixel -->
+    <script>
+        (function() {
+            var a = document.createElement("script");
+            a.type = "text/javascript";
+            a.async = true;
+            a.src = "https://crm.atalaya.pe/free/pixel/5485e4be-54e0-11ef-bfda-26a0a2e74226";
+            var b = document.getElementsByTagName("script")[0];
+            b.parentNode.insertBefore(a, b);
+        })();
     </script>
 </head>
 
@@ -359,7 +372,7 @@
 
                     $('#formContactos')[0].reset();
 
-                   // window.location.href = 'http://agenciapapaya.pe/#formularioListo';
+                    // window.location.href = 'http://agenciapapaya.pe/#formularioListo';
                 }).catch((error) => {
                     Swal.close();
                     Swal.fire({
