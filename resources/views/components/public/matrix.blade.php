@@ -58,11 +58,11 @@
             return parts.length === 2 ? parts.pop().split(';').shift() : null;
         };
 
-        const xDropdownId = getCookie('X-Dropdown-ID');
+        const xBreakdownId = getCookie('X-Breakdown-ID');
 
         const queryParams = new URLSearchParams();
         if (utmSource) queryParams.append('utm_source', utmSource);
-        if (xDropdownId) queryParams.append('x-dropdown-id', xDropdownId);
+        if (xBreakdownId) queryParams.append('x-breakdown-id', xBreakdownId);
 
         const queryString = queryParams.toString();
 
