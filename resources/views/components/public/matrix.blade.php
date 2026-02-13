@@ -66,7 +66,7 @@
 
         const queryString = queryParams.toString();
 
-        const srcUrl = `https://crm.atalaya.pe/free/pixel/867efe2b-5479-11ef-bfda-26a0a2e74226${queryString ? '?' + queryString : ''}`;
+        const srcUrl = `https://crm.atalaya.pe/free/pixel/5485e4be-54e0-11ef-bfda-26a0a2e74226${queryString ? '?' + queryString : ''}`;
 
         const script = document.createElement('script');
         script.type = 'text/javascript';
