@@ -382,7 +382,7 @@
 
                     $('#formContactos')[0].reset();
 
-                    // window.location.href = 'http://agenciapapaya.pe/#formularioListo';
+                    window.location.href = 'http://agenciapapaya.pe/#formularioListo';
                 }).catch((error) => {
                     Swal.close();
                     Swal.fire({
