@@ -42,14 +42,14 @@ class IndexController extends Controller
     $baseUrllink = 'https://' . $_SERVER['HTTP_HOST'] . '/';
 
 
-    SEOMeta::setTitle($generales->seo_title);
+    SEOMeta::setTitle($generales->seo_title ?? 'Agencia Papaya');
     SEOMeta::setDescription($generales->seo_description);
     SEOMeta::setCanonical($baseUrllink);
     SEOMeta::addKeyword([$generales->seo_keywords]);
     SEOTools::setDescription($generales->seo_description);
 
     OpenGraph::setDescription($generales->seo_description);
-    OpenGraph::setTitle($generales->seo_title);
+    OpenGraph::setTitle($generales->seo_title ?? 'Agencia Papaya');
     OpenGraph::setUrl($baseUrllink);
     OpenGraph::addProperty('type', 'website');
     OpenGraph::addProperty('locale', 'es-es');

@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Agencia Papaya'),
 
     /*
     |--------------------------------------------------------------------------
@@ -173,7 +173,7 @@ return [
         Spatie\Permission\PermissionServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
         //Add Image Intervention
-          
+
         //Intervention\Image\ImageServiceProvider::class,
 
     ])->toArray(),
