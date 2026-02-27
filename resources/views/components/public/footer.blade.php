@@ -2,20 +2,20 @@
     <div class="grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto pt-16 pb-8 md:py-16 gap-4 md:gap-5">
         <div class="w-full md:max-w-[500px] flex flex-col gap-5">
             <a href="#">
-                <img src="{{asset('images/svg/logofooter.svg')}}" alt="Hidromec" />
+                <img src="{{asset('images/svg/logofooter.svg')}}" alt="Agencia Papaya" />
             </a>
             <p class="text-white font-outfitLight text-lg">
-                Como expertos en marketing digital, aceleramos tu negocio de manera sostenida, con 
+                Como expertos en marketing digital, aceleramos tu negocio de manera sostenida, con
                 resultados comprobados en branding, performance y automatización de procesos.
             </p>
             <a href="https://www.google.com/partners/agency?id=3977416976" target="_blank">
-                <img src="https://www.gstatic.com/partners/badge/images/2024/PartnerBadgeClickable.svg"/>
+                <img src="https://www.gstatic.com/partners/badge/images/2024/PartnerBadgeClickable.svg" />
             </a>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0">
             <div class="flex flex-col gap-5">
-              
+
             </div>
 
             <div class="flex flex-col gap-5">
@@ -44,10 +44,8 @@
             <a target="_blank" href="https://www.tiktok.com/@papayamarketingdigital"> <img src="{{asset('images/svg/redes4.svg')}}" /></a>
             <a target="_blank" href="https://pe.linkedin.com/company/agenciapapaya-pe"> <img src="{{asset('images/svg/redes_6.svg')}}" /></a>
             {{-- <a target="_blank" href="https://api.whatsapp.com/send?phone=51908857558&text=Hola.%20Deseo%20mayor%20informaci%C3%B3n%20%F0%9F%92%BB!!"> <img src="{{asset('images/svg/redes2.svg')}}" /></a> --}}
-            
-            
+
+
         </div>
     </div>
 </footer>
-
-

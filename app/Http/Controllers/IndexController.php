@@ -109,6 +109,9 @@ class IndexController extends Controller
     $servicioById = Service::where('id', '=', $id)->first();
     $servicios = Service::where('status', '=', true)->where('visible', '=', true)->get();
     $generales = General::all()->first();
+
+    SEOMeta::setTitle($servicioById->title . ' - Agencia Papaya');
+
     return view('public.servicios', compact('generales', 'servicios', 'servicioById'));
   }
 
@@ -179,6 +182,9 @@ class IndexController extends Controller
         $lastpost = Blog::where('status', '=', 1)->where('visible', '=', 1)->orderBy('created_at', 'desc')->where('category_id', '=', $filtro)->first();
       }
 
+      SEOMeta::setTitle('Blog - Agencia Papaya');
+      SEOMeta::setDescription('Noticias y artículos sobre Marketing Digital en Agencia Papaya.');
+
       return view('public.blog', compact('posts', 'categoria', 'categorias', 'filtro', 'lastpost'));
     } catch (\Throwable $th) {
     }
@@ -190,6 +196,9 @@ class IndexController extends Controller
     $meta_title = $post->meta_title ?? $post->title;
     $meta_description = $post->meta_description  ?? Str::limit($post->extract, 160);
     $meta_keywords = $post->meta_keywords ?? '';
+
+    SEOMeta::setTitle($meta_title);
+    SEOMeta::setDescription($meta_description);
 
     return view('public.post', compact('meta_title', 'meta_description', 'meta_keywords', 'post'));
   }

@@ -3,7 +3,7 @@
     <div class="flex flex-col md:flex-row justify-center items-center w-11/12 mx-auto py-5 gap-5">
         <div class="flex justify-center items-center">
             <a href="{{ route('index') }}">
-                <img src="{{ asset('images/svg/logoblancoheader.svg') }}" alt="Hidromec" class="w-full" />
+                <img src="{{ asset('images/svg/logoblancoheader.svg') }}" alt="Agencia Papaya" class="w-full" />
             </a>
         </div>
 
