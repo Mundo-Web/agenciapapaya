@@ -823,7 +823,7 @@
 
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
             <div class="flex flex-col justify-center items-center  px-0 lg:px-[5%]">
-              <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/icono-papaya.png') }}');">
+              <div class="w-full h-[500px] lg:h-[700px] border border-gray-200 rounded-3xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/hidromex.png') }}');">
                 <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo(this)">
                   <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/svg/iconoplayblanco.svg') }}" /></button>
                 </div>
