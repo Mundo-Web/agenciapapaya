@@ -438,7 +438,7 @@
                     }).then((result) => {
 
                         if (result.isConfirmed) {
-                            window.open("https://wa.link/ei9dmr", "_blank");
+                            window.open("https://wa.link/0fbq56", "_blank");
                             window.location.href = "https://www.agenciapapaya.pe/#whastapplisto";
                         }
                     });
